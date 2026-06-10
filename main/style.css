@@ -731,3 +731,191 @@ aside {
 .song-card.active .card-title {
     color: #1DB954;
 }
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+    aside {
+        width: 280px;
+    }
+
+    .middle-nav {
+        margin-left: 0;
+    }
+
+    .search {
+        width: 320px;
+    }
+
+    #install-app {
+        display: none;
+    }
+
+    .cards-row {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    nav {
+        padding: 8px 12px;
+    }
+
+    .middle-nav {
+        margin-left: 0;
+    }
+
+    .search {
+        width: 200px;
+        height: 40px;
+        padding: 10px 14px;
+    }
+
+    .search-box {
+        font-size: 14px;
+    }
+
+    .search-shortcut {
+        display: none;
+    }
+
+    #explore-premium {
+        display: none;
+    }
+
+    #install-app {
+        display: none;
+    }
+
+    /* Hide sidebar */
+    aside {
+        display: none;
+    }
+
+    /* Main full width */
+    main {
+        top: 56px;
+        bottom: 130px;
+    }
+
+    /* Content */
+    .content {
+        padding: 14px 12px;
+    }
+
+    /* Recent row */
+    .recent-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Cards */
+    .cards-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+
+    /* Player stacked */
+    .player {
+        flex-direction: column;
+        height: 130px;
+        padding: 8px 16px;
+        gap: 2px;
+        justify-content: center;
+    }
+
+    .player-left {
+        min-width: unset;
+        flex: unset;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .player-left img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .player-song-info p:first-child,
+    .player-song-info p:last-child {
+        max-width: 180px;
+    }
+
+    .player-center {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .player-right {
+        display: none;
+    }
+}
+
+/* Small Mobile (max 480px) */
+@media (max-width: 480px) {
+    .search {
+        width: 150px;
+    }
+
+    .fa-home {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .recent-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+
+    .recent-card {
+        font-size: 12px;
+    }
+
+    .recent-card img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .cards-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .song-card {
+        padding: 10px;
+    }
+
+    .song-card .card-title {
+        font-size: 12px;
+    }
+
+    .song-card .card-artist {
+        font-size: 11px;
+    }
+
+    .play-overlay {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        bottom: 60px;
+    }
+
+    #profile {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .player-controls {
+        gap: 14px;
+    }
+}
