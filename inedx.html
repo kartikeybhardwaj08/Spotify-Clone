@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav>
+        <div class="logo-container">
+            <i class="fab fa-spotify"></i>
+        </div>
+        <div class="middle-nav">
+            <div class="home-btn">
+                <i class="fas fa-home" title="Home Page"></i>
+            </div>
+            <div class="search">
+                <i class="fas fa-search" title="Search"></i>
+                <input type="search" id="searchInput" placeholder="What do You Want to Play?" class="search-box">
+                <div class="search-shortcut">
+                    <div class="cuts">Ctrl</div>
+                    <div class="cuts">Shift</div>
+                    <div class="cuts">L</div>
+                </div>
+            </div>
+        </div>
+        <div class="right-nav">
+            <button class="right-nav-btn" id="explore-premium">Explore Premium</button>
+            <button class="right-nav-btn" id="install-app">
+                <i class="fas fa-download"></i> Install App
+            </button>
+            <button class="right-nav-btn right-btns" id="notification">
+                <i class="far fa-bell"></i>
+            </button>
+            <button class="right-nav-btn right-btns" id="friends">
+                <i class="fas fa-user-group"></i>
+            </button>
+            <button class="right-nav-btn" id="profile">K</button>
+        </div>
+    </nav>
+
+    <!-- ========== MAIN ========== -->
+    <main>
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside>
+            <div class="library-header">
+                <div class="library-title">
+                    <span>Your Library</span>
+                </div>
+                <button class="icon-btn" id="create-playlist">
+                    <i class="fas fa-plus"></i> <span>Create</span>
+                </button>
+                <button class="icon-btn" id="expand-sidebar">
+                    <i class="fas fa-up-right-and-down-left-from-center"></i>
+                </button>
+                <div class="library-filters">
+                    <button class="filter-btn active">Playlists</button>
+                    <button class="filter-btn">Artists</button>
+                </div>
+            </div>
+
+            <ul class="library-list" id="libraryList">
+                <li class="library-item">
+                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdvYfqQHGw2qMH1sTLTjp%2Fresized%2F1715710400017_1000x1000.webp?alt=media&token=7aa00e20-9eae-47c4-ab0a-4b1c163645a6" alt="cover" />
+                    <div class="lib-info">
+                        <span class="lib-name">Best Collection</span>
+                        <span class="lib-meta">🟢 Playlist • RPG_player#1</span>
+                    </div>
+                </li>
+                <li class="library-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr_qbHcIUnfDkrG-ygvue2a6s5HG9jrF6Cw&s" alt="cover" />
+                    <div class="lib-info">
+                        <span class="lib-name">Confess Your Love - Funk</span>
+                        <span class="lib-meta">Playlist • RPG_player#1</span>
+                    </div>
+                </li>
+                <li class="library-item">
+                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00" alt="cover" />
+                    <div class="lib-info">
+                        <span class="lib-name">vibe</span>
+                        <span class="lib-meta">Playlist • RPG_player#1</span>
+                    </div>
+                </li>
+                <li class="library-item liked">
+                    <div class="liked-icon"><i class="fas fa-heart"></i></div>
+                    <div class="lib-info">
+                        <span class="lib-name">Liked Songs</span>
+                        <span class="lib-meta">Playlist • 46 songs</span>
+                    </div>
+                </li>
+                <li class="library-item">
+                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411134145e_800x800.webp?alt=media&token=30484985-907c-454b-a6e5-15af34d69e65" alt="cover" />
+                    <div class="lib-info">
+                        <span class="lib-name">MY ENEMY ULTRAFUNK</span>
+                        <span class="lib-meta">Playlist • RPG_player#1</span>
+                    </div>
+                </li>
+                <li class="library-item">
+                    <img src="https://cdn-images.dzcdn.net/images/cover/dd99fb2f076f8d7c7413fb27969bfbc3/0x1900-000000-80-0-0.jpg" alt="cover" />
+                    <div class="lib-info">
+                        <span class="lib-name">Badshah</span>
+                        <span class="lib-meta">Artist</span>
+                    </div>
+                </li>
+                <li class="library-item">
+                    <img src="https://i.redd.it/why-is-this-style-of-cover-art-so-popular-among-phonk-v0-gk4koaezfova1.jpg?width=600&format=pjpg&auto=webp&s=fdb0770d95e8dfd4fede682584ef4482d73438f5" alt="cover" />
+                    <div class="lib-info">
+                        <span class="lib-name">Yo Yo Honey Singh</span>
+                        <span class="lib-meta">Artist</span>
+                    </div>
+                </li>
+                <li class="library-item">
+                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411133943a_800x800.webp?alt=media&token=e50b6dc7-3095-43d7-97be-9fc9d4f06711" alt="cover" />
+                    <div class="lib-info">
+                        <span class="lib-name">Gulzaar Chhaniwala</span>
+                        <span class="lib-meta">Artist</span>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- ===== CONTENT ===== -->
+        <div class="content" id="mainContent">
+
+            <!-- Filter Tabs -->
+            <div class="content-filters">
+                <button class="content-filter active">All</button>
+                <button class="content-filter">Music</button>
+                <button class="content-filter">Podcasts</button>
+            </div>
+
+            <!-- Recent Row -->
+            <div class="recent-row">
+                <div class="recent-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr_qbHcIUnfDkrG-ygvue2a6s5HG9jrF6Cw&s" alt="cover" />
+                    <span>Confess Your Love - Funk</span>
+                </div>
+                <div class="recent-card">
+                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00" alt="cover" />
+                    <span>LYA FUNK</span>
+                </div>
+                <div class="recent-card">
+                    <div class="liked-icon"><i class="fas fa-heart"></i></div>
+                    <span>Liked Songs</span>
+                </div>
+                <div class="recent-card">
+                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdvYfqQHGw2qMH1sTLTjp%2Fresized%2F1715710400017_1000x1000.webp?alt=media&token=7aa00e20-9eae-47c4-ab0a-4b1c163645a6" alt="cover" />
+                    <span>vibe</span>
+                </div>
+            </div>
+
+            <!-- Recommended Section -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Recommended for today</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <!-- JS yahan cards inject karega -->
+                <div class="cards-row" id="recommendedRow">
+                    <p class="loading-text">Loading songs...</p>
+                </div>
+            </div>
+
+            <!-- Trending Section -->
+            <div class="section">
+                <div class="section-header">
+                    <h2>Trending Hindi Songs</h2>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <!-- JS yahan cards inject karega -->
+                <div class="cards-row" id="hindiRow">
+                    <p class="loading-text">Loading songs...</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========== PLAYER ========== -->
+    <footer class="player">
+
+        <!-- Left -->
+        <div class="player-left">
+            <img id="currentCover" src="https://picsum.photos/seed/default/56/56" alt="cover" />
+            <div class="player-song-info">
+                <p id="currentTitle">Select a song</p>
+                <p id="currentArtist">--</p>
+            </div>
+            <i class="fas fa-heart player-heart" id="heartBtn"></i>
+        </div>
+
+        <!-- Center -->
+        <div class="player-center">
+            <div class="player-controls">
+                <button class="ctrl-btn" id="shuffleBtn" title="Shuffle"><i class="fas fa-shuffle"></i></button>
+                <button class="ctrl-btn" id="prevBtn" title="Previous"><i class="fas fa-backward-step"></i></button>
+                <button class="ctrl-btn play-pause-btn" id="playBtn" title="Play/Pause">
+                    <i class="fas fa-play" id="playIcon"></i>
+                </button>
+                <button class="ctrl-btn" id="nextBtn" title="Next"><i class="fas fa-forward-step"></i></button>
+                <button class="ctrl-btn" id="repeatBtn" title="Repeat"><i class="fas fa-repeat"></i></button>
+            </div>
+            <div class="progress-row">
+                <span id="currentTime">0:00</span>
+                <div class="progress-bar-container">
+                    <input type="range" id="progressBar" value="0" min="0" max="100" step="0.1" />
+                </div>
+                <span id="totalTime">0:00</span>
+            </div>
+        </div>
+
+        <!-- Right -->
+        <div class="player-right">
+            <button class="ctrl-btn" title="Queue"><i class="fas fa-list"></i></button>
+            <button class="ctrl-btn" title="Devices"><i class="fas fa-laptop"></i></button>
+            <i class="fas fa-volume-high vol-icon"></i>
+            <div class="volume-bar-container">
+                <input type="range" id="volumeBar" value="80" min="0" max="100" />
+            </div>
+            <button class="ctrl-btn" title="Full screen">
+                <i class="fas fa-up-right-and-down-left-from-center"></i>
+            </button>
+        </div>
+
+    </footer>
+
+    <!-- Hidden Audio -->
+    <audio id="audioPlayer"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

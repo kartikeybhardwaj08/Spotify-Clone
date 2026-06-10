@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "KAMALI",
+    "artist": "Seedhe Maut",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411134145e_800x800.webp?alt=media&token=30484985-907c-454b-a6e5-15af34d69e65",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/_KAMALI.mp3"
+  },
+  {
+    "id": 2,
+    "title": "Admirin' You",
+    "artist": "Karan Aujla",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/dd99fb2f076f8d7c7413fb27969bfbc3/0x1900-000000-80-0-0.jpg",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/Admirin'%20You.mp3"
+  },
+  {
+    "id": 3,
+    "title": "All I Want Is You",
+    "artist": "Unknown",
+    "cover": "https://i.redd.it/why-is-this-style-of-cover-art-so-popular-among-phonk-v0-gk4koaezfova1.jpg?width=600&format=pjpg&auto=webp&s=fdb0770d95e8dfd4fede682584ef4482d73438f5",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/All%20i%20Want%20is%20You.mp3"
+  },
+  {
+    "id": 4,
+    "title": "Boyfriend",
+    "artist": "Karan Aujla",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411133943a_800x800.webp?alt=media&token=e50b6dc7-3095-43d7-97be-9fc9d4f06711",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/boyfriend%20karan%20aujla.mp3"
+  },
+  {
+    "id": 5,
+    "title": "Confess Your Love Funk",
+    "artist": "-Prey, ZMAJOR, zxnc, Emrld",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdvYfqQHGw2qMH1sTLTjp%2Fresized%2F1715710400017_1000x1000.webp?alt=media&token=7aa00e20-9eae-47c4-ab0a-4b1c163645a6",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/CONFESS%20YOUR%20LOVE%20FUNK%20-%20-Prey%2C%20ZMAJOR%2C%20z...mp3"
+  },
+  {
+    "id": 6,
+    "title": "For A Reason",
+    "artist": "Unknown",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr_qbHcIUnfDkrG-ygvue2a6s5HG9jrF6Cw&s",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/For%20A%20Reason.mp3"
+  },
+  {
+    "id": 7,
+    "title": "LYA FUNK",
+    "artist": "BLVKZ",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/LYA%20FUNK%20-%20BLVKZ.mp3"
+  },
+  {
+    "id": 8,
+    "title": "Magic",
+    "artist": "Unknown",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411134145e_800x800.webp?alt=media&token=30484985-907c-454b-a6e5-15af34d69e65",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/Magic.mp3"
+  },
+  {
+    "id": 9,
+    "title": "Maldito Movimiento",
+    "artist": "Unknown",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/dd99fb2f076f8d7c7413fb27969bfbc3/0x1900-000000-80-0-0.jpg",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/Maldito%20Movimiento.mp3"
+  },
+  {
+    "id": 10,
+    "title": "Russian Bandana",
+    "artist": "Unknown",
+    "cover": "https://i.redd.it/why-is-this-style-of-cover-art-so-popular-among-phonk-v0-gk4koaezfova1.jpg?width=600&format=pjpg&auto=webp&s=fdb0770d95e8dfd4fede682584ef4482d73438f5",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/Russian%20Bandana.mp3"
+  },
+  {
+    "id": 11,
+    "title": "STFU",
+    "artist": "Unknown",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdvYfqQHGw2qMH1sTLTjp%2Fresized%2F1715710400017_1000x1000.webp?alt=media&token=7aa00e20-9eae-47c4-ab0a-4b1c163645a6",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/STFU.mp3"
+  },
+  {
+    "id": 12,
+    "title": "You and Me",
+    "artist": "Unknown",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00",
+    "src": "https://raw.githubusercontent.com/kartikeybhardwaj08/Spotify-Clone/main/songs/You%20and%20Me.mp3"
+  }
+]
