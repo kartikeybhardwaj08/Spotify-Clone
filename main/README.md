@@ -35,11 +35,17 @@ Spotify-Clone/main/
 ├── boyfriend karan aujla.mp3
 └── ... 
 
+## 📷 Project SC
+<img width="1920" height="991" alt="image" src="https://github.com/user-attachments/assets/aca919c1-3432-4956-accc-e56efa5e4c6e" />
+
+
 ## 🎯 How to Run
 
 1. Clone the repository
 2. Open `index.html` with **Live Server** in VS Code
+    or viste "kartikeybhardwaj08.github.io/Spotify-Clone/main/index.html"
 3. Enjoy the music! 🎵
+4. Sorry For Short Liabery i'll and more songs with itme.
 
 ## 👨‍💻 Made By
 
