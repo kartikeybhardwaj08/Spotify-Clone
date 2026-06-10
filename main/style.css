@@ -1,6 +1,7 @@
 * {
     user-select: none;
     color: #fff;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 body {
@@ -637,6 +638,7 @@ aside {
 .section-header h2 {
     font-size: 22px;
     font-weight: 700;
+    margin: 0;
 }
 
 .show-all {
@@ -655,8 +657,66 @@ aside {
 /* Cards Row */
 .cards-row {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+}
+
+/* Horizontal 2-row scroll for Trending section */
+.horizontal-two-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 12px;
+}
+
+/* Make sure cards don't shrink in horizontal mode */
+.horizontal-two-row .song-card {
+    width: 175px;
+    flex-shrink: 0;
+}
+
+/* Scroll Arrow Controls */
+.scroll-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.scroll-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #282828;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.scroll-btn:hover {
+    background-color: #1DB954;
+    color: #000;
+    transform: scale(1.1);
+}
+
+.scroll-btn:active {
+    transform: scale(0.95);
+}
+
+/* Hide horizontal scrollbar (arrows will be used for scrolling) */
+.horizontal-two-row {
+    scrollbar-width: none; /* Firefox */
+}
+
+.horizontal-two-row::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
 }
 
 .loading-text {
@@ -670,12 +730,21 @@ aside {
     border-radius: 8px;
     padding: 16px;
     cursor: pointer;
-    transition: background 0.2s;
     position: relative;
+    min-width: 0;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .song-card:hover {
     background: #3E3E3E;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.song-card.active {
+    background: #2a2a2a;
+    box-shadow: 0 0 0 2px #1DB954;
 }
 
 .song-card img {
@@ -708,8 +777,8 @@ aside {
     position: absolute;
     bottom: 76px;
     right: 16px;
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     background: #1DB954;
     border-radius: 50%;
     display: flex;
@@ -718,14 +787,14 @@ aside {
     font-size: 18px;
     color: #000;
     opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 0.2s, transform 0.2s;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transform: translateY(10px) scale(0.9);
+    transition: all 0.2s ease;
+    box-shadow: 0 8px 20px rgba(29, 185, 84, 0.4);
 }
 
 .song-card:hover .play-overlay {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 .song-card.active {
@@ -735,6 +804,38 @@ aside {
 .song-card.active .card-title {
     color: #1DB954;
 }
+
+/* Add to Queue Button on Song Cards */
+.add-to-queue-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 28px;
+    height: 28px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: #000;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.song-card:hover .add-to-queue-btn {
+    opacity: 1;
+}
+
+.add-to-queue-btn:hover {
+    background: #e0e0e0;
+    color: #000;
+    transform: scale(1.1);
+}
+
 /* ===================================
    RESPONSIVE
 =================================== */
@@ -922,4 +1023,99 @@ aside {
     .player-controls {
         gap: 14px;
     }
+}
+
+/* ========== RIGHT SIDEBAR ========== */
+.right-sidebar {
+    width: 280px;
+    background: #181818;
+    border-radius: 10px;
+    padding: 16px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    display: none;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.now-playing {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.now-playing-header {
+    font-size: 14px;
+    font-weight: 600;
+    color: #b3b3b3;
+    margin-bottom: 8px;
+}
+
+.right-sidebar img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.now-playing-info h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 8px 0 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.now-playing-info p {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.queue-section {
+    margin-top: 20px;
+}
+
+.queue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.queue-header span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.queue-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.queue-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.queue-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.queue-info span {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.queue-info small {
+    font-size: 12px;
+    color: #b3b3b3;
 }
