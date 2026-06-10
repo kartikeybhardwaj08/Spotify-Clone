@@ -3,6 +3,10 @@
     color: #fff;
 }
 
+body {
+    background-color: #000;
+}
+
 *::-webkit-scrollbar {
     width: 8px;
 }
