@@ -82,5 +82,12 @@
     "artist": "Mark Ambo",
     "cover": "https://cdnb.artstation.com/p/assets/images/images/066/152/281/large/phonk-artwork-cover2.jpg?1692179830",
     "src": "https://archive.org/download/magic_202606/You%20and%20Me.mp3"
+  },
+  {
+    "id": 13,
+    "title": "Dark Side",
+    "artist": "CHMCL SØUP",
+    "cover": "https://i1.sndcdn.com/artworks-pUX371NyTjqfuO8R-QTy3RA-t500x500.jpg",
+    "src": "https://archive.org/download/darkside_202606/Darkside.mp3"
   }
 ]
