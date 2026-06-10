@@ -43,7 +43,9 @@ Spotify-Clone/main/
 
 1. Clone the repository
 2. Open `index.html` with **Live Server** in VS Code
+    or viste "kartikeybhardwaj08.github.io/Spotify-Clone/main/index.html"
 3. Enjoy the music! 🎵
+4. Sorry For Short Liabery i'll and more songs with itme.
 
 ## 👨‍💻 Made By
 
