@@ -24,7 +24,7 @@ A pixel-perfect Spotify clone built with HTML, CSS, and Vanilla JavaScript — c
 
 ## 📁 Project Structure
 
-Spotify-Clone/
+Spotify-Clone/main/
 ├── index.html
 ├── style.css
 ├── script.js
