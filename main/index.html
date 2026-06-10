@@ -43,15 +43,15 @@
             <button class="right-nav-btn right-btns" id="friends">
                 <i class="fas fa-user-group"></i>
             </button>
-            <button class="right-nav-btn" id="profile" title="Kartik">K</button>
+            <button class="right-nav-btn" id="profile">K</button>
         </div>
     </nav>
 
     <!-- ========== MAIN ========== -->
     <main>
 
-        <!-- ===== SIDEBAR ===== -->
-        <aside>
+        <!-- ===== LEFT SIDEBAR ===== -->
+        <aside class="left-sidebar">
             <div class="library-header">
                 <div class="library-title">
                     <span>Your Library</span>
@@ -162,7 +162,11 @@
             <div class="section">
                 <div class="section-header">
                     <h2>Recommended for today</h2>
-                    <a href="#" class="show-all">Show all</a>
+                    <div class="scroll-controls">
+                        <button class="scroll-btn" id="recScrollLeft"><i class="fas fa-chevron-left"></i></button>
+                        <button class="scroll-btn" id="recScrollRight"><i class="fas fa-chevron-right"></i></button>
+                        <a href="#" class="show-all">Show all</a>
+                    </div>
                 </div>
                 <!-- JS yahan cards inject karega -->
                 <div class="cards-row" id="recommendedRow">
@@ -174,15 +178,46 @@
             <div class="section">
                 <div class="section-header">
                     <h2>Trending Hindi Songs</h2>
-                    <a href="#" class="show-all">Show all</a>
+                    <div class="scroll-controls">
+                        <button class="scroll-btn" id="scrollLeft"><i class="fas fa-chevron-left"></i></button>
+                        <button class="scroll-btn" id="scrollRight"><i class="fas fa-chevron-right"></i></button>
+                        <a href="#" class="show-all">Show all</a>
+                    </div>
                 </div>
                 <!-- JS yahan cards inject karega -->
-                <div class="cards-row" id="hindiRow">
+                <div class="cards-row horizontal-two-row" id="hindiRow">
                     <p class="loading-text">Loading songs...</p>
                 </div>
             </div>
 
         </div>
+
+        <!-- ===== RIGHT SIDEBAR ===== -->
+        <aside class="right-sidebar">
+            <div class="now-playing">
+                <div class="now-playing-header">
+                    <span>Now Playing</span>
+                </div>
+                
+                <img id="rightCover" src="https://picsum.photos/seed/default/300/300" alt="Album Art">
+                
+                <div class="now-playing-info">
+                    <h4 id="rightTitle">Select a song</h4>
+                    <p id="rightArtist">--</p>
+                </div>
+
+                <div class="queue-section">
+                    <div class="queue-header">
+                        <span>Next in queue</span>
+                        <a href="#" class="show-all">Open queue</a>
+                    </div>
+                    <div id="queueList">
+                        <!-- Queue items will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        </aside>
+
     </main>
 
     <!-- ========== PLAYER ========== -->
@@ -220,7 +255,7 @@
 
         <!-- Right -->
         <div class="player-right">
-            <button class="ctrl-btn" title="Queue"><i class="fas fa-list"></i></button>
+            <button class="ctrl-btn" id="queueBtn" title="Add to Queue"><i class="fas fa-list"></i></button>
             <button class="ctrl-btn" title="Devices"><i class="fas fa-laptop"></i></button>
             <i class="fas fa-volume-high vol-icon"></i>
             <div class="volume-bar-container">
