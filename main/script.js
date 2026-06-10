@@ -184,17 +184,45 @@ audio.addEventListener('ended', () => {
 });
 
 // ========== SEARCH ==========
-searchInput && searchInput.addEventListener('input', () => {
+searchInput?.addEventListener("input", () => {
   const query = searchInput.value.trim().toLowerCase();
-  if (!query) {
-    renderCards(songs, 'recommendedRow');
+
+  const container = document.getElementById("recommendedRow");
+  container.innerHTML = "";
+
+  const filteredSongs = songs.filter(song =>
+    song.title.toLowerCase().includes(query) ||
+    song.artist.toLowerCase().includes(query)
+  );
+
+  if (filteredSongs.length === 0) {
+    container.innerHTML =
+      '<p class="loading-text">No songs found.</p>';
     return;
   }
-  const filtered = songs.filter(s =>
-    s.title.toLowerCase().includes(query) ||
-    s.artist.toLowerCase().includes(query)
-  );
-  renderCards(filtered, 'recommendedRow');
+
+  filteredSongs.forEach(song => {
+
+    const originalIndex = songs.findIndex(s => s.id === song.id);
+
+    const card = document.createElement("div");
+    card.className = "song-card";
+
+    card.innerHTML = `
+      <img src="${song.cover}" alt="${song.title}">
+      <div class="card-title">${song.title}</div>
+      <div class="card-artist">${song.artist}</div>
+      <div class="play-overlay">
+        <i class="fas fa-play"></i>
+      </div>
+    `;
+
+    card.addEventListener("click", () => {
+      playSong(originalIndex);
+    });
+
+    container.appendChild(card);
+  });
 });
 
 // ========== FILTER TABS ==========
