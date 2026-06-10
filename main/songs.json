@@ -72,7 +72,7 @@
   {
     "id": 11,
     "title": "STFU",
-    "artist": " AP Dhillon",
+    "artist": "AP Dhillon",
     "cover": "https://i.ytimg.com/vi/NHLiJAcW1J0/maxresdefault.jpg",
     "src": "https://archive.org/download/magic_202606/STFU.mp3"
   },
@@ -89,5 +89,103 @@
     "artist": "CHMCL SØUP",
     "cover": "https://i1.sndcdn.com/artworks-pUX371NyTjqfuO8R-QTy3RA-t500x500.jpg",
     "src": "https://archive.org/download/darkside_202606/Darkside.mp3"
+  },
+  {
+    "id": 14,
+    "title": "Lak Tunu Tunu",
+    "artist": "Surjit Bindrakhiya",
+    "cover": "https://picsum.photos/seed/laktunoo/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Lak%20Tunu%20Tunu%20Surjit%20Bindrakhiya%20%28meledy%29%20%20Lakk%20Tunoo%20Tunoo%20-%20T-Series%20Apna%20Punjab.mp3"
+  },
+  {
+    "id": 15,
+    "title": "Diamond Di Jhanjar",
+    "artist": "Gurnam Bhullar",
+    "cover": "https://picsum.photos/seed/diamondjhanjar/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diamond%20di%20jhanjar%20pa%20da%20gay%20Offical%20Video%20%28Full%20HD%29%20%20Gurnam%20Bhullar%20%20New%20Punjabi%20Songs%202018%20-%20Z-Production.mp3"
+  },
+  {
+    "id": 16,
+    "title": "G.O.A.T.",
+    "artist": "Diljit Dosanjh",
+    "cover": "https://picsum.photos/seed/goatdiljit/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diljit%20Dosanjh%20-%20G.O.A.T.%20%28Official%20Music%20Video%29.mp3"
+  },
+  {
+    "id": 17,
+    "title": "Kinni Kinni",
+    "artist": "Diljit Dosanjh",
+    "cover": "https://picsum.photos/seed/kinnikinni/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diljit%20Dosanjh_%20Kinni%20Kinni%20%28Official%20Audio%29%20GHOST%20_%20Thiarajxtt%2C%20Raj%20Ranjodh.mp3"
+  },
+  {
+    "id": 18,
+    "title": "Gal Sun",
+    "artist": "Sabaat Batin ft. Rackstar",
+    "cover": "https://picsum.photos/seed/galsun/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Gal%20Sun%20-%20Sabaat%20Batin%20ft.%20Rackstar%20_%20Official%20Music%20Video%20_%20SkillMill%20Records.mp3"
+  },
+  {
+    "id": 19,
+    "title": "HIGH ON YOU",
+    "artist": "Jind Universe",
+    "cover": "https://picsum.photos/seed/highonyou/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/HIGH%20ON%20YOU%20-%20Jind%20Universe%20_%20Latest%20Punjabi%20Love%20Song%202024.mp3"
+  },
+  {
+    "id": 20,
+    "title": "Hai Hai Jawaani",
+    "artist": "Don Mixicano",
+    "cover": "https://picsum.photos/seed/haihai/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Hai%20Hai%20Jawaani%20feat.%20Don%20Mixicano%20-%20Official%20Video%20%20Jawani%20On%20The%20Rocks%20%20Stereo%20Nation%20Taz%20-%20Tips%20Official.mp3"
+  },
+  {
+    "id": 21,
+    "title": "I Wanna Be Yours",
+    "artist": "Arctic Monkeys",
+    "cover": "https://picsum.photos/seed/iwannabeyours/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/I%20Wanna%20Be%20Yours.mp3"
+  },
+  {
+    "id": 22,
+    "title": "Kooch Na Karin",
+    "artist": "Fahad Mustafa & Mehwish Hayat",
+    "cover": "https://picsum.photos/seed/koochna/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Kooch%20Na%20Karin-Full%20Video%20Song%20%20Load%20Wedding%20%20Fahad%20Mustafa%20%26%20Mehwish%20Hayat%20%20Azhar%20Abbas%20-%20ML%20Series.mp3"
+  },
+  {
+    "id": 23,
+    "title": "Mi Amor",
+    "artist": "Unknown",
+    "cover": "https://picsum.photos/seed/miamor/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Mi%20Amor.mp3"
+  },
+  {
+    "id": 24,
+    "title": "Obsessed",
+    "artist": "Riar Saab ft. Abhijay Sharma",
+    "cover": "https://picsum.photos/seed/obsessed/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Obsessed%20-%20Riar%20Saab%2C%20%40AbhijaySharma%20%20_%20Official%20Audio.mp3"
+  },
+  {
+    "id": 25,
+    "title": "Bamb Jatt",
+    "artist": "Amrit Maan & Jasmine Sandlas",
+    "cover": "https://picsum.photos/seed/bambjatt/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Punjabi%20Songs%20%20Bamb%20Jatt%20%20Amrit%20Maan%20%20Jasmine%20Sandlas%20Ft.%20DJ%20Flow%20%20Ishtar%20Punjabi%20-%20Ishtar%20Punjabi.mp3"
+  },
+  {
+    "id": 26,
+    "title": "One Love",
+    "artist": "Shubh",
+    "cover": "https://picsum.photos/seed/onelove/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Shubh%20-%20One%20Love%20%28Official%20Audio%29.mp3"
+  },
+  {
+    "id": 27,
+    "title": "Water",
+    "artist": "Diljit Dosanjh",
+    "cover": "https://picsum.photos/seed/waterdiljit/300/300",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Water%20I%20Diljit%20Dosanjh%20I%20Happy%20Valentine%20Day.mp3"
   }
 ]
