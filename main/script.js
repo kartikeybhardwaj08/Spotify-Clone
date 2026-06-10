@@ -4,6 +4,7 @@ let currentIndex = 0;
 let isPlaying = false;
 let isShuffle = false;
 let isRepeat = false;
+let queue = []; // Queue for songs
 
 // ========== ELEMENTS ==========
 const audio = document.getElementById('audioPlayer');
@@ -53,9 +54,25 @@ function renderCards(songList, containerId) {
       <div class="card-title">${song.title}</div>
       <div class="card-artist">${song.artist}</div>
       <div class="play-overlay"><i class="fas fa-play"></i></div>
+      <button class="add-to-queue-btn" title="Add to Queue">
+        <i class="fas fa-plus"></i>
+      </button>
     `;
 
-    card.addEventListener('click', () => playSong(i));
+    // Play on card click
+    card.addEventListener('click', (e) => {
+      if (!e.target.closest('.add-to-queue-btn')) {
+        playSong(i);
+      }
+    });
+
+    // Add to Queue button
+    const addBtn = card.querySelector('.add-to-queue-btn');
+    addBtn.addEventListener('click', (e) => {
+      e.stopImmediatePropagation();
+      addToQueue(song);
+    });
+
     container.appendChild(card);
   });
 }
@@ -95,6 +112,52 @@ function playSong(index) {
   currentTitle.textContent = song.title;
   currentArtist.textContent = song.artist;
 
+  // Update Right Sidebar with transition
+  const rightSidebar = document.querySelector('.right-sidebar');
+  const rightCover = document.getElementById('rightCover');
+  const rightTitle = document.getElementById('rightTitle');
+  const rightArtist = document.getElementById('rightArtist');
+
+  if (rightSidebar) {
+    rightSidebar.style.display = 'block';
+    // Trigger transition
+    setTimeout(() => {
+      rightSidebar.style.opacity = '1';
+      rightSidebar.style.transform = 'translateX(0)';
+    }, 10);
+  }
+
+  if (rightCover) rightCover.src = song.cover;
+  if (rightTitle) rightTitle.textContent = song.title;
+  if (rightArtist) rightArtist.textContent = song.artist;
+
+  // Update Queue display (in case queue changed)
+  updateQueueDisplay();
+
+  // Update Queue Section (Next Song)
+  let nextSong;
+
+  if (isShuffle) {
+    // Pick a random different song when shuffle is on
+    let randomIndex;
+    do {
+      randomIndex = Math.floor(Math.random() * songs.length);
+    } while (randomIndex === currentIndex && songs.length > 1);
+    nextSong = songs[randomIndex];
+  } else {
+    // Normal next song
+    const nextIndex = (currentIndex + 1) % songs.length;
+    nextSong = songs[nextIndex];
+  }
+
+  const queueCover = document.getElementById('queueCover');
+  const queueTitle = document.getElementById('queueTitle');
+  const queueArtist = document.getElementById('queueArtist');
+
+  if (queueCover) queueCover.src = nextSong.cover;
+  if (queueTitle) queueTitle.textContent = nextSong.title;
+  if (queueArtist) queueArtist.textContent = nextSong.artist;
+
   document.querySelectorAll('.song-card').forEach(c => c.classList.remove('active'));
   const activeCard = document.querySelector(`.song-card[data-index="${currentIndex}"]`);
   if (activeCard) {
@@ -130,6 +193,20 @@ prevBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
   if (songs.length === 0) return;
+
+  // Priority: Play from queue if available
+  if (queue.length > 0) {
+    const nextSongFromQueue = queue.shift();
+    updateQueueDisplay();
+
+    const songIndex = songs.findIndex(s => s.id === nextSongFromQueue.id);
+    if (songIndex !== -1) {
+      playSong(songIndex);
+    }
+    return;
+  }
+
+  // Normal next behavior
   if (isShuffle) {
     currentIndex = Math.floor(Math.random() * songs.length);
   } else {
@@ -175,6 +252,21 @@ volumeBar.addEventListener('input', () => {
 // ========== SONG END ==========
 audio.addEventListener('ended', () => {
   if (isRepeat) return;
+
+  // Priority: Queue first
+  if (queue.length > 0) {
+    const nextSongFromQueue = queue.shift(); // Take first song from queue
+    updateQueueDisplay();
+
+    // Find index in main songs list
+    const songIndex = songs.findIndex(s => s.id === nextSongFromQueue.id);
+    if (songIndex !== -1) {
+      playSong(songIndex);
+    }
+    return;
+  }
+
+  // Normal behavior (Shuffle or Next)
   if (isShuffle) {
     currentIndex = Math.floor(Math.random() * songs.length);
   } else {
@@ -239,6 +331,129 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.classList.add('active');
   });
 });
+
+// ========== QUEUE BUTTON ==========
+const queueBtn = document.getElementById('queueBtn');
+
+if (queueBtn) {
+  queueBtn.addEventListener('click', () => {
+    if (songs.length === 0 || currentIndex < 0) return;
+
+    const currentSong = songs[currentIndex];
+    
+    // Avoid duplicates at the end
+    if (queue.length === 0 || queue[queue.length - 1].id !== currentSong.id) {
+      queue.push(currentSong);
+      showToast(`"${currentSong.title}" added to queue`);
+      updateQueueDisplay();
+    }
+  });
+}
+
+function updateQueueDisplay() {
+  const queueList = document.getElementById('queueList');
+  if (!queueList) return;
+
+  queueList.innerHTML = '';
+
+  if (queue.length === 0) {
+    const queueHeader = document.querySelector('.queue-header span');
+    if (queueHeader) queueHeader.textContent = 'Next in queue';
+    return;
+  }
+
+  // Update header with count
+  const queueHeader = document.querySelector('.queue-header span');
+  if (queueHeader) {
+    queueHeader.textContent = `Next in queue (${queue.length})`;
+  }
+
+  // Show up to 4 songs in queue
+  const songsToShow = queue.slice(0, 4);
+
+  songsToShow.forEach((song) => {
+    const item = document.createElement('div');
+    item.className = 'queue-item';
+    item.innerHTML = `
+      <img src="${song.cover}" alt="${song.title}">
+      <div class="queue-info">
+        <span>${song.title}</span>
+        <small>${song.artist}</small>
+      </div>
+    `;
+    queueList.appendChild(item);
+  });
+}
+
+function addToQueue(song) {
+  queue.push(song);
+  showToast(`"${song.title}" added to queue`);
+  updateQueueDisplay();
+}
+
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.style.cssText = `
+    position: fixed; bottom: 120px; left: 50%; transform: translateX(-50%);
+    background: #1DB954; color: #000; padding: 12px 24px; border-radius: 25px;
+    font-size: 14px; font-weight: 600; z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  `;
+  toast.textContent = message;
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.transition = 'all 0.3s ease';
+    toast.style.opacity = '0';
+    setTimeout(() => toast.parentNode.removeChild(toast), 300);
+  }, 2200);
+}
+
+// ========== HORIZONTAL SCROLL ARROWS ==========
+const scrollLeftBtn = document.getElementById('scrollLeft');
+const scrollRightBtn = document.getElementById('scrollRight');
+const hindiRow = document.getElementById('hindiRow');
+
+if (scrollLeftBtn && scrollRightBtn && hindiRow) {
+  const scrollAmount = 300; // pixels to scroll each click
+
+  scrollLeftBtn.addEventListener('click', () => {
+    hindiRow.scrollBy({
+      left: -scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+  scrollRightBtn.addEventListener('click', () => {
+    hindiRow.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Recommended section arrows
+const recScrollLeftBtn = document.getElementById('recScrollLeft');
+const recScrollRightBtn = document.getElementById('recScrollRight');
+const recommendedRow = document.getElementById('recommendedRow');
+
+if (recScrollLeftBtn && recScrollRightBtn && recommendedRow) {
+  const recScrollAmount = 300;
+
+  recScrollLeftBtn.addEventListener('click', () => {
+    recommendedRow.scrollBy({
+      left: -recScrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+  recScrollRightBtn.addEventListener('click', () => {
+    recommendedRow.scrollBy({
+      left: recScrollAmount,
+      behavior: 'smooth'
+    });
+  });
+}
 
 // ========== INIT ==========
 loadSongs();
