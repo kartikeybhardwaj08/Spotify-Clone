@@ -128,10 +128,18 @@
         </div>
 
         <!-- ===== RIGHT SIDEBAR ===== -->
-        <aside class="right-sidebar">
+        <!-- Floating expand tab — visible only when sidebar is collapsed -->
+        <button class="right-sidebar-expand-tab" id="rightExpandTab" title="Show Now Playing">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <aside class="right-sidebar" id="rightSidebar">
             <div class="now-playing">
                 <div class="now-playing-header">
                     <span>Now Playing</span>
+                    <button class="right-sidebar-collapse-btn" id="rightSidebarCollapseBtn" title="Collapse">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
                 
                 <img id="rightCover" src="https://picsum.photos/seed/default/300/300" alt="Album Art">
@@ -277,6 +285,7 @@
             <div class="volume-bar-container">
                 <input type="range" id="volumeBar" value="100" min="0" max="100" />
             </div>
+            <!-- Now Playing panel toggle removed — use right edge tab instead -->
             <button class="ctrl-btn" title="Full screen">
                 <i class="fas fa-up-right-and-down-left-from-center"></i>
             </button>
