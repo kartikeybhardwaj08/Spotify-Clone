@@ -761,6 +761,8 @@ function playSong(index) {
     setTimeout(() => {
       rightSidebar.style.opacity = '1';
       rightSidebar.style.transform = 'translateX(0)';
+      // Apply saved collapse/expand preference
+      if (window._applyRightSidebarState) window._applyRightSidebarState();
     }, 10);
   }
 
@@ -1405,6 +1407,44 @@ if (rightHeartBtn) {
   // Close sidebar when a library item is clicked on mobile
   // (handled inside openPlaylistView so it closes AFTER the view loads)
   window._closeSidebar = closeSidebar;
+})();
+
+// ========== RIGHT SIDEBAR COLLAPSE / EXPAND ==========
+(function () {
+  const rightSidebar      = document.getElementById('rightSidebar');
+  const collapseBtn       = document.getElementById('rightSidebarCollapseBtn');
+  const expandBtn         = document.getElementById('expandRightSidebarBtn');
+  const expandTab         = document.getElementById('rightExpandTab');
+
+  // Load saved preference
+  let isCollapsed = localStorage.getItem('rightSidebarCollapsed') === 'true';
+
+  function applyState() {
+    if (!rightSidebar) return;
+    if (isCollapsed) {
+      rightSidebar.classList.add('collapsed');
+      if (collapseBtn) collapseBtn.querySelector('i').className = 'fas fa-chevron-left';
+      if (expandBtn)   expandBtn.classList.add('active');
+      if (expandTab)   expandTab.style.display = 'flex';
+    } else {
+      rightSidebar.classList.remove('collapsed');
+      if (collapseBtn) collapseBtn.querySelector('i').className = 'fas fa-chevron-right';
+      if (expandBtn)   expandBtn.classList.remove('active');
+      if (expandTab)   expandTab.style.display = 'none';
+    }
+    localStorage.setItem('rightSidebarCollapsed', isCollapsed);
+  }
+
+  function toggle() {
+    isCollapsed = !isCollapsed;
+    applyState();
+  }
+
+  if (collapseBtn) collapseBtn.addEventListener('click', toggle);
+  if (expandBtn)   expandBtn.addEventListener('click', toggle);
+  if (expandTab)   expandTab.addEventListener('click', toggle);
+
+  window._applyRightSidebarState = applyState;
 })();
 
 // ========== INIT ==========
