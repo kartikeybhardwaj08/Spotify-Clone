@@ -101,6 +101,42 @@ const closeAddToPlaylistModal = document.getElementById('closeAddToPlaylistModal
 const playlistOptions = document.getElementById('playlistOptions');
 const libraryList = document.getElementById('libraryList');
 
+// ========== RECENT PLAYLISTS ROW ==========
+function renderRecentPlaylists() {
+  const row = document.getElementById('recentPlaylistsRow');
+  if (!row) return;
+  row.innerHTML = '';
+
+  // 1. Liked Songs card — always first
+  const likedCount = likedSongIds.size;
+  const likedCard = document.createElement('div');
+  likedCard.className = 'recent-card';
+  likedCard.innerHTML = `
+    <div class="liked-icon"><i class="fas fa-heart"></i></div>
+    <span>Liked Songs</span>
+  `;
+  likedCard.addEventListener('click', () => openPlaylistView('liked'));
+  row.appendChild(likedCard);
+
+  // 2. User playlists
+  playlists.forEach(playlist => {
+    const cover = playlist.songs.length > 0
+      ? `<img src="${playlist.songs[0].cover}" alt="${playlist.name}" onerror="this.src='https://picsum.photos/seed/${playlist.id}/60/60'" />`
+      : `<div style="width:60px;height:60px;background:#282828;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-music" style="color:#535353;font-size:20px;"></i></div>`;
+
+    const card = document.createElement('div');
+    card.className = 'recent-card';
+    card.innerHTML = `${cover}<span>${playlist.name}</span>`;
+    card.addEventListener('click', () => openPlaylistView(playlist.id));
+    row.appendChild(card);
+  });
+}
+
+function attachRecentCardListeners() {
+  // Now just calls renderRecentPlaylists since all cards are dynamic
+  renderRecentPlaylists();
+}
+
 // ========== PLAYLIST FUNCTIONS ==========
 function renderLibraryList() {
   libraryList.innerHTML = '';
@@ -127,7 +163,7 @@ function renderLibraryList() {
       : 'https://picsum.photos/seed/' + playlist.id + '/300/300';
     item.innerHTML = `
       <img src="${cover}" alt="${playlist.name}" />
-      <div class="lib-info">
+      <div class="lib-info" style="flex:1; min-width:0;">
         <span class="lib-name">${playlist.name}</span>
         <span class="lib-meta">Playlist • ${playlist.songs.length} songs</span>
       </div>
@@ -140,7 +176,15 @@ function renderLibraryList() {
         </button>
       </div>
     `;
-    item.querySelector('.lib-info, img').addEventListener('click', () => openPlaylistView(playlist.id));
+
+    // ✅ Click on the WHOLE item opens playlist
+    // — but not if the user tapped an action button
+    item.addEventListener('click', (e) => {
+      if (!e.target.closest('.edit-playlist-btn') && !e.target.closest('.delete-playlist-btn')) {
+        openPlaylistView(playlist.id);
+      }
+    });
+
     item.querySelector('.edit-playlist-btn').addEventListener('click', (e) => {
       e.stopPropagation();
       openEditPlaylistModal(playlist.id);
@@ -162,6 +206,7 @@ function createPlaylist(name) {
   playlists.push(newPlaylist);
   saveStateToLocalStorage();
   renderLibraryList();
+  renderRecentPlaylists();
 }
 
 function openEditPlaylistModal(playlistId) {
@@ -187,6 +232,7 @@ function deletePlaylist(playlistId) {
   playlists = playlists.filter(p => p.id !== playlistId);
   saveStateToLocalStorage();
   renderLibraryList();
+  renderRecentPlaylists();
 }
 
 function openAddToPlaylistModal(song) {
@@ -206,6 +252,7 @@ function openAddToPlaylistModal(song) {
     } else {
       likedSongIds.add(song.id);
       saveStateToLocalStorage();
+      renderRecentPlaylists();
       showToast('Added to Liked Songs');
     }
     addToPlaylistModal.classList.remove('show');
@@ -242,199 +289,192 @@ function addSongToPlaylist(playlistId, song) {
     playlist.songs.push(song);
     saveStateToLocalStorage();
     renderLibraryList();
+    renderRecentPlaylists();
     showToast('Added to ' + playlist.name);
   }
   addToPlaylistModal.classList.remove('show');
 }
 
 function openPlaylistView(playlistId) {
+  const sidebar = document.querySelector('.left-sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+
+  // Hide sidebar instantly on ALL screen sizes for playlist view
+  if (sidebar) {
+    sidebar.style.transition = 'none';
+    sidebar.classList.remove('open');
+    // On desktop too — hide left sidebar so playlist gets full width
+    sidebar.style.display = 'none';
+    setTimeout(() => { sidebar.style.transition = ''; }, 50);
+  }
+  if (overlay) overlay.classList.remove('show');
+  document.body.style.overflow = '';
+
+  // Mark mainContent as "playlist mode" for CSS
+  const mc = document.getElementById('mainContent');
+  if (mc) mc.classList.add('playlist-mode');
+
+  _renderPlaylistView(playlistId);
+}
+
+function _renderPlaylistView(playlistId) {
   let playlistSongs = [];
-  let playlistName = 'All Songs';
-  
+  let playlistName  = 'All Songs';
+
   if (playlistId === 'liked') {
-    playlistName = 'Liked Songs';
+    playlistName  = 'Liked Songs';
     playlistSongs = songs.filter(s => likedSongIds.has(s.id));
   } else {
     const playlist = playlists.find(p => p.id === playlistId);
     if (!playlist) return;
-    playlistName = playlist.name;
-    playlistSongs = playlist.songs;
+    playlistName  = playlist.name;
+    playlistSongs = [...playlist.songs];
   }
-  
-  // Update main content to show playlist
-  const mainContent = document.getElementById('mainContent');
+
+  const mainContent  = document.getElementById('mainContent');
+  const isMobileView = window.innerWidth <= 768;
+  const coverSize    = isMobileView ? '100px' : '200px';
+  const titleSize    = isMobileView ? '1.6rem' : '3.5rem';
+  const headerPad    = isMobileView ? '16px 12px' : '40px 24px';
+
+  // Pick accent color based on playlist
+  const accentColor = playlistId === 'liked' ? '#450af5'
+    : playlistSongs.length > 0 ? '#c0392b' : '#1DB954';
+
+  const coverHTML = playlistId === 'liked'
+    ? `<div class="pl-cover-liked"><i class="fas fa-heart"></i></div>`
+    : playlistSongs.length > 0
+      ? `<img class="pl-cover-img" src="${playlistSongs[0].cover}" onerror="this.src='https://picsum.photos/seed/pl/200/200'" />`
+      : `<div class="pl-cover-empty"><i class="fas fa-music"></i></div>`;
+
   mainContent.innerHTML = `
-    <div class="playlist-header" data-playlist-type="${playlistId}" style="background: linear-gradient(180deg, ${playlistId === 'liked' ? '#450af5' : '#535353'} 0%, #181818 100%); padding: 40px 24px; border-radius: 12px; margin-bottom: 24px;">
-      <div style="display: flex; align-items: end; gap: 24px;">
-        <div style="width: 200px; height: 200px; background: #282828; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
-          ${playlistId === 'liked' 
-            ? '<div class="liked-icon" style="width: 80px; height: 80px; background: linear-gradient(135deg, #450af5, #c4efd9); display: flex; align-items: center; justify-content: center;"><i class="fas fa-heart" style="font-size: 2.5rem; color: white;"></i></div>'
-            : playlistSongs.length > 0 
-              ? '<img src="' + playlistSongs[0].cover + '" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />'
-              : '<i class="fas fa-music" style="font-size: 4rem; color: #535353;"></i>'
-          }
-        </div>
-        <div>
-          <p style="color: #b3b3b3; margin: 0 0 8px;">PLAYLIST</p>
-          <h1 style="color: white; font-size: 4rem; margin: 0 0 16px;">${playlistName}</h1>
-          <p style="color: #b3b3b3; margin: 0;">${playlistSongs.length} songs</p>
+    <div class="pl-hero" style="--accent: ${accentColor};">
+      <div class="pl-hero-bg"></div>
+      <div class="pl-hero-content">
+        <div class="pl-cover-wrap">${coverHTML}</div>
+        <div class="pl-meta">
+          <span class="pl-type-label">Playlist</span>
+          <h1 class="pl-title">${playlistName}</h1>
+          <p class="pl-songcount">${playlistSongs.length} song${playlistSongs.length !== 1 ? 's' : ''}</p>
         </div>
       </div>
+      <div class="pl-controls">
+        <button id="playlistPlayBtn" class="pl-play-btn">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="playlistShuffleBtn" class="pl-shuffle-btn" style="color:${isShuffle ? '#1DB954' : '#b3b3b3'}">
+          <i class="fas fa-shuffle"></i>
+        </button>
+        <span class="pl-duration-label">${playlistSongs.length} tracks</span>
+      </div>
     </div>
-    <div class="playlist-controls" style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
-      <button class="play-pause-btn" id="playlistPlayBtn" style="width: 64px; height: 64px; border-radius: 50%; background: #1DB954; border: none; color: black; font-size: 1.7rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s;">
-        <i class="fas fa-play"></i>
-      </button>
-      <button class="playlist-shuffle-btn" id="playlistShuffleBtn" style="width: 40px; height: 40px; border-radius: 50%; background: transparent; border: none; color: ${isShuffle ? '#1DB954' : '#b3b3b3'}; font-size: 1.2rem; cursor: pointer; transition: all 0.2s;">
-        <i class="fas fa-shuffle"></i>
-      </button>
-    </div>
-    <div class="playlist-songs" id="playlistSongsContainer" style="width: 100%;"></div>
+
+    <div id="playlistSongsContainer" class="pl-songs-list"></div>
   `;
-  
-  // Render playlist songs
-  const playlistSongsContainer = document.getElementById('playlistSongsContainer');
+
+  /* ── Song rows ── */
+  const container = document.getElementById('playlistSongsContainer');
+  const isMobile  = window.innerWidth <= 768;
+
+  if (playlistSongs.length === 0) {
+    container.innerHTML = '<p style="color:#b3b3b3; padding:20px 12px; font-size:14px;">No songs yet. Add some!</p>';
+  }
+
   playlistSongs.forEach((song, i) => {
-    const songRow = document.createElement('div');
-    songRow.className = 'playlist-song';
-    songRow.style.cssText = 'display: flex; align-items: center; gap: 16px; padding: 12px 24px; border-radius: 8px; cursor: pointer; transition: background 0.2s;';
-    songRow.innerHTML = `
-      <div style="width: 40px; text-align: center;">
-        <span class="song-number" style="color: #b3b3b3; font-size: 0.9rem;">${i + 1}</span>
-        <i class="fas fa-play song-play-icon" style="color: white; font-size: 0.9rem; display: none;"></i>
+    const row = document.createElement('div');
+    row.style.cssText = 'display:flex; align-items:center; gap:12px; padding:10px 8px; border-radius:8px; cursor:pointer; transition:background 0.15s;';
+    row.innerHTML = `
+      <div style="width:28px; text-align:center; flex-shrink:0; color:#b3b3b3; font-size:0.85rem;">${i + 1}</div>
+      <img src="${song.cover}" onerror="this.src='https://picsum.photos/seed/${song.id}/48/48'"
+           style="width:48px; height:48px; border-radius:4px; object-fit:cover; flex-shrink:0;" />
+      <div style="flex:1; min-width:0; overflow:hidden;">
+        <p style="color:white; margin:0; font-weight:500; font-size:14px;
+                  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${song.title}</p>
+        <p style="color:#b3b3b3; margin:3px 0 0; font-size:12px;
+                  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${song.artist}</p>
       </div>
-      <div style="width: 56px; height: 56px; border-radius: 4px; background: #282828; flex-shrink: 0;">
-        <img src="${song.cover}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;" />
-      </div>
-      <div style="flex: 1;">
-        <p style="color: white; margin: 0; font-weight: 500;">${song.title}</p>
-        <p style="color: #b3b3b3; margin: 4px 0 0; font-size: 0.9rem;">${song.artist}</p>
-      </div>
-      <button class="remove-song-btn" data-song-id="${song.id}" data-playlist-id="${playlistId}" style="background: none; border: none; color: #b3b3b3; cursor: pointer; padding: 8px; opacity: 0; transition: opacity 0.2s;">
+      <button class="remove-song-btn" style="background:none; border:none; color:#b3b3b3;
+              cursor:pointer; padding:8px; flex-shrink:0; font-size:13px;
+              opacity:${isMobile ? '1' : '0'}; transition:opacity 0.2s;">
         <i class="fas fa-trash-alt"></i>
       </button>
     `;
-    
-    // Show remove button and play icon on hover
-    songRow.addEventListener('mouseenter', () => {
-      songRow.querySelector('.remove-song-btn').style.opacity = '1';
-      songRow.querySelector('.song-number').style.display = 'none';
-      songRow.querySelector('.song-play-icon').style.display = 'inline';
-    });
-    songRow.addEventListener('mouseleave', () => {
-      songRow.querySelector('.remove-song-btn').style.opacity = '0';
-      songRow.querySelector('.song-number').style.display = 'inline';
-      songRow.querySelector('.song-play-icon').style.display = 'none';
-    });
-    
-    // Play song when clicking anywhere except remove button
-    songRow.addEventListener('click', (e) => {
-      if (!e.target.closest('.remove-song-btn')) {
-        const songIndex = songs.findIndex(s => s.id === song.id);
-        if (songIndex !== -1) {
-          // Set current playlist state
-          currentPlaylistType = playlistId;
-          currentPlaylistSongs = playlistSongs;
-          playSong(songIndex);
-        }
+
+    /* desktop hover */
+    if (!isMobile) {
+      row.addEventListener('mouseenter', () => {
+        row.style.background = 'rgba(255,255,255,0.08)';
+        row.querySelector('.remove-song-btn').style.opacity = '1';
+      });
+      row.addEventListener('mouseleave', () => {
+        row.style.background = 'transparent';
+        row.querySelector('.remove-song-btn').style.opacity = '0';
+      });
+    }
+
+    /* play on tap/click */
+    row.addEventListener('click', e => {
+      if (e.target.closest('.remove-song-btn')) return;
+      const idx = songs.findIndex(s => s.id === song.id);
+      if (idx !== -1) {
+        currentPlaylistType  = playlistId;
+        currentPlaylistSongs = playlistSongs;
+        playSong(idx);
       }
     });
-    
-    // Remove song from playlist/liked songs
-    const removeBtn = songRow.querySelector('.remove-song-btn');
-    removeBtn.addEventListener('click', (e) => {
+
+    /* remove */
+    row.querySelector('.remove-song-btn').addEventListener('click', e => {
       e.stopPropagation();
       if (playlistId === 'liked') {
         likedSongIds.delete(song.id);
       } else {
-        const playlist = playlists.find(p => p.id === playlistId);
-        if (playlist) {
-          playlist.songs = playlist.songs.filter(s => s.id !== song.id);
-        }
+        const pl = playlists.find(p => p.id === playlistId);
+        if (pl) pl.songs = pl.songs.filter(s => s.id !== song.id);
       }
       saveStateToLocalStorage();
-      openPlaylistView(playlistId); // Refresh view
+      _renderPlaylistView(playlistId);
     });
-    
-    playlistSongsContainer.appendChild(songRow);
-  });
-  
-  // Add functionality to playlist play button
-  const playlistPlayBtn = document.getElementById('playlistPlayBtn');
-  const playlistPlayIcon = playlistPlayBtn.querySelector('i');
-  
-  // Update play button icon initially
-  const currentSong = songs[currentIndex];
-  const isCurrentPlaylistSong = playlistSongs.some(s => s.id === currentSong.id);
-  if (isCurrentPlaylistSong && isPlaying) {
-    playlistPlayIcon.className = 'fas fa-pause';
-  } else {
-    playlistPlayIcon.className = 'fas fa-play';
-  }
 
+    container.appendChild(row);
+  });
+
+  /* ── Play button ── */
+  const playlistPlayBtn = document.getElementById('playlistPlayBtn');
   playlistPlayBtn.addEventListener('click', () => {
     if (playlistSongs.length === 0) return;
-
-    const currentSongPlaying = songs[currentIndex];
-    const isSongInPlaylist = playlistSongs.some(s => s.id === currentSongPlaying.id);
-    
-    if (isSongInPlaylist && isPlaying) {
-      // Pause
-      audio.pause();
-      isPlaying = false;
-      updatePlayIcon();
-    } else if (isSongInPlaylist && !isPlaying) {
-      // Resume
-      audio.play();
-      isPlaying = true;
-      updatePlayIcon();
+    const cur = songs[currentIndex];
+    const inList = playlistSongs.some(s => s.id === cur.id);
+    if (inList && isPlaying) {
+      audio.pause(); isPlaying = false; updatePlayIcon();
+    } else if (inList && !isPlaying) {
+      audio.play();  isPlaying = true;  updatePlayIcon();
     } else {
-      // Play first song in playlist
-      const firstSong = playlistSongs[0];
-      const songIndex = songs.findIndex(s => s.id === firstSong.id);
-      if (songIndex !== -1) {
-        currentPlaylistType = playlistId;
-        currentPlaylistSongs = playlistSongs;
-        playSong(songIndex);
-      }
+      const idx = songs.findIndex(s => s.id === playlistSongs[0].id);
+      if (idx !== -1) { currentPlaylistType = playlistId; currentPlaylistSongs = playlistSongs; playSong(idx); }
     }
   });
 
-  // Playlist shuffle button
-  const playlistShuffleBtn = document.getElementById('playlistShuffleBtn');
-  if (playlistShuffleBtn) {
-    playlistShuffleBtn.addEventListener('click', () => {
-      isShuffle = !isShuffle;
-      shuffleBtn.classList.toggle('active', isShuffle);
-      // Update this shuffle button's color
-      playlistShuffleBtn.style.color = isShuffle ? '#1DB954' : '#b3b3b3';
-      // If we're already playing this playlist, shuffle next
-      currentPlaylistType = playlistId;
-      currentPlaylistSongs = playlistSongs;
-    });
-  }
-
-  // Hover effect on song rows
-  playlistSongsContainer.querySelectorAll('.playlist-song').forEach(row => {
-    row.addEventListener('mouseenter', () => {
-      row.style.background = 'rgba(255, 255, 255, 0.1)';
-    });
-    row.addEventListener('mouseleave', () => {
-      row.style.background = 'transparent';
-    });
+  /* ── Shuffle button ── */
+  document.getElementById('playlistShuffleBtn').addEventListener('click', function () {
+    isShuffle = !isShuffle;
+    shuffleBtn.classList.toggle('active', isShuffle);
+    this.style.color = isShuffle ? '#1DB954' : '#b3b3b3';
+    currentPlaylistType  = playlistId;
+    currentPlaylistSongs = playlistSongs;
   });
 
-  // Back button to home
-  const playlistHeader = mainContent.querySelector('.playlist-header');
+  /* ── Back button — fixed top bar ── */
   const backBtn = document.createElement('button');
-  backBtn.innerHTML = '<i class="fas fa-arrow-left"></i>';
-  backBtn.style.cssText = 'background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; margin-bottom: 16px;';
-  backBtn.addEventListener('click', () => {
-    // Reset main content to home view
-    window.location.reload(); // Simple way to reset
-  });
-  mainContent.insertBefore(backBtn, playlistHeader);
+  backBtn.className = 'pl-back-btn';
+  backBtn.innerHTML = '<i class="fas fa-arrow-left"></i> Back';
+  backBtn.addEventListener('click', restoreHomeView);
+  mainContent.insertBefore(backBtn, mainContent.firstChild);
+
+  /* scroll to top */
+  mainContent.scrollTop = 0;
 }
+
 
 // ========== MODAL EVENT LISTENERS ==========
 createPlaylistBtn.addEventListener('click', () => {
@@ -540,6 +580,63 @@ function renderCards(songList, containerId) {
   });
 }
 
+// ========== HOME VIEW SNAPSHOT & RESTORE ==========
+let _homeHTML = null;
+
+function snapshotHomeView() {
+  const mc = document.getElementById('mainContent');
+  if (mc) _homeHTML = mc.innerHTML;
+}
+
+function restoreHomeView() {
+  const mc = document.getElementById('mainContent');
+  if (!mc || !_homeHTML) return;
+
+  // Remove playlist mode, restore sidebar
+  mc.classList.remove('playlist-mode');
+  const sidebar = document.querySelector('.left-sidebar');
+  if (sidebar) sidebar.style.display = '';
+
+  mc.innerHTML = _homeHTML;
+
+  // Re-attach card click listeners
+  renderCards(songs, 'recommendedRow');
+  renderCards(songs, 'hindiRow');
+
+  // Re-mark active card
+  document.querySelectorAll('.song-card').forEach(c => c.classList.remove('active'));
+  const activeCard = document.querySelector(`.song-card[data-index="${currentIndex}"]`);
+  if (activeCard) activeCard.classList.add('active');
+
+  // Re-attach content filter buttons
+  document.querySelectorAll('.content-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.content-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Re-attach scroll arrows
+  const scrollLeftBtn  = document.getElementById('scrollLeft');
+  const scrollRightBtn = document.getElementById('scrollRight');
+  const hindiRow       = document.getElementById('hindiRow');
+  if (scrollLeftBtn && scrollRightBtn && hindiRow) {
+    scrollLeftBtn.addEventListener('click',  () => hindiRow.scrollBy({ left: -300, behavior: 'smooth' }));
+    scrollRightBtn.addEventListener('click', () => hindiRow.scrollBy({ left:  300, behavior: 'smooth' }));
+  }
+  const recL = document.getElementById('recScrollLeft');
+  const recR = document.getElementById('recScrollRight');
+  const recRow = document.getElementById('recommendedRow');
+  if (recL && recR && recRow) {
+    recL.addEventListener('click', () => recRow.scrollBy({ left: -300, behavior: 'smooth' }));
+    recR.addEventListener('click', () => recRow.scrollBy({ left:  300, behavior: 'smooth' }));
+  }
+
+  // Re-attach recent card listeners
+  attachRecentCardListeners();
+  renderRecentPlaylists();
+}
+
 // ========== LOAD SONGS FROM JSON ==========
 async function loadSongs() {
   const container = document.getElementById('recommendedRow');
@@ -548,12 +645,19 @@ async function loadSongs() {
     songs = await res.json();
     renderCards(songs, 'recommendedRow');
     renderCards(songs, 'hindiRow');
+
+    // Snapshot home view HTML so we can restore it from playlist view
+    snapshotHomeView();
+
+    // Attach recent card listeners
+    attachRecentCardListeners();
     
     // Load saved state after songs are loaded
     loadStateFromLocalStorage();
     
-    // Render library list
+    // Render library list and recent playlists row
     renderLibraryList();
+    renderRecentPlaylists();
     
     // If we have a saved state, initialize the song
     if (songs.length > 0) {
@@ -1241,6 +1345,67 @@ heartBtn.addEventListener('click', saveStateToLocalStorage);
 if (rightHeartBtn) {
   rightHeartBtn.addEventListener('click', saveStateToLocalStorage);
 }
+
+// ========== MOBILE RESPONSIVE JS ==========
+(function () {
+  const menuToggle = document.getElementById('mobileMenuToggle');
+  const sidebar = document.querySelector('.left-sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  if (menuToggle) menuToggle.addEventListener('click', openSidebar);
+  if (overlay)    overlay.addEventListener('click', closeSidebar);
+
+  // Mobile bottom nav
+  const mobileHomeBtn    = document.getElementById('mobileHomeBtn');
+  const mobileSearchBtn  = document.getElementById('mobileSearchBtn');
+  const mobileLibraryBtn = document.getElementById('mobileLibraryBtn');
+  const searchInput      = document.getElementById('searchInput');
+
+  function setMobileActive(btn) {
+    [mobileHomeBtn, mobileSearchBtn, mobileLibraryBtn].forEach(b => b && b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+
+  if (mobileHomeBtn) {
+    mobileHomeBtn.addEventListener('click', () => {
+      setMobileActive(mobileHomeBtn);
+      window.location.reload();
+    });
+  }
+
+  if (mobileSearchBtn) {
+    mobileSearchBtn.addEventListener('click', () => {
+      setMobileActive(mobileSearchBtn);
+      // Focus the search input and scroll to top
+      if (searchInput) {
+        searchInput.focus();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
+  if (mobileLibraryBtn) {
+    mobileLibraryBtn.addEventListener('click', () => {
+      setMobileActive(mobileLibraryBtn);
+      openSidebar();
+    });
+  }
+
+  // Close sidebar when a library item is clicked on mobile
+  // (handled inside openPlaylistView so it closes AFTER the view loads)
+  window._closeSidebar = closeSidebar;
+})();
 
 // ========== INIT ==========
 loadSongs();
