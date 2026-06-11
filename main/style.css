@@ -346,6 +346,10 @@ aside {
     flex-shrink: 0;
 }
 
+.recent-row .liked-icon{
+    padding-left: 20px;
+}
+
 .library-item.liked .liked-icon {
     width: 48px;
     height: 48px;
@@ -1340,10 +1344,91 @@ aside {
     padding: 20px;
     flex-shrink: 0;
     overflow-y: auto;
+    overflow-x: hidden;
     display: none;
     opacity: 0;
     transform: translateX(20px);
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.3s cubic-bezier(0.4,0,0.2,1),
+                opacity 0.3s cubic-bezier(0.4,0,0.2,1),
+                transform 0.3s cubic-bezier(0.4,0,0.2,1),
+                padding 0.3s ease;
+}
+
+/* Collapsed state */
+.right-sidebar.collapsed {
+    width: 0 !important;
+    padding: 0 !important;
+    opacity: 0 !important;
+    transform: translateX(40px) !important;
+    pointer-events: none;
+}
+
+/* now-playing-header with collapse btn */
+.now-playing-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.right-sidebar-collapse-btn {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s, transform 0.3s;
+    flex-shrink: 0;
+}
+.right-sidebar-collapse-btn:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+/* Expand button in player bar — highlight when sidebar is collapsed */
+#expandRightSidebarBtn {
+    transition: color 0.2s;
+}
+#expandRightSidebarBtn.active {
+    color: #1DB954;
+}
+
+/* ── Floating expand tab on right edge ── */
+.right-sidebar-expand-tab {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 64px;
+    background: #282828;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    color: #b3b3b3;
+    font-size: 11px;
+    cursor: pointer;
+    display: none;          /* hidden by default — shown when collapsed */
+    align-items: center;
+    justify-content: center;
+    z-index: 199;           /* just below player (355) but above content */
+    transition: background 0.2s, color 0.2s, width 0.2s;
+    box-shadow: -3px 0 12px rgba(0,0,0,0.4);
+}
+.right-sidebar-expand-tab:hover {
+    background: #3e3e3e;
+    color: #fff;
+    width: 26px;
+}
+/* Show tab only when sidebar is collapsed */
+.right-sidebar.collapsed ~ .right-sidebar-expand-tab,
+body.right-collapsed .right-sidebar-expand-tab {
+    display: flex;
 }
 
 .now-playing {
