@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <!-- ========== NAVBAR ========== -->
     <nav>
         <div class="logo-container">
@@ -69,62 +68,7 @@
             </div>
 
             <ul class="library-list" id="libraryList">
-                <li class="library-item">
-                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdvYfqQHGw2qMH1sTLTjp%2Fresized%2F1715710400017_1000x1000.webp?alt=media&token=7aa00e20-9eae-47c4-ab0a-4b1c163645a6" alt="cover" />
-                    <div class="lib-info">
-                        <span class="lib-name">Best Collection</span>
-                        <span class="lib-meta">🟢 Playlist • RPG_player#1</span>
-                    </div>
-                </li>
-                <li class="library-item">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr_qbHcIUnfDkrG-ygvue2a6s5HG9jrF6Cw&s" alt="cover" />
-                    <div class="lib-info">
-                        <span class="lib-name">Confess Your Love - Funk</span>
-                        <span class="lib-meta">Playlist • RPG_player#1</span>
-                    </div>
-                </li>
-                <li class="library-item">
-                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00" alt="cover" />
-                    <div class="lib-info">
-                        <span class="lib-name">vibe</span>
-                        <span class="lib-meta">Playlist • RPG_player#1</span>
-                    </div>
-                </li>
-                <li class="library-item liked">
-                    <div class="liked-icon"><i class="fas fa-heart"></i></div>
-                    <div class="lib-info">
-                        <span class="lib-name">Liked Songs</span>
-                        <span class="lib-meta">Playlist • 46 songs</span>
-                    </div>
-                </li>
-                <li class="library-item">
-                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411134145e_800x800.webp?alt=media&token=30484985-907c-454b-a6e5-15af34d69e65" alt="cover" />
-                    <div class="lib-info">
-                        <span class="lib-name">MY ENEMY ULTRAFUNK</span>
-                        <span class="lib-meta">Playlist • RPG_player#1</span>
-                    </div>
-                </li>
-                <li class="library-item">
-                    <img src="https://cdn-images.dzcdn.net/images/cover/dd99fb2f076f8d7c7413fb27969bfbc3/0x1900-000000-80-0-0.jpg" alt="cover" />
-                    <div class="lib-info">
-                        <span class="lib-name">Badshah</span>
-                        <span class="lib-meta">Artist</span>
-                    </div>
-                </li>
-                <li class="library-item">
-                    <img src="https://i.redd.it/why-is-this-style-of-cover-art-so-popular-among-phonk-v0-gk4koaezfova1.jpg?width=600&format=pjpg&auto=webp&s=fdb0770d95e8dfd4fede682584ef4482d73438f5" alt="cover" />
-                    <div class="lib-info">
-                        <span class="lib-name">Yo Yo Honey Singh</span>
-                        <span class="lib-meta">Artist</span>
-                    </div>
-                </li>
-                <li class="library-item">
-                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411133943a_800x800.webp?alt=media&token=e50b6dc7-3095-43d7-97be-9fc9d4f06711" alt="cover" />
-                    <div class="lib-info">
-                        <span class="lib-name">Gulzaar Chhaniwala</span>
-                        <span class="lib-meta">Artist</span>
-                    </div>
-                </li>
+                <!-- Library items will be added dynamically -->
             </ul>
         </aside>
 
@@ -159,20 +103,20 @@
             </div>
 
             <!-- Recommended Section -->
-            <div class="section">
-                <div class="section-header">
-                    <h2>Recommended for today</h2>
-                    <div class="scroll-controls">
-                        <button class="scroll-btn" id="recScrollLeft"><i class="fas fa-chevron-left"></i></button>
-                        <button class="scroll-btn" id="recScrollRight"><i class="fas fa-chevron-right"></i></button>
-                        <a href="#" class="show-all">Show all</a>
-                    </div>
-                </div>
-                <!-- JS yahan cards inject karega -->
-                <div class="cards-row" id="recommendedRow">
-                    <p class="loading-text">Loading songs...</p>
-                </div>
-            </div>
+    <div class="section">
+      <div class="section-header">
+        <h2>Recommended for today</h2>
+        <div class="scroll-controls">
+          <button class="scroll-btn" id="recScrollLeft"><i class="fas fa-chevron-left"></i></button>
+          <button class="scroll-btn" id="recScrollRight"><i class="fas fa-chevron-right"></i></button>
+          <a href="#" class="show-all">Show all</a>
+        </div>
+      </div>
+      <!-- JS yahan cards inject karega -->
+      <div class="cards-row horizontal-two-row" id="recommendedRow">
+        <p class="loading-text">Loading songs...</p>
+      </div>
+    </div>
 
             <!-- Trending Section -->
             <div class="section">
@@ -185,7 +129,7 @@
                     </div>
                 </div>
                 <!-- JS yahan cards inject karega -->
-                <div class="cards-row horizontal-two-row" id="hindiRow">
+                <div class="cards-row" id="hindiRow">
                     <p class="loading-text">Loading songs...</p>
                 </div>
             </div>
@@ -206,6 +150,35 @@
                     <p id="rightArtist">--</p>
                 </div>
 
+                <!-- Progress Bar -->
+                <div class="right-sidebar-progress">
+                    <span id="rightCurrentTime">0:00</span>
+                    <div class="right-progress-bar-container">
+                        <input type="range" id="rightProgressBar" value="0" min="0" max="100" step="0.1">
+                    </div>
+                    <span id="rightTotalTime">0:00</span>
+                </div>
+
+                <!-- Controls -->
+                <div class="right-sidebar-controls">
+                    <button class="right-sidebar-heart" id="rightHeartBtn" title="Like Song">
+                        <i class="far fa-heart"></i>
+                    </button>
+                    <button class="right-sidebar-prev" id="rightPrevBtn" title="Previous">
+                        <i class="fas fa-backward-step"></i>
+                    </button>
+                    <button class="right-sidebar-play" id="rightPlayBtn" title="Play/Pause">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="right-sidebar-next" id="rightNextBtn" title="Next">
+                        <i class="fas fa-forward-step"></i>
+                    </button>
+                    <div class="right-sidebar-volume">
+                        <i class="fas fa-volume-high"></i>
+                        <input type="range" id="rightVolumeBar" value="100" min="0" max="100">
+                    </div>
+                </div>
+
                 <div class="queue-section">
                     <div class="queue-header">
                         <span>Next in queue</span>
@@ -219,6 +192,42 @@
         </aside>
 
     </main>
+
+    <!-- ===== CREATE PLAYLIST MODAL ===== -->
+    <div class="modal-overlay" id="playlistModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Create New Playlist</h3>
+                <button class="close-modal" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="playlistNameInput" placeholder="Playlist name" class="playlist-input" />
+                <div class="modal-actions">
+                    <button class="modal-btn cancel" id="cancelBtn">Cancel</button>
+                    <button class="modal-btn save" id="saveBtn">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ADD TO PLAYLIST MODAL ===== -->
+    <div class="modal-overlay" id="addToPlaylistModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add to Playlist</h3>
+                <button class="close-modal" id="closeAddToPlaylistModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="playlist-options" id="playlistOptions">
+                    <!-- Playlist options will be added dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ========== PLAYER ========== -->
     <footer class="player">
@@ -259,7 +268,7 @@
             <button class="ctrl-btn" title="Devices"><i class="fas fa-laptop"></i></button>
             <i class="fas fa-volume-high vol-icon"></i>
             <div class="volume-bar-container">
-                <input type="range" id="volumeBar" value="80" min="0" max="100" />
+                <input type="range" id="volumeBar" value="100" min="0" max="100" />
             </div>
             <button class="ctrl-btn" title="Full screen">
                 <i class="fas fa-up-right-and-down-left-from-center"></i>
