@@ -18,6 +18,10 @@
             <i class="fab fa-spotify"></i>
         </div>
         <div class="middle-nav">
+            <!-- Hamburger: visible only on mobile via CSS -->
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" style="display:none;" title="Library">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="home-btn">
                 <i class="fas fa-home" title="Home Page"></i>
             </div>
@@ -47,6 +51,8 @@
     </nav>
 
     <!-- ========== MAIN ========== -->
+    <!-- Sidebar overlay for mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <main>
 
         <!-- ===== LEFT SIDEBAR ===== -->
@@ -82,24 +88,9 @@
                 <button class="content-filter">Podcasts</button>
             </div>
 
-            <!-- Recent Row -->
-            <div class="recent-row">
-                <div class="recent-card">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqr_qbHcIUnfDkrG-ygvue2a6s5HG9jrF6Cw&s" alt="cover" />
-                    <span>Confess Your Love - Funk</span>
-                </div>
-                <div class="recent-card">
-                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00" alt="cover" />
-                    <span>LYA FUNK</span>
-                </div>
-                <div class="recent-card">
-                    <div class="liked-icon"><i class="fas fa-heart"></i></div>
-                    <span>Liked Songs</span>
-                </div>
-                <div class="recent-card">
-                    <img src="https://assets.promptbase.com/DALLE_IMAGES%2FdvYfqQHGw2qMH1sTLTjp%2Fresized%2F1715710400017_1000x1000.webp?alt=media&token=7aa00e20-9eae-47c4-ab0a-4b1c163645a6" alt="cover" />
-                    <span>vibe</span>
-                </div>
+            <!-- Recent Row — playlists dynamically injected by JS -->
+            <div class="recent-row" id="recentPlaylistsRow">
+                <!-- JS will render all playlists here -->
             </div>
 
             <!-- Recommended Section -->
@@ -227,6 +218,22 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- ========== MOBILE BOTTOM NAV ========== -->
+    <div class="mobile-bottom-nav" id="mobileBottomNav">
+        <button class="mobile-nav-btn active" id="mobileHomeBtn">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </button>
+        <button class="mobile-nav-btn" id="mobileSearchBtn">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </button>
+        <button class="mobile-nav-btn" id="mobileLibraryBtn">
+            <i class="fas fa-book"></i>
+            <span>Library</span>
+        </button>
     </div>
 
     <!-- ========== PLAYER ========== -->
