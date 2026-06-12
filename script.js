@@ -602,6 +602,28 @@ function restoreHomeView() {
   // Re-attach card click listeners
   renderCards(songs, 'recommendedRow');
   renderCards(songs, 'hindiRow');
+  
+  // Re-render AVM section when restoring from snapshot
+  const avmSongs = songs.filter(song => song.avm === true);
+  const avmSection = document.getElementById('avmSection');
+  const avmRow = document.getElementById('avmRow');
+  
+  if (avmSongs.length > 0) {
+    avmSection.style.display = 'block';
+    renderCards(avmSongs, 'avmRow');
+    
+    // Re-attach scroll functionality for AVM section
+    const avmScrollLeft = document.getElementById('avmScrollLeft');
+    const avmScrollRight = document.getElementById('avmScrollRight');
+    if (avmScrollLeft && avmScrollRight) {
+      avmScrollLeft.addEventListener('click', () => {
+        avmRow.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      avmScrollRight.addEventListener('click', () => {
+        avmRow.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    }
+  }
 
   // Re-mark active card
   document.querySelectorAll('.song-card').forEach(c => c.classList.remove('active'));
@@ -645,6 +667,28 @@ async function loadSongs() {
     songs = await res.json();
     renderCards(songs, 'recommendedRow');
     renderCards(songs, 'hindiRow');
+    
+    // Render AVM section - filter songs where avm: true
+    const avmSongs = songs.filter(song => song.avm === true);
+    const avmSection = document.getElementById('avmSection');
+    const avmRow = document.getElementById('avmRow');
+    
+    if (avmSongs.length > 0) {
+      avmSection.style.display = 'block';
+      renderCards(avmSongs, 'avmRow');
+      
+      // Add scroll functionality for AVM section
+      const avmScrollLeft = document.getElementById('avmScrollLeft');
+      const avmScrollRight = document.getElementById('avmScrollRight');
+      if (avmScrollLeft && avmScrollRight) {
+        avmScrollLeft.addEventListener('click', () => {
+          avmRow.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        avmScrollRight.addEventListener('click', () => {
+          avmRow.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+      }
+    }
 
     // Snapshot home view HTML so we can restore it from playlist view
     snapshotHomeView();
