@@ -603,24 +603,24 @@ function restoreHomeView() {
   renderCards(songs, 'recommendedRow');
   renderCards(songs, 'hindiRow');
   
-  // Re-render AVM section when restoring from snapshot
-  const avmSongs = songs.filter(song => song.avm === true);
-  const avmSection = document.getElementById('avmSection');
-  const avmRow = document.getElementById('avmRow');
+  // Re-render AMV section when restoring from snapshot
+  const amvSongs = songs.filter(song => song.amv === true);
+  const amvSection = document.getElementById('amvSection');
+  const amvRow = document.getElementById('amvRow');
   
-  if (avmSongs.length > 0) {
-    avmSection.style.display = 'block';
-    renderCards(avmSongs, 'avmRow');
+  if (amvSongs.length > 0) {
+    amvSection.style.display = 'block';
+    renderCards(amvSongs, 'amvRow');
     
-    // Re-attach scroll functionality for AVM section
-    const avmScrollLeft = document.getElementById('avmScrollLeft');
-    const avmScrollRight = document.getElementById('avmScrollRight');
-    if (avmScrollLeft && avmScrollRight) {
-      avmScrollLeft.addEventListener('click', () => {
-        avmRow.scrollBy({ left: -300, behavior: 'smooth' });
+    // Re-attach scroll functionality for AMV section
+    const amvScrollLeft = document.getElementById('amvScrollLeft');
+    const amvScrollRight = document.getElementById('amvScrollRight');
+    if (amvScrollLeft && amvScrollRight) {
+      amvScrollLeft.addEventListener('click', () => {
+        amvRow.scrollBy({ left: -300, behavior: 'smooth' });
       });
-      avmScrollRight.addEventListener('click', () => {
-        avmRow.scrollBy({ left: 300, behavior: 'smooth' });
+      amvScrollRight.addEventListener('click', () => {
+        amvRow.scrollBy({ left: 300, behavior: 'smooth' });
       });
     }
   }
@@ -668,24 +668,24 @@ async function loadSongs() {
     renderCards(songs, 'recommendedRow');
     renderCards(songs, 'hindiRow');
     
-    // Render AVM section - filter songs where avm: true
-    const avmSongs = songs.filter(song => song.avm === true);
-    const avmSection = document.getElementById('avmSection');
-    const avmRow = document.getElementById('avmRow');
+    // Render AMV section - filter songs where amv: true
+    const amvSongs = songs.filter(song => song.amv === true);
+    const amvSection = document.getElementById('amvSection');
+    const amvRow = document.getElementById('amvRow');
     
-    if (avmSongs.length > 0) {
-      avmSection.style.display = 'block';
-      renderCards(avmSongs, 'avmRow');
+    if (amvSongs.length > 0) {
+      amvSection.style.display = 'block';
+      renderCards(amvSongs, 'amvRow');
       
-      // Add scroll functionality for AVM section
-      const avmScrollLeft = document.getElementById('avmScrollLeft');
-      const avmScrollRight = document.getElementById('avmScrollRight');
-      if (avmScrollLeft && avmScrollRight) {
-        avmScrollLeft.addEventListener('click', () => {
-          avmRow.scrollBy({ left: -300, behavior: 'smooth' });
+      // Add scroll functionality for AMV section
+      const amvScrollLeft = document.getElementById('amvScrollLeft');
+      const amvScrollRight = document.getElementById('amvScrollRight');
+      if (amvScrollLeft && amvScrollRight) {
+        amvScrollLeft.addEventListener('click', () => {
+          amvRow.scrollBy({ left: -300, behavior: 'smooth' });
         });
-        avmScrollRight.addEventListener('click', () => {
-          avmRow.scrollBy({ left: 300, behavior: 'smooth' });
+        amvScrollRight.addEventListener('click', () => {
+          amvRow.scrollBy({ left: 300, behavior: 'smooth' });
         });
       }
     }
