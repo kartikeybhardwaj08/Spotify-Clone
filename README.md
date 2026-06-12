@@ -33,7 +33,7 @@ Spotify-Clone/main/
 ├── _KAMALI.mp3
 ├── All i Want is You.mp3
 ├── boyfriend karan aujla.mp3
-└── ...
+└── ... 
 
 ## 📷 Project SC
 <img width="1920" height="991" alt="image" src="https://github.com/user-attachments/assets/aca919c1-3432-4956-accc-e56efa5e4c6e" />
