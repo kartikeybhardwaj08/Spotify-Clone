@@ -415,12 +415,9 @@ function _renderPlaylistView(playlistId) {
     /* play on tap/click */
     row.addEventListener('click', e => {
       if (e.target.closest('.remove-song-btn')) return;
-      const idx = songs.findIndex(s => s.id === song.id);
-      if (idx !== -1) {
-        currentPlaylistType  = playlistId;
-        currentPlaylistSongs = playlistSongs;
-        playSong(idx);
-      }
+      currentPlaylistType  = playlistId;
+      currentPlaylistSongs = playlistSongs;
+      playSong(song.id);
     });
 
     /* remove */
@@ -536,7 +533,7 @@ function renderCards(songList, containerId) {
   songList.forEach((song, i) => {
     const card = document.createElement('div');
     card.className = 'song-card';
-    card.dataset.index = i;
+    card.dataset.songId = song.id;
 
     card.innerHTML = `
       <img src="${song.cover}" alt="${song.title}" loading="lazy"
@@ -558,7 +555,7 @@ function renderCards(songList, containerId) {
         // Reset playlist state since we're playing from home
         currentPlaylistType = null;
         currentPlaylistSongs = [];
-        playSong(i);
+        playSong(song.id);
       }
     });
 
@@ -627,7 +624,7 @@ function restoreHomeView() {
 
   // Re-mark active card
   document.querySelectorAll('.song-card').forEach(c => c.classList.remove('active'));
-  const activeCard = document.querySelector(`.song-card[data-index="${currentIndex}"]`);
+  const activeCard = document.querySelector(`.song-card[data-song-id="${currentIndex}"]`);
   if (activeCard) activeCard.classList.add('active');
 
   // Re-attach content filter buttons
@@ -775,7 +772,15 @@ async function loadSongs() {
 }
 
 // ========== PLAY SONG ==========
-function playSong(index) {
+function playSong(input) {
+  let index;
+  // Check if input is a number (index) or song id
+  if (typeof input === 'number') {
+    index = input;
+  } else {
+    // Input is song id
+    index = songs.findIndex(s => s.id === input);
+  }
   if (index < 0 || index >= songs.length) return;
   currentIndex = index;
   const song = songs[currentIndex];
@@ -842,7 +847,8 @@ function playSong(index) {
   if (queueArtist) queueArtist.textContent = nextSong.artist;
 
   document.querySelectorAll('.song-card').forEach(c => c.classList.remove('active'));
-  const activeCard = document.querySelector(`.song-card[data-index="${currentIndex}"]`);
+  const currentSongId = songs[currentIndex].id;
+  const activeCard = document.querySelector(`.song-card[data-song-id="${currentSongId}"]`);
   if (activeCard) {
     activeCard.classList.add('active');
     activeCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1178,11 +1184,9 @@ searchInput?.addEventListener("input", () => {
 
   filteredSongs.forEach(song => {
 
-    const originalIndex = songs.findIndex(s => s.id === song.id);
-
     const card = document.createElement("div");
     card.className = "song-card";
-    card.dataset.index = originalIndex;
+    card.dataset.songId = song.id;
 
     card.innerHTML = `
       <img src="${song.cover}" alt="${song.title}">
@@ -1205,7 +1209,7 @@ searchInput?.addEventListener("input", () => {
         // Reset playlist state since we're playing from home
         currentPlaylistType = null;
         currentPlaylistSongs = [];
-        playSong(originalIndex);
+        playSong(song.id);
       }
     });
 
