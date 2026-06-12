@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "title": "KAMALI",
+    "artist": "Seedhe Maut",
+    "cover": "https://c.saavncdn.com/320/KAMALI-Unknown-2026-20260205053827-500x500.jpg",
+    "src": "https://archive.org/download/magic_202606/_KAMALI.mp3"
+  },
+  {
+    "id": 2,
+    "title": "Admirin' You",
+    "artist": "Karan Aujla",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/22f4e4606f6b9a7bad96f74fa42c3778/1900x1900-000000-80-0-0.jpg",
+    "src": "https://archive.org/download/magic_202606/Admirin%27%20You.mp3"
+  },
+  {
+    "id": 3,
+    "title": "All I Want Is You",
+    "artist": "Rebzyyx",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUxER12a0Gyg_r53F87dbKAt-GPc6RQ0rHtA&s",
+    "src": "https://archive.org/download/magic_202606/All%20i%20Want%20is%20You.mp3"
+  },
+  {
+    "id": 4,
+    "title": "Boyfriend",
+    "artist": "Karan Aujla",
+    "cover": "https://f4.bcbits.com/img/a1653167560_16.jpg",
+    "src": "https://archive.org/download/magic_202606/boyfriend%20karan%20aujla.mp3"
+  },
+  {
+    "id": 5,
+    "title": "Confess Your Love Funk",
+    "artist": "-Prey, ZMAJOR, zxnc, Emrld",
+    "cover": "https://i1.sndcdn.com/artworks-YkOAaAAcuP0NjBsj-IkSUTg-t500x500.png",
+    "src": "https://archive.org/download/magic_202606/CONFESS%20YOUR%20LOVE%20FUNK%20-%20-Prey%2C%20ZMAJOR%2C%20zxnc%2C%20Emrld!.mp3"
+  },
+  {
+    "id": 6,
+    "title": "For A Reason",
+    "artist": "Karan Aujla",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GaqMFVPC5OI_e1G_BJ1tjvsAuf6cYK5uZQ&s",
+    "src": "https://archive.org/download/magic_202606/For%20A%20Reason.mp3"
+  },
+  {
+    "id": 7,
+    "title": "LYA FUNK",
+    "artist": "BLVKZ",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00",
+    "src": "https://archive.org/download/magic_202606/LYA%20FUNK%20-%20BLVKZ.mp3"
+  },
+  {
+    "id": 8,
+    "title": "Magic",
+    "artist": "Unknown",
+    "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411134145e_800x800.webp?alt=media&token=30484985-907c-454b-a6e5-15af34d69e65",
+    "src": "https://archive.org/download/magic_202606/Magic.mp3"
+  },
+  {
+    "id": 9,
+    "title": "Maldito Movimiento",
+    "artist": "DJ ORBITAL",
+    "cover": "https://i1.sndcdn.com/artworks-hhSZlOUL4i6l-0-t500x500.jpg",
+    "src": "https://archive.org/download/magic_202606/Maldito%20Movimiento.mp3"
+  },
+  {
+    "id": 10,
+    "title": "Russian Bandana",
+    "artist": "Dhanda Nyoliwala",
+    "cover": "https://c.saavncdn.com/414/Russian-Bandana-Lo-Fi-Hindi-2024-20241016121647-500x500.jpg",
+    "src": "https://archive.org/download/magic_202606/Russian%20Bandana.mp3"
+  },
+  {
+    "id": 11,
+    "title": "STFU",
+    "artist": "AP Dhillon",
+    "cover": "https://i.ytimg.com/vi/NHLiJAcW1J0/maxresdefault.jpg",
+    "src": "https://archive.org/download/magic_202606/STFU.mp3"
+  },
+  {
+    "id": 12,
+    "title": "You and Me",
+    "artist": "Mark Ambo",
+    "cover": "https://cdnb.artstation.com/p/assets/images/images/066/152/281/large/phonk-artwork-cover2.jpg?1692179830",
+    "src": "https://archive.org/download/magic_202606/You%20and%20Me.mp3"
+  },
+  {
+    "id": 13,
+    "title": "Dark Side",
+    "artist": "CHMCL SØUP",
+    "cover": "https://i1.sndcdn.com/artworks-pUX371NyTjqfuO8R-QTy3RA-t500x500.jpg",
+    "src": "https://archive.org/download/darkside_202606/Darkside.mp3"
+  },
+  {
+    "id": 14,
+    "title": "Lak Tunu Tunu",
+    "artist": "Surjit Bindrakhiya",
+    "cover": "https://c.saavncdn.com/625/Lakk-Tunoo-Tunoo-Punjabi-2000-20221201201142-500x500.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Lak%20Tunu%20Tunu%20Surjit%20Bindrakhiya%20%28meledy%29%20%20Lakk%20Tunoo%20Tunoo%20-%20T-Series%20Apna%20Punjab.mp3"
+  },
+  {
+    "id": 15,
+    "title": "Diamond Di Jhanjar",
+    "artist": "Gurnam Bhullar",
+    "cover": "https://c.saavncdn.com/593/Diamond-Punjabi-2018-20180109-500x500.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diamond%20di%20jhanjar%20pa%20da%20gay%20Offical%20Video%20%28Full%20HD%29%20%20Gurnam%20Bhullar%20%20New%20Punjabi%20Songs%202018%20-%20Z-Production.mp3"
+  },
+  {
+    "id": 16,
+    "title": "G.O.A.T.",
+    "artist": "Diljit Dosanjh",
+    "cover": "https://ih1.redbubble.net/image.3766960069.8924/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u3.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diljit%20Dosanjh%20-%20G.O.A.T.%20%28Official%20Music%20Video%29.mp3"
+  },
+  {
+    "id": 17,
+    "title": "Kinni Kinni",
+    "artist": "Diljit Dosanjh",
+    "cover": "https://i.ytimg.com/vi/RpN9gTFll5o/hqdefault.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diljit%20Dosanjh_%20Kinni%20Kinni%20%28Official%20Audio%29%20GHOST%20_%20Thiarajxtt%2C%20Raj%20Ranjodh.mp3"
+  },
+  {
+    "id": 18,
+    "title": "Gal Sun",
+    "artist": "Sabaat Batin ft. Rackstar",
+    "cover": "https://i.ytimg.com/vi/LZymeRtax3Q/hqdefault.jpg?v=68b48615",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Gal%20Sun%20-%20Sabaat%20Batin%20ft.%20Rackstar%20_%20Official%20Music%20Video%20_%20SkillMill%20Records.mp3"
+  },
+  {
+    "id": 19,
+    "title": "HIGH ON YOU",
+    "artist": "Jind Universe",
+    "cover": "https://c.saavncdn.com/541/High-On-You-Punjabi-2024-20241211183544-500x500.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/HIGH%20ON%20YOU%20-%20Jind%20Universe%20_%20Latest%20Punjabi%20Love%20Song%202024.mp3"
+  },
+  {
+    "id": 20,
+    "title": "Hai Hai Jawaani",
+    "artist": "Don Mixicano",
+    "cover": "https://i.ytimg.com/vi/EyxI628uZaI/maxresdefault.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Hai%20Hai%20Jawaani%20feat.%20Don%20Mixicano%20-%20Official%20Video%20%20Jawani%20On%20The%20Rocks%20%20Stereo%20Nation%20Taz%20-%20Tips%20Official.mp3"
+  },
+  {
+    "id": 21,
+    "title": "I Wanna Be Yours",
+    "artist": "Arctic Monkeys",
+    "cover": "https://f4.bcbits.com/img/a2426428626_16.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/I%20Wanna%20Be%20Yours.mp3"
+  },
+  {
+    "id": 22,
+    "title": "Kooch Na Karin",
+    "artist": "Fahad Mustafa & Mehwish Hayat",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZKLm5yPxdPFuWfmWU8tfk63410CWjZROcw&s",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Kooch%20Na%20Karin-Full%20Video%20Song%20%20Load%20Wedding%20%20Fahad%20Mustafa%20%26%20Mehwish%20Hayat%20%20Azhar%20Abbas%20-%20ML%20Series.mp3"
+  },
+  {
+    "id": 23,
+    "title": "Mi Amor",
+    "artist": "Sharn, 40K, and The Paul",
+    "cover": "https://c.saavncdn.com/385/Mi-Amor-Punjabi-2020-20230708024929-500x500.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Mi%20Amor.mp3"
+  },
+  {
+    "id": 24,
+    "title": "Obsessed",
+    "artist": "Riar Saab ft. Abhijay Sharma",
+    "cover": "https://c.saavncdn.com/850/Obsessed-Punjabi-2022-20240926115443-500x500.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Obsessed%20-%20Riar%20Saab%2C%20%40AbhijaySharma%20%20_%20Official%20Audio.mp3"
+  },
+  {
+    "id": 25,
+    "title": "Bamb Jatt",
+    "artist": "Amrit Maan & Jasmine Sandlas",
+    "cover": "https://c.saavncdn.com/228/Bamb-Jatt-Punjabi-2017-500x500.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Punjabi%20Songs%20%20Bamb%20Jatt%20%20Amrit%20Maan%20%20Jasmine%20Sandlas%20Ft.%20DJ%20Flow%20%20Ishtar%20Punjabi%20-%20Ishtar%20Punjabi.mp3"
+  },
+  {
+    "id": 26,
+    "title": "One Love",
+    "artist": "Shubh",
+    "cover": "https://a10.gaanacdn.com/gn_img/albums/lJvKa63DV9/vKa5ay7RKD/size_m.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Shubh%20-%20One%20Love%20%28Official%20Audio%29.mp3"
+  },
+  {
+    "id": 27,
+    "title": "Water",
+    "artist": "Diljit Dosanjh",
+    "cover": "https://f4.bcbits.com/img/a3319506576_16.jpg",
+    "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Water%20I%20Diljit%20Dosanjh%20I%20Happy%20Valentine%20Day.mp3"
+  },
+  {
+    "id": 28,
+    "title": "Dil Diyan Gallan",
+    "artist": "Atif Aslam",
+    "cover": "https://a10.gaanacdn.com/gn_img/song/2lV3d1WRgB/V3d56QQoWR/size_m_1516003439.webp",
+    "src": "https://archive.org/download/ishq-sufiyana/Dil%20Diyan%20Gallan.mp3"
+  },
+  {
+    "id": 29,
+    "title": "Ishq Sufiyana",
+    "artist": "Kamal Khan / Sunidhi Chauhan",
+    "cover": "https://m.media-amazon.com/images/I/61E7OfS4lPL._UF1000,1000_QL80_.jpg",
+    "src": "https://archive.org/download/ishq-sufiyana/Ishq%20Sufiyana.mp3"
+  },
+  {
+    "id": 30,
+    "title": "Mascara",
+    "artist": "Mohit Chauhan",
+    "cover": "https://c.saavncdn.com/871/Mascara-Hindi-2021-20210209180733-500x500.jpg",
+    "src": "https://archive.org/download/ishq-sufiyana/Maskara.mp3"
+  },
+  {
+    "id": 31,
+    "title": "Rasputin",
+    "artist": "Boney M.",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--qJN49skYyD5vcxpPDZIJLq8Mkf7d8GoWQ&s",
+    "src": "https://archive.org/download/ishq-sufiyana/Rasputin.mp3"
+  },
+  {
+    "id": 32,
+    "title": "Babydoll",
+    "artist": "Kanika Kapoor & Meet Bros",
+    "cover": "https://i.ytimg.com/vi/-J2rSm8K9_Y/sddefault.jpg",
+    "src": "https://archive.org/download/ishq-sufiyana/Baby%20Doll.mp3"
+  },
+  {
+    "id": 33,
+    "title": "Despacito",
+    "artist": "Luis Fonsi & Daddy Yankee",
+    "cover": "https://f4.bcbits.com/img/a2635494032_10.jpg",
+    "src": "https://archive.org/download/ishq-sufiyana/Despacito.mp3"
+  },
+  {
+    "id": 34,
+    "title": "Aahun Aahun",
+    "artist": "Master Saleem & Neeraj Shridhar",
+    "cover": "https://c.saavncdn.com/822/Aahun-Aahun-Trippy-Club-Remix-Hindi-2022-20250702161917-500x500.jpg",
+    "src": "https://archive.org/download/ishq-sufiyana/Aahun%20Aahun.mp3"
+  },
+  {
+    "id": 35,
+    "title": "Naah",
+    "artist": "Harrdy Sandhu",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/8/8a/Naah_Cover_Art.jpeg",
+    "src": "https://archive.org/download/ishq-sufiyana/Naah.m4a"
+  },
+  {
+    "id": 36,
+    "title": "Sajan Razi",
+    "artist": "Satinder Sartaaj",
+    "cover": "https://cdn-images.dzcdn.net/images/cover/7406fd113d8c76c13cc3f8019723a694/1900x1900-000000-80-0-0.jpg",
+    "src": "https://archive.org/download/ishq-sufiyana/Sajjan%20Raazi.mp3"
+  },
+  {
+    "id": 37,
+    "title": "Ikko Mikke",
+    "artist": "Satinder Sartaaj",
+    "cover": "https://c.saavncdn.com/902/Ikko-Mikke-Punjabi-2021-20211123105034-500x500.jpg",
+    "src": "https://archive.org/download/ishq-sufiyana/Ikko%20Mikke.mp3"
+  },
+  {
+    "id": 38,
+    "title": "Yaar Bathere",
+    "artist": "Alfaaz (feat. Yo Yo Honey Singh)",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhsltbVHFCGO7yVQXifZ6qwEz1yTzlHh2h0w&s",
+    "src": "https://archive.org/download/ishq-sufiyana/Yaar%20Bathere.mp3"
+  },
+  {
+    "id": 39,
+    "title": "Gal Mithi Mithi Bol",
+    "artist": "Tochi Raina",
+    "cover": "https://c.saavncdn.com/274/Gal-Mitthi-Mitthi-Bol-The-DJ-Suketu-Remix-From-Aisha-2013-500x500.jpg",
+    "src": "https://archive.org/download/gani_20260611/Gal%20Mitthi%20Mitthi%20Bol.m4a"
+  },
+  {
+    "id": 40,
+    "title": "Cute Munda",
+    "artist": "Sharry Mann",
+    "cover": "https://c.saavncdn.com/348/Cute-Munda-Punjabi-2022-20220817164912-500x500.jpg",
+    "src": "https://archive.org/download/gani_20260611/CUTE%20MUNDA.m4a"
+  },
+  {
+    "id": 41,
+    "title": "Black Suit",
+    "artist": "Dr. Zeus",
+    "cover": "https://i.ytimg.com/vi/te9GQ5_LkwY/sddefault.jpg",
+    "src": "https://archive.org/download/gani_20260611/Black%20Suit.m4a"
+  },
+  {
+    "id": 42,
+    "title": "Sayna Sayna",
+    "artist": "Aneela Mirza, Robert Uhlmann & Arash",
+    "cover": "https://s.saregama.tech/image/c/fw_485/8/5e/b3/say-na-say-na-pro-bros-remix-1440_1725620094.jpg",
+    "src": "https://archive.org/download/gani_20260611/SayNa%20SayNa.m4a"
+  },
+  {
+    "id": 43,
+    "title": "Bairi",
+    "artist": "Shreya Ghoshal & Udit Narayan",
+    "cover": "https://c.saavncdn.com/705/Bairi-Rajasthani-2026-20260204121225-500x500.jpg",
+    "src": "https://archive.org/download/gani_20260611/Bairi.m4a"
+  },
+  {
+    "id": 44,
+    "title": "Jogi",
+    "artist": "Panjabi MC / Sukhwinder Singh",
+    "cover": "https://c.saavncdn.com/542/Jogi-Punjabi-2023-20230622140259-500x500.jpg",
+    "src": "https://archive.org/download/gani_20260611/Jogi.m4a"
+  },
+  {
+    "id": 45,
+    "title": "With You",
+    "artist": "AP Dhillon",
+    "cover": "https://i.ytimg.com/vi/fe9udc210tM/maxresdefault.jpg",
+    "src": "https://archive.org/download/gani_20260611/With%20You.m4a"
+  },
+  {
+    "id": 46,
+    "title": "Ganni",
+    "artist": "Mickey Singh",
+    "cover": "https://a10.gaanacdn.com/gn_img/albums/81l3Me3rMx/l3MZOn1yWr/size_m.jpg",
+    "src": "https://archive.org/download/gani_20260611/Gani.m4a"
+  },
+  {
+    "id": 47,
+    "title": "Haseen",
+    "artist": "Talwiinder",
+    "cover": "https://i.ytimg.com/vi/IltsOcCj1Ak/sddefault.jpg?v=67bb05cd",
+    "src": "https://archive.org/download/gani_20260611/HASEEN.m4a"
+  },
+  {
+    "id": 48,
+    "title": "Bolve",
+    "artist": "Dani Fura (Blue) / Yung Kai (Blue)",
+    "cover": "https://i.scdn.co/image/ab67616d0000b273d2133dab7528044b530616f0",
+    "src": "https://archive.org/download/gani_20260611/Bolve.m4a"
+  },
+  {
+    "id": 59,
+    "title": "Long Drive",
+    "artist": "Aakshy Kuamr",
+    "cover": "https://artwork.anghcdn.co/webp/?id=220944164&size=320",
+    "src": "https://archive.org/download/gani_20260611/Long%20Drive.m4a"
+  },
+  {
+    "id": 50,
+    "title": "Bapu Zmidar",
+    "artist": "Jassie Gill",
+    "cover": "https://i1.sndcdn.com/artworks-000112322178-5wp5r8-t500x500.jpg",
+    "src": "https://archive.org/download/gani_20260611/Bapu%20Zimidar.m4a"
+  },
+  {
+    "id": 51,
+    "title": "Laden",
+    "artist": "Jassie Gill",
+    "cover": "https://c.saavncdn.com/224/Laden-Remix-Punjabi-2019-20190907001516-500x500.jpg",
+    "src": "https://archive.org/download/gani_20260611/Laden.m4a"
+  },
+  {
+    "id": 52,
+    "title": "Why This Kolaveri Di",
+    "artist": "Dhanush",
+    "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Why_This_Kolaveri_Di.jpg/250px-Why_This_Kolaveri_Di.jpg",
+    "src": "https://archive.org/download/london_202606/Why%20This%20Kolaveri%20Di.m4a"
+  },
+  {
+    "id": 53,
+    "title": "Naal Nachna",
+    "artist": "Sukhbir",
+    "cover": "https://i.ytimg.com/vi/P4UnrmPFPA4/maxresdefault.jpg",
+    "src": "https://archive.org/download/london_202606/Naal%20Nachna.m4a"
+  },
+  {
+    "id": 54,
+    "title": "Dil Tuteya",
+    "artist": "Elly Mangat",
+    "cover": "https://aydym.com/_next/image?url=https%3A%2F%2Fstorage.aydym.com%2Fimages%2Fthumbnail%2F2022%2F02%2F14%2F067f653f-9853-4848-946c-975c4b7a0c9c.webp&w=1080&q=75",
+    "src": "https://archive.org/download/london_202606/Dil%20Tutteya.m4a"
+  },
+  {
+    "id": 55,
+    "title": "BreakUp Party",
+    "artist": "Yo Yo Honey Singh & Leo",
+    "cover": "https://c.saavncdn.com/622/Breakup-Party-Punjabi-2017-20221224014513-500x500.jpg",
+    "src": "https://archive.org/download/london_202606/BREAK%20UP%20PARTY.m4a"
+  },
+  {
+    "id": 56,
+    "title": "Dope Shope",
+    "artist": "Deep Money & Yo Yo Honey Singh",
+    "cover": "https://c.saavncdn.com/964/Dope-Shope-LoFI-Remix-Punjabi-2023-20231031161429-500x500.jpg",
+    "src": "https://archive.org/download/london_202606/Dope%20Shope.m4a"
+  },
+  {
+    "id": 57,
+    "title": "Lakk 28",
+    "artist": "Yo Yo Honey Singh & Diljit Dosanjh",
+    "cover": "https://c.saavncdn.com/300/Lak-28-Kudi-Da-Punjabi-2015-500x500.jpg",
+    "src": "https://archive.org/download/london_202606/Lakk%2028.m4a"
+  },
+  {
+    "id": 58,
+    "title": "Sadi Sun",
+    "artist": "Lehmber Hussainpuri",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY1nuwuNL9A_p1BloVT-4cYMsK1iCCifdaPw&s",
+    "src": "https://archive.org/download/london_202606/SADI%20SUN.m4a"
+  },
+  {
+    "id": 59,
+    "title": "London",
+    "artist": "Labh Janjua, Sonu Kakkar & Neha Kakkar",
+    "cover": "https://c.saavncdn.com/894/London-Punjabi-2022-20220804061905-500x500.jpg",
+    "src": "https://archive.org/download/london_202606/London.m4a"
+  },
+  {
+    "id": 60,
+    "title": "Good Luck Charm",
+    "artist": "K.S. Makhan",
+    "cover": "https://i.scdn.co/image/ab67616d0000b27336b0cee402db81788eeba6e8",
+    "src": "https://archive.org/download/london_202606/Good%20Luck%20Charm.m4a"
+  }
+]
