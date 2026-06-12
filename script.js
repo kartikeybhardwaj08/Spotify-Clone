@@ -521,6 +521,9 @@ function formatTime(seconds) {
 
 // ========== RENDER CARDS ==========
 function renderCards(songList, containerId) {
+  console.log('✅ renderCards CALLED FOR:', containerId);
+  console.log('✅ songList length:', songList.length);
+  console.log('✅ songList:', songList);
   const container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = '';
@@ -531,6 +534,7 @@ function renderCards(songList, containerId) {
   }
 
   songList.forEach((song, i) => {
+    console.log(`  🎵 song[${i}]: title="${song.title}", id=${song.id}`);
     const card = document.createElement('div');
     card.className = 'song-card';
     card.dataset.songId = song.id;
@@ -552,6 +556,8 @@ function renderCards(songList, containerId) {
     // Play on card click
     card.addEventListener('click', (e) => {
       if (!e.target.closest('.add-to-queue-btn') && !e.target.closest('.add-to-playlist-btn')) {
+        console.log('👆 CLICKED CARD! song:', song);
+        console.log('👆 Calling playSong with song.id:', song.id);
         // Reset playlist state since we're playing from home
         currentPlaylistType = null;
         currentPlaylistSongs = [];
@@ -773,17 +779,26 @@ async function loadSongs() {
 
 // ========== PLAY SONG ==========
 function playSong(input) {
+  console.log('🎵 playSong CALLED with input:', input, 'TYPE:', typeof input);
   let index;
   // Check if input is a number (index) or song id
   if (typeof input === 'number') {
     index = input;
+    console.log('🎵 Input was index:', index);
   } else {
     // Input is song id
+    console.log('🎵 Input was songId, finding index in songs array...');
     index = songs.findIndex(s => s.id === input);
+    console.log('🎵 Found index:', index);
   }
-  if (index < 0 || index >= songs.length) return;
+  if (index < 0 || index >= songs.length) {
+    console.error('❌ Index invalid:', index);
+    return;
+  }
   currentIndex = index;
   const song = songs[currentIndex];
+  console.log('🎵 NOW PLAYING:', song.title);
+  console.log('🎵 song.src:', song.src);
 
   audio.src = song.src;
   audio.volume = volumeBar.value / 100;

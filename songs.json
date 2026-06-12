@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "KAMALI",
     "artist": "Seedhe Maut",
     "cover": "https://c.saavncdn.com/320/KAMALI-Unknown-2026-20260205053827-500x500.jpg",
@@ -8,7 +8,7 @@
     "amv": false
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "Admirin' You",
     "artist": "Karan Aujla",
     "cover": "https://cdn-images.dzcdn.net/images/cover/22f4e4606f6b9a7bad96f74fa42c3778/1900x1900-000000-80-0-0.jpg",
@@ -16,7 +16,7 @@
     "amv": false
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "All I Want Is You",
     "artist": "Rebzyyx",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUxER12a0Gyg_r53F87dbKAt-GPc6RQ0rHtA&s",
@@ -24,7 +24,7 @@
     "amv": false
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "Boyfriend",
     "artist": "Karan Aujla",
     "cover": "https://f4.bcbits.com/img/a1653167560_16.jpg",
@@ -32,7 +32,7 @@
     "amv": false
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "Confess Your Love Funk",
     "artist": "-Prey, ZMAJOR, zxnc, Emrld",
     "cover": "https://i1.sndcdn.com/artworks-YkOAaAAcuP0NjBsj-IkSUTg-t500x500.png",
@@ -40,7 +40,7 @@
     "amv": false
   },
   {
-    "id": 6,
+    "id": "6",
     "title": "For A Reason",
     "artist": "Karan Aujla",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GaqMFVPC5OI_e1G_BJ1tjvsAuf6cYK5uZQ&s",
@@ -48,7 +48,7 @@
     "amv": false
   },
   {
-    "id": 7,
+    "id": "7",
     "title": "LYA FUNK",
     "artist": "BLVKZ",
     "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00",
@@ -56,7 +56,7 @@
     "amv": false
   },
   {
-    "id": 8,
+    "id": "8",
     "title": "Magic",
     "artist": "Unknown",
     "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411134145e_800x800.webp?alt=media&token=30484985-907c-454b-a6e5-15af34d69e65",
@@ -64,7 +64,7 @@
     "amv": false
   },
   {
-    "id": 9,
+    "id": "9",
     "title": "Maldito Movimiento",
     "artist": "DJ ORBITAL",
     "cover": "https://i1.sndcdn.com/artworks-hhSZlOUL4i6l-0-t500x500.jpg",
@@ -72,7 +72,7 @@
     "amv": false
   },
   {
-    "id": 10,
+    "id": "10",
     "title": "Russian Bandana",
     "artist": "Dhanda Nyoliwala",
     "cover": "https://c.saavncdn.com/414/Russian-Bandana-Lo-Fi-Hindi-2024-20241016121647-500x500.jpg",
@@ -80,7 +80,7 @@
     "amv": false
   },
   {
-    "id": 11,
+    "id": "11",
     "title": "STFU",
     "artist": "AP Dhillon",
     "cover": "https://i.ytimg.com/vi/NHLiJAcW1J0/maxresdefault.jpg",
@@ -88,7 +88,7 @@
     "amv": false
   },
   {
-    "id": 12,
+    "id": "12",
     "title": "You and Me",
     "artist": "Mark Ambo",
     "cover": "https://cdnb.artstation.com/p/assets/images/images/066/152/281/large/phonk-artwork-cover2.jpg?1692179830",
@@ -96,7 +96,7 @@
     "amv": false
   },
   {
-    "id": 13,
+    "id": "13",
     "title": "Dark Side",
     "artist": "CHMCL SØUP",
     "cover": "https://i1.sndcdn.com/artworks-pUX371NyTjqfuO8R-QTy3RA-t500x500.jpg",
@@ -104,7 +104,7 @@
     "amv": false
   },
   {
-    "id": 14,
+    "id": "14",
     "title": "Lak Tunu Tunu",
     "artist": "Surjit Bindrakhiya",
     "cover": "https://c.saavncdn.com/625/Lakk-Tunoo-Tunoo-Punjabi-2000-20221201201142-500x500.jpg",
@@ -112,7 +112,7 @@
     "amv": false
   },
   {
-    "id": 15,
+    "id": "15",
     "title": "Diamond Di Jhanjar",
     "artist": "Gurnam Bhullar",
     "cover": "https://c.saavncdn.com/593/Diamond-Punjabi-2018-20180109-500x500.jpg",
@@ -120,7 +120,7 @@
     "amv": false
   },
   {
-    "id": 16,
+    "id": "16",
     "title": "G.O.A.T.",
     "artist": "Diljit Dosanjh",
     "cover": "https://ih1.redbubble.net/image.3766960069.8924/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u3.jpg",
@@ -128,7 +128,7 @@
     "amv": false
   },
   {
-    "id": 17,
+    "id": "17",
     "title": "Kinni Kinni",
     "artist": "Diljit Dosanjh",
     "cover": "https://i.ytimg.com/vi/RpN9gTFll5o/hqdefault.jpg",
@@ -136,7 +136,7 @@
     "amv": false
   },
   {
-    "id": 18,
+    "id": "18",
     "title": "Gal Sun",
     "artist": "Sabaat Batin ft. Rackstar",
     "cover": "https://i.ytimg.com/vi/LZymeRtax3Q/hqdefault.jpg?v=68b48615",
@@ -144,7 +144,7 @@
     "amv": false
   },
   {
-    "id": 19,
+    "id": "19",
     "title": "HIGH ON YOU",
     "artist": "Jind Universe",
     "cover": "https://c.saavncdn.com/541/High-On-You-Punjabi-2024-20241211183544-500x500.jpg",
@@ -152,7 +152,7 @@
     "amv": false
   },
   {
-    "id": 20,
+    "id": "20",
     "title": "Hai Hai Jawaani",
     "artist": "Don Mixicano",
     "cover": "https://i.ytimg.com/vi/EyxI628uZaI/maxresdefault.jpg",
@@ -160,7 +160,7 @@
     "amv": false
   },
   {
-    "id": 21,
+    "id": "21",
     "title": "I Wanna Be Yours",
     "artist": "Arctic Monkeys",
     "cover": "https://f4.bcbits.com/img/a2426428626_16.jpg",
@@ -168,7 +168,7 @@
     "amv": false
   },
   {
-    "id": 22,
+    "id": "22",
     "title": "Kooch Na Karin",
     "artist": "Fahad Mustafa & Mehwish Hayat",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZKLm5yPxdPFuWfmWU8tfk63410CWjZROcw&s",
@@ -176,7 +176,7 @@
     "amv": false
   },
   {
-    "id": 23,
+    "id": "23",
     "title": "Mi Amor",
     "artist": "Sharn, 40K, and The Paul",
     "cover": "https://c.saavncdn.com/385/Mi-Amor-Punjabi-2020-20230708024929-500x500.jpg",
@@ -184,7 +184,7 @@
     "amv": false
   },
   {
-    "id": 24,
+    "id": "24",
     "title": "Obsessed",
     "artist": "Riar Saab ft. Abhijay Sharma",
     "cover": "https://c.saavncdn.com/850/Obsessed-Punjabi-2022-20240926115443-500x500.jpg",
@@ -192,7 +192,7 @@
     "amv": false
   },
   {
-    "id": 25,
+    "id": "25",
     "title": "Bamb Jatt",
     "artist": "Amrit Maan & Jasmine Sandlas",
     "cover": "https://c.saavncdn.com/228/Bamb-Jatt-Punjabi-2017-500x500.jpg",
@@ -200,7 +200,7 @@
     "amv": false
   },
   {
-    "id": 26,
+    "id": "26",
     "title": "One Love",
     "artist": "Shubh",
     "cover": "https://a10.gaanacdn.com/gn_img/albums/lJvKa63DV9/vKa5ay7RKD/size_m.jpg",
@@ -208,7 +208,7 @@
     "amv": false
   },
   {
-    "id": 27,
+    "id": "27",
     "title": "Water",
     "artist": "Diljit Dosanjh",
     "cover": "https://f4.bcbits.com/img/a3319506576_16.jpg",
@@ -216,7 +216,7 @@
     "amv": false
   },
   {
-    "id": 28,
+    "id": "28",
     "title": "Dil Diyan Gallan",
     "artist": "Atif Aslam",
     "cover": "https://a10.gaanacdn.com/gn_img/song/2lV3d1WRgB/V3d56QQoWR/size_m_1516003439.webp",
@@ -224,7 +224,7 @@
     "amv": false
   },
   {
-    "id": 29,
+    "id": "29",
     "title": "Ishq Sufiyana",
     "artist": "Kamal Khan / Sunidhi Chauhan",
     "cover": "https://m.media-amazon.com/images/I/61E7OfS4lPL._UF1000,1000_QL80_.jpg",
@@ -232,7 +232,7 @@
     "amv": false
   },
   {
-    "id": 30,
+    "id": "30",
     "title": "Mascara",
     "artist": "Mohit Chauhan",
     "cover": "https://c.saavncdn.com/871/Mascara-Hindi-2021-20210209180733-500x500.jpg",
@@ -240,7 +240,7 @@
     "amv": false
   },
   {
-    "id": 31,
+    "id": "31",
     "title": "Rasputin",
     "artist": "Boney M.",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--qJN49skYyD5vcxpPDZIJLq8Mkf7d8GoWQ&s",
@@ -248,7 +248,7 @@
     "amv": false
   },
   {
-    "id": 32,
+    "id": "32",
     "title": "Babydoll",
     "artist": "Kanika Kapoor & Meet Bros",
     "cover": "https://i.ytimg.com/vi/-J2rSm8K9_Y/sddefault.jpg",
@@ -256,7 +256,7 @@
     "amv": false
   },
   {
-    "id": 33,
+    "id": "33",
     "title": "Despacito",
     "artist": "Luis Fonsi & Daddy Yankee",
     "cover": "https://f4.bcbits.com/img/a2635494032_10.jpg",
@@ -264,7 +264,7 @@
     "amv": false
   },
   {
-    "id": 34,
+    "id": "34",
     "title": "Aahun Aahun",
     "artist": "Master Saleem & Neeraj Shridhar",
     "cover": "https://c.saavncdn.com/822/Aahun-Aahun-Trippy-Club-Remix-Hindi-2022-20250702161917-500x500.jpg",
@@ -272,7 +272,7 @@
     "amv": false
   },
   {
-    "id": 35,
+    "id": "35",
     "title": "Naah",
     "artist": "Harrdy Sandhu",
     "cover": "https://upload.wikimedia.org/wikipedia/en/8/8a/Naah_Cover_Art.jpeg",
@@ -280,7 +280,7 @@
     "amv": false
   },
   {
-    "id": 36,
+    "id": "36",
     "title": "Sajan Razi",
     "artist": "Satinder Sartaaj",
     "cover": "https://cdn-images.dzcdn.net/images/cover/7406fd113d8c76c13cc3f8019723a694/1900x1900-000000-80-0-0.jpg",
@@ -288,7 +288,7 @@
     "amv": false
   },
   {
-    "id": 37,
+    "id": "37",
     "title": "Ikko Mikke",
     "artist": "Satinder Sartaaj",
     "cover": "https://c.saavncdn.com/902/Ikko-Mikke-Punjabi-2021-20211123105034-500x500.jpg",
@@ -296,7 +296,7 @@
     "amv": false
   },
   {
-    "id": 38,
+    "id": "38",
     "title": "Yaar Bathere",
     "artist": "Alfaaz (feat. Yo Yo Honey Singh)",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhsltbVHFCGO7yVQXifZ6qwEz1yTzlHh2h0w&s",
@@ -304,7 +304,7 @@
     "amv": false
   },
   {
-    "id": 39,
+    "id": "39",
     "title": "Gal Mithi Mithi Bol",
     "artist": "Tochi Raina",
     "cover": "https://c.saavncdn.com/274/Gal-Mitthi-Mitthi-Bol-The-DJ-Suketu-Remix-From-Aisha-2013-500x500.jpg",
@@ -312,7 +312,7 @@
     "amv": false
   },
   {
-    "id": 40,
+    "id": "40",
     "title": "Cute Munda",
     "artist": "Sharry Mann",
     "cover": "https://c.saavncdn.com/348/Cute-Munda-Punjabi-2022-20220817164912-500x500.jpg",
@@ -320,7 +320,7 @@
     "amv": false
   },
   {
-    "id": 41,
+    "id": "41",
     "title": "Black Suit",
     "artist": "Dr. Zeus",
     "cover": "https://i.ytimg.com/vi/te9GQ5_LkwY/sddefault.jpg",
@@ -328,7 +328,7 @@
     "amv": false
   },
   {
-    "id": 42,
+    "id": "42",
     "title": "Sayna Sayna",
     "artist": "Aneela Mirza, Robert Uhlmann & Arash",
     "cover": "https://s.saregama.tech/image/c/fw_485/8/5e/b3/say-na-say-na-pro-bros-remix-1440_1725620094.jpg",
@@ -336,7 +336,7 @@
     "amv": false
   },
   {
-    "id": 43,
+    "id": "43",
     "title": "Bairi",
     "artist": "Shreya Ghoshal & Udit Narayan",
     "cover": "https://c.saavncdn.com/705/Bairi-Rajasthani-2026-20260204121225-500x500.jpg",
@@ -344,7 +344,7 @@
     "amv": false
   },
   {
-    "id": 44,
+    "id": "44",
     "title": "Jogi",
     "artist": "Panjabi MC / Sukhwinder Singh",
     "cover": "https://c.saavncdn.com/542/Jogi-Punjabi-2023-20230622140259-500x500.jpg",
@@ -352,7 +352,7 @@
     "amv": false
   },
   {
-    "id": 45,
+    "id": "45",
     "title": "With You",
     "artist": "AP Dhillon",
     "cover": "https://i.ytimg.com/vi/fe9udc210tM/maxresdefault.jpg",
@@ -360,7 +360,7 @@
     "amv": false
   },
   {
-    "id": 46,
+    "id": "46",
     "title": "Ganni",
     "artist": "Mickey Singh",
     "cover": "https://a10.gaanacdn.com/gn_img/albums/81l3Me3rMx/l3MZOn1yWr/size_m.jpg",
@@ -368,7 +368,7 @@
     "amv": false
   },
   {
-    "id": 47,
+    "id": "47",
     "title": "Haseen",
     "artist": "Talwiinder",
     "cover": "https://i.ytimg.com/vi/IltsOcCj1Ak/sddefault.jpg?v=67bb05cd",
@@ -376,7 +376,7 @@
     "amv": false
   },
   {
-    "id": 48,
+    "id": "48",
     "title": "Bolve",
     "artist": "Dani Fura (Blue) / Yung Kai (Blue)",
     "cover": "https://i.scdn.co/image/ab67616d0000b273d2133dab7528044b530616f0",
@@ -384,7 +384,7 @@
     "amv": false
   },
   {
-    "id": 49,
+    "id": "49",
     "title": "Long Drive",
     "artist": "Aakshy Kuamr",
     "cover": "https://artwork.anghcdn.co/webp/?id=220944164&size=320",
@@ -392,7 +392,7 @@
     "amv": false
   },
   {
-    "id": 50,
+    "id": "50",
     "title": "Bapu Zmidar",
     "artist": "Jassie Gill",
     "cover": "https://i1.sndcdn.com/artworks-000112322178-5wp5r8-t500x500.jpg",
@@ -400,7 +400,7 @@
     "amv": false
   },
   {
-    "id": 51,
+    "id": "51",
     "title": "Laden",
     "artist": "Jassie Gill",
     "cover": "https://c.saavncdn.com/224/Laden-Remix-Punjabi-2019-20190907001516-500x500.jpg",
@@ -408,7 +408,7 @@
     "amv": false
   },
   {
-    "id": 52,
+    "id": "52",
     "title": "Why This Kolaveri Di",
     "artist": "Dhanush",
     "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Why_This_Kolaveri_Di.jpg/250px-Why_This_Kolaveri_Di.jpg",
@@ -416,7 +416,7 @@
     "amv": false
   },
   {
-    "id": 53,
+    "id": "53",
     "title": "Naal Nachna",
     "artist": "Sukhbir",
     "cover": "https://i.ytimg.com/vi/P4UnrmPFPA4/maxresdefault.jpg",
@@ -424,7 +424,7 @@
     "amv": false
   },
   {
-    "id": 54,
+    "id": "54",
     "title": "Dil Tuteya",
     "artist": "Elly Mangat",
     "cover": "https://aydym.com/_next/image?url=https%3A%2F%2Fstorage.aydym.com%2Fimages%2Fthumbnail%2F2022%2F02%2F14%2F067f653f-9853-4848-946c-975c4b7a0c9c.webp&w=1080&q=75",
@@ -432,7 +432,7 @@
     "amv": false
   },
   {
-    "id": 55,
+    "id": "55",
     "title": "BreakUp Party",
     "artist": "Yo Yo Honey Singh & Leo",
     "cover": "https://c.saavncdn.com/622/Breakup-Party-Punjabi-2017-20221224014513-500x500.jpg",
@@ -440,7 +440,7 @@
     "amv": false
   },
   {
-    "id": 56,
+    "id": "56",
     "title": "Dope Shope",
     "artist": "Deep Money & Yo Yo Honey Singh",
     "cover": "https://c.saavncdn.com/964/Dope-Shope-LoFI-Remix-Punjabi-2023-20231031161429-500x500.jpg",
@@ -448,7 +448,7 @@
     "amv": false
   },
   {
-    "id": 57,
+    "id": "57",
     "title": "Lakk 28",
     "artist": "Yo Yo Honey Singh & Diljit Dosanjh",
     "cover": "https://c.saavncdn.com/300/Lak-28-Kudi-Da-Punjabi-2015-500x500.jpg",
@@ -456,7 +456,7 @@
     "amv": false
   },
   {
-    "id": 58,
+    "id": "58",
     "title": "Sadi Sun",
     "artist": "Lehmber Hussainpuri",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY1nuwuNL9A_p1BloVT-4cYMsK1iCCifdaPw&s",
@@ -464,7 +464,7 @@
     "amv": false
   },
   {
-    "id": 59,
+    "id": "59",
     "title": "London",
     "artist": "Labh Janjua, Sonu Kakkar & Neha Kakkar",
     "cover": "https://c.saavncdn.com/894/London-Punjabi-2022-20220804061905-500x500.jpg",
@@ -472,7 +472,7 @@
     "amv": false
   },
   {
-    "id": 60,
+    "id": "60",
     "title": "Good Luck Charm",
     "artist": "K.S. Makhan",
     "cover": "https://i.scdn.co/image/ab67616d0000b27336b0cee402db81788eeba6e8",
@@ -480,15 +480,15 @@
     "amv": false
   },
   {
-    "id": 61,
+    "id": "61",
     "title": "AKAZA VS TANJIRO GIYU Final War AMV",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/AKAZA%20VS%20TANJIRO%20GIYU%20Final%20War%20AMV.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/AKAZA%20VS%20TANJIRO%20%20GIYU%20%20Final%20War%20AMV.m4a",
     "amv": true
   },
   {
-    "id": 62,
+    "id": "62",
     "title": "Demon Slayer Infinity Castle AMV",
     "artist": "Tanjiro Frames",
     "cover": "",
@@ -496,7 +496,7 @@
     "amv": true
   },
   {
-    "id": 63,
+    "id": "63",
     "title": "Demon Slayer Season 4 AMV",
     "artist": "Tanjiro Frames",
     "cover": "",
@@ -504,31 +504,31 @@
     "amv": true
   },
   {
-    "id": 64,
+    "id": "64",
     "title": "Gojo vs Toji AMVEdit 4K Hidden Inventory Arc Part -1",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gojo%20vs%20Toji%20AMVEdit%204K%20Hidden%20Inventory%20Arc%20Part%20-1.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gojo%20vs%20Toji%20AMVEdit%204K%20%20%20Hidden%20Inventory%20Arc%20Part%20-1.m4a",
     "amv": true
   },
   {
-    "id": 65,
+    "id": "65",
     "title": "Gyomei Himejima AMV MONSTER Stone Hashira",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gyomei%20Himejima%20AMV%20MONSTER%20Stone%20Hashira.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gyomei%20Himejima%20AMV%20%20MONSTER%20Stone%20Hashira.m4a",
     "amv": true
   },
   {
-    "id": 66,
+    "id": "66",
     "title": "INOSUKE VS DOMA Infinity Castle AMV Final Battle",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/INOSUKE%20VS%20DOMA%20Infinity%20Castle%20AMV%20Final%20Battle.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/INOSUKE%20VS%20DOMA%20%20Infinity%20Castle%20AMV%20%20Final%20Battle.m4a",
     "amv": true
   },
   {
-    "id": 67,
+    "id": "67",
     "title": "Infinity Castle Part 2 Final War Kokushibo vs Hash",
     "artist": "Tanjiro Frames",
     "cover": "",
@@ -536,71 +536,71 @@
     "amv": true
   },
   {
-    "id": 68,
+    "id": "68",
     "title": "Inosuke Hashibira The Jungle King Demon Slayer AMV",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Inosuke%20Hashibira%20The%20Jungle%20King%20Demon%20Slayer%20AMV.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Inosuke%20Hashibira%20The%20Jungle%20King%20%20%20Demon%20Slayer%20AMV.m4a",
     "amv": true
   },
   {
-    "id": 69,
+    "id": "69",
     "title": "JINWOO VS BERU SHADOW MONARCH Solo Leveling AMV",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/JINWOO%20VS%20BERU%20SHADOW%20MONARCH%20Solo%20Leveling%20AMV.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/JINWOO%20VS%20BERU%20%20SHADOW%20MONARCH%20%20Solo%20Leveling%20AMV.m4a",
     "amv": true
   },
   {
-    "id": 70,
+    "id": "70",
     "title": "Mugen Train AMV Rengoku vs Akaza",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Mugen%20Train%20AMV%20Rengoku%20vs%20Akaza.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Mugen%20Train%20AMV%20%20Rengoku%20vs%20Akaza.m4a",
     "amv": true
   },
   {
-    "id": 71,
+    "id": "71",
     "title": "Naruto AMV The Journey of Naruto Sasuke Sakura",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Naruto%20AMV%20The%20Journey%20of%20Naruto%20Sasuke%20Sakura.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Naruto%20AMV%20%20The%20Journey%20of%20Naruto%20Sasuke%20%20Sakura.m4a",
     "amv": true
   },
   {
-    "id": 72,
+    "id": "72",
     "title": "SECRET LIFE Spy x Family AMV Forger Family",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/SECRET%20LIFE%20Spy%20x%20Family%20AMV%20Forger%20Family.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/SECRET%20LIFE%20%20Spy%20x%20Family%20AMV%20%20Forger%20Family.m4a",
     "amv": true
   },
   {
-    "id": 73,
+    "id": "73",
     "title": "Satoru Gojo AMV The Strongest Sorcerer Jujutsu Kaisen",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Satoru%20Gojo%20AMV%20The%20Strongest%20Sorcerer%20Jujutsu%20Kaisen.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Satoru%20Gojo%20AMV%20%20The%20Strongest%20Sorcerer%20%20Jujutsu%20Kaisen.m4a",
     "amv": true
   },
   {
-    "id": 74,
+    "id": "74",
     "title": "Tengen Uzui AMV Flashy King Demon Slayer",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Tengen%20Uzui%20AMV%20Flashy%20King%20Demon%20Slayer.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Tengen%20Uzui%20AMV%20%20Flashy%20King%20%20%20Demon%20Slayer.m4a",
     "amv": true
   },
   {
-    "id": 75,
+    "id": "75",
     "title": "UNSTOPPABLE Rimuru Tempest Demon Lord",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/UNSTOPPABLE%20Rimuru%20Tempest%20Demon%20Lord.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/UNSTOPPABLE%20%20Rimuru%20Tempest%20Demon%20Lord.m4a",
     "amv": true
   },
   {
-    "id": 76,
+    "id": "76",
     "title": "Yoriichi vs Muzan AMVEdit Demon Slayer Final War",
     "artist": "Tanjiro Frames",
     "cover": "",
@@ -608,11 +608,11 @@
     "amv": true
   },
   {
-    "id": 77,
+    "id": "77",
     "title": "ZENITSU VS KAIGAKU GODSPEED Demon Slayer Infiniy Castle AMV",
     "artist": "Tanjiro Frames",
     "cover": "",
-    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/ZENITSU%20VS%20KAIGAKU%20GODSPEED%20Demon%20Slayer%20Infiniy%20Castle%20AMV.m4a",
+    "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/ZENITSU%20VS%20KAIGAKU%20%20GODSPEED%20%20%20Demon%20Slayer%20Infiniy%20Castle%20AMV.m4a",
     "amv": true
   }
 ]
