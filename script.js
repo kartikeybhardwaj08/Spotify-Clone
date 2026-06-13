@@ -107,7 +107,23 @@ function renderRecentPlaylists() {
   if (!row) return;
   row.innerHTML = '';
 
-  // 1. Liked Songs card — always first
+  // 1. Create Playlist button
+  const createCard = document.createElement('div');
+  createCard.className = 'recent-card';
+  createCard.innerHTML = `
+    <div class="create-playlist-icon"><i class="fas fa-plus"></i></div>
+    <span>Create Playlist</span>
+  `;
+  createCard.addEventListener('click', () => {
+    currentEditingPlaylistId = null;
+    modalTitle.textContent = 'Create New Playlist';
+    playlistNameInput.value = '';
+    saveBtn.textContent = 'Create';
+    playlistModal.classList.add('show');
+  });
+  row.appendChild(createCard);
+
+  // 2. Liked Songs card — always first
   const likedCount = likedSongIds.size;
   const likedCard = document.createElement('div');
   likedCard.className = 'recent-card';

@@ -638,6 +638,18 @@ aside {
     flex-shrink: 0;
 }
 
+.recent-card .create-playlist-icon {
+    width: 60px;
+    height: 60px;
+    background: #282828;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
 /* Section */
 .section {
     margin-bottom: 32px;
