@@ -1012,6 +1012,7 @@ aside {
         height: 60px;
         padding: 0 12px;
         gap: 10px;
+        margin-bottom: 60px;
     }
     .player-left {
         min-width: unset;
