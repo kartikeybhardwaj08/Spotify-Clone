@@ -670,5 +670,29 @@
     "cover": "https://i.ytimg.com/vi/lav5pEcqU3U/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Demon%20Slayer%20Hashira%20AMV.m4a",
     "amv": true
+  },
+  {
+    "id": "85",
+    "title": "Muichiro Tokito Silent Voice",
+    "artist": "Tanjiro Frames",
+    "cover": "https://i.ytimg.com/vi/0q1DEqMN3LU/maxresdefault.jpg",
+    "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Muichiro%20Tokito(Silent%20Voice).m4a",
+    "amv": true
+  },
+  {
+    "id": "86",
+    "title": "RENGOKU VS AKAZA Mugen Train Arc AMV",
+    "artist": "Tanjiro Frames",
+    "cover": "https://i.ytimg.com/vi/KpDD3mO3Elg/maxresdefault.jpg",
+    "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/RENGOKU%20VS%20AKAZA%20Mugen%20Train%20Arc%20AMV.m4a",
+    "amv": true
+  },
+  {
+    "id": "87",
+    "title": "Butterfly Sisters & Love Hashira AMV",
+    "artist": "Tanjiro Frames",
+    "cover": "https://i.ytimg.com/vi/aeTImBqlj28/maxresdefault.jpg",
+    "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Butterfly%20Sisters%20%20Love%20Hashira%20AMV.m4a",
+    "amv": true
   }
 ]
