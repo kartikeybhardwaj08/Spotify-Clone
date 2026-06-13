@@ -78,6 +78,39 @@ const searchInput = document.getElementById('searchInput');
 // Set default audio volume to 100%
 audio.volume = 1;
 
+// ========== KEYBOARD SHORTCUTS ==========
+document.addEventListener('keydown', (e) => {
+  // Prevent spacebar from scrolling page
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+  if (e.code === 'Space') {
+    e.preventDefault();
+    if (songs.length === 0) return;
+    if (isPlaying) {
+      audio.pause();
+      isPlaying = false;
+    } else {
+      audio.play();
+      isPlaying = true;
+    }
+    updatePlayIcon();
+  } else if (e.code === 'ArrowRight') {
+    e.preventDefault();
+    if (songs.length === 0) return;
+    const nextIndex = getNextSongIndex();
+    if (nextIndex !== -1) {
+      playSong(nextIndex);
+    }
+  } else if (e.code === 'ArrowLeft') {
+    e.preventDefault();
+    if (songs.length === 0) return;
+    const prevIndex = getPrevSongIndex();
+    if (prevIndex !== -1) {
+      playSong(prevIndex);
+    }
+  }
+});
+
 // Right Sidebar Elements
 const rightHeartBtn = document.getElementById('rightHeartBtn');
 const rightPlayBtn = document.getElementById('rightPlayBtn');
@@ -535,6 +568,23 @@ function formatTime(seconds) {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
+// ========== SKELETON LOADING ==========
+function renderSkeletons(containerId, count = 6) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '';
+  for (let i = 0; i < count; i++) {
+    const skeleton = document.createElement('div');
+    skeleton.className = 'skeleton-card';
+    skeleton.innerHTML = `
+      <div class="skeleton-cover"></div>
+      <div class="skeleton-title"></div>
+      <div class="skeleton-artist"></div>
+    `;
+    container.appendChild(skeleton);
+  }
+}
+
 // ========== RENDER CARDS ==========
 function renderCards(songList, containerId) {
   console.log('✅ renderCards CALLED FOR:', containerId);
@@ -681,6 +731,12 @@ function restoreHomeView() {
 // ========== LOAD SONGS FROM JSON ==========
 async function loadSongs() {
   const container = document.getElementById('recommendedRow');
+  
+  // Show skeletons while loading
+  renderSkeletons('recommendedRow', 6);
+  renderSkeletons('hindiRow', 6);
+  renderSkeletons('amvRow', 6);
+  
   try {
     const res = await fetch('songs.json');
     songs = await res.json();
@@ -707,6 +763,8 @@ async function loadSongs() {
           amvRow.scrollBy({ left: 300, behavior: 'smooth' });
         });
       }
+    } else {
+      amvSection.style.display = 'none';
     }
 
     // Snapshot home view HTML so we can restore it from playlist view

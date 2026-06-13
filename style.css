@@ -765,13 +765,63 @@ aside {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+   transition: transform .3s ease, box-shadow .3s ease;
+}
+
+/* Skeleton Loading */
+.skeleton-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.skeleton-cover {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #282828 25%, #383838 50%, #282828 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    margin-bottom: 14px;
+}
+
+.skeleton-title {
+    height: 14px;
+    width: 70%;
+    background: linear-gradient(90deg, #282828 25%, #383838 50%, #282828 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.skeleton-artist {
+    height: 12px;
+    width: 50%;
+    background: linear-gradient(90deg, #282828 25%, #383838 50%, #282828 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 4px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
 }
 
 .song-card:hover {
     background: #3E3E3E;
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
 }
 
 .song-card.active {
