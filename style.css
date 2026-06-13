@@ -928,6 +928,9 @@ aside {
         padding: 8px 12px;
         z-index: 360;  /* above sidebar drawer */
     }
+    .home-btn{
+        display: none;
+    }
     .middle-nav { margin-left: 0; gap: 8px; }
     .search {
         width: 180px;
