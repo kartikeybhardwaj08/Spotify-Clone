@@ -930,6 +930,7 @@ aside {
     }
     .home-btn{
         display: none;
+        position: absolute;
     }
     .middle-nav { margin-left: 0; gap: 8px; }
     .search {
