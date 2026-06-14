@@ -177,7 +177,7 @@ function renderRecentPlaylists() {
   playlists.forEach(playlist => {
     const cover = playlist.songs.length > 0
       ? `<img src="${playlist.songs[0].cover}" alt="${playlist.name}" onerror="this.src='https://picsum.photos/seed/${playlist.id}/60/60'" />`
-      : `<div style="width:60px;height:60px;background:#282828;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="fas fa-music" style="color:#535353;font-size:20px;"></i></div>`;
+      : `<div class="empty-playlist-cover"><i class="fas fa-music"></i></div>`;
 
     const card = document.createElement('div');
     card.className = 'recent-card';
@@ -218,11 +218,11 @@ function renderLibraryList() {
       : 'https://picsum.photos/seed/' + playlist.id + '/300/300';
     item.innerHTML = `
       <img src="${cover}" alt="${playlist.name}" />
-      <div class="lib-info" style="flex:1; min-width:0;">
+      <div class="lib-info lib-info-flex">
         <span class="lib-name">${playlist.name}</span>
         <span class="lib-meta">Playlist • ${playlist.songs.length} songs</span>
       </div>
-      <div class="library-item-actions" style="margin-left: auto; display: flex; gap: 8px;">
+      <div class="library-item-actions library-item-actions-flex">
         <button class="edit-playlist-btn" data-id="${playlist.id}" title="Edit">
           <i class="fas fa-pencil-alt"></i>
         </button>
@@ -359,7 +359,7 @@ function openPlaylistView(playlistId) {
     sidebar.style.transition = 'none';
     sidebar.classList.remove('open');
     // On desktop too — hide left sidebar so playlist gets full width
-    sidebar.style.display = 'none';
+    sidebar.classList.add('left-sidebar-hidden');
     setTimeout(() => { sidebar.style.transition = ''; }, 50);
   }
   if (overlay) overlay.classList.remove('show');
@@ -387,10 +387,6 @@ function _renderPlaylistView(playlistId) {
   }
 
   const mainContent  = document.getElementById('mainContent');
-  const isMobileView = window.innerWidth <= 768;
-  const coverSize    = isMobileView ? '100px' : '200px';
-  const titleSize    = isMobileView ? '1.6rem' : '3.5rem';
-  const headerPad    = isMobileView ? '16px 12px' : '40px 24px';
 
   // Pick accent color based on playlist
   const accentColor = playlistId === 'liked' ? '#450af5'
@@ -417,7 +413,7 @@ function _renderPlaylistView(playlistId) {
         <button id="playlistPlayBtn" class="pl-play-btn">
           <i class="fas fa-play"></i>
         </button>
-        <button id="playlistShuffleBtn" class="pl-shuffle-btn" style="color:${isShuffle ? '#1DB954' : '#b3b3b3'}">
+        <button id="playlistShuffleBtn" class="pl-shuffle-btn ${isShuffle ? 'pl-shuffle-btn-active' : 'pl-shuffle-btn-inactive'}">
           <i class="fas fa-shuffle"></i>
         </button>
         <span class="pl-duration-label">${playlistSongs.length} tracks</span>
@@ -429,43 +425,25 @@ function _renderPlaylistView(playlistId) {
 
   /* ── Song rows ── */
   const container = document.getElementById('playlistSongsContainer');
-  const isMobile  = window.innerWidth <= 768;
 
   if (playlistSongs.length === 0) {
-    container.innerHTML = '<p style="color:#b3b3b3; padding:20px 12px; font-size:14px;">No songs yet. Add some!</p>';
+    container.innerHTML = '<p class="playlist-empty-message">No songs yet. Add some!</p>';
   }
 
   playlistSongs.forEach((song, i) => {
     const row = document.createElement('div');
-    row.style.cssText = 'display:flex; align-items:center; gap:12px; padding:10px 8px; border-radius:8px; cursor:pointer; transition:background 0.15s;';
+    row.className = 'playlist-song-row';
     row.innerHTML = `
-      <div style="width:28px; text-align:center; flex-shrink:0; color:#b3b3b3; font-size:0.85rem;">${i + 1}</div>
-      <img src="${song.cover}" onerror="this.src='https://picsum.photos/seed/${song.id}/48/48'"
-           style="width:48px; height:48px; border-radius:4px; object-fit:cover; flex-shrink:0;" />
-      <div style="flex:1; min-width:0; overflow:hidden;">
-        <p style="color:white; margin:0; font-weight:500; font-size:14px;
-                  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${song.title}</p>
-        <p style="color:#b3b3b3; margin:3px 0 0; font-size:12px;
-                  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">${song.artist}</p>
+      <div class="playlist-song-number">${i + 1}</div>
+      <img src="${song.cover}" onerror="this.src='https://picsum.photos/seed/${song.id}/48/48'" class="playlist-song-cover" />
+      <div class="playlist-song-info">
+        <p class="playlist-song-title">${song.title}</p>
+        <p class="playlist-song-artist">${song.artist}</p>
       </div>
-      <button class="remove-song-btn" style="background:none; border:none; color:#b3b3b3;
-              cursor:pointer; padding:8px; flex-shrink:0; font-size:13px;
-              opacity:${isMobile ? '1' : '0'}; transition:opacity 0.2s;">
+      <button class="remove-song-btn">
         <i class="fas fa-trash-alt"></i>
       </button>
     `;
-
-    /* desktop hover */
-    if (!isMobile) {
-      row.addEventListener('mouseenter', () => {
-        row.style.background = 'rgba(255,255,255,0.08)';
-        row.querySelector('.remove-song-btn').style.opacity = '1';
-      });
-      row.addEventListener('mouseleave', () => {
-        row.style.background = 'transparent';
-        row.querySelector('.remove-song-btn').style.opacity = '0';
-      });
-    }
 
     /* play on tap/click */
     row.addEventListener('click', e => {
@@ -511,7 +489,8 @@ function _renderPlaylistView(playlistId) {
   document.getElementById('playlistShuffleBtn').addEventListener('click', function () {
     isShuffle = !isShuffle;
     shuffleBtn.classList.toggle('active', isShuffle);
-    this.style.color = isShuffle ? '#1DB954' : '#b3b3b3';
+    this.classList.toggle('pl-shuffle-btn-active', isShuffle);
+    this.classList.toggle('pl-shuffle-btn-inactive', !isShuffle);
     currentPlaylistType  = playlistId;
     currentPlaylistSongs = playlistSongs;
   });
@@ -670,7 +649,7 @@ function restoreHomeView() {
   // Remove playlist mode, restore sidebar
   mc.classList.remove('playlist-mode');
   const sidebar = document.querySelector('.left-sidebar');
-  if (sidebar) sidebar.style.display = '';
+  if (sidebar) sidebar.classList.remove('left-sidebar-hidden');
 
   mc.innerHTML = _homeHTML;
 
@@ -687,7 +666,8 @@ function restoreHomeView() {
   const amvRow = document.getElementById('amvRow');
   
   if (amvSongs.length > 0) {
-    amvSection.style.display = 'block';
+    amvSection.classList.remove('section-hidden');
+    amvSection.classList.add('section-visible');
     renderCards(amvSongs, 'amvRow');
     
     // Re-attach scroll functionality for AMV section
@@ -709,7 +689,8 @@ function restoreHomeView() {
   const phonkRow = document.getElementById('phonkRow');
   
   if (phonkSongs.length > 0) {
-    phonkSection.style.display = 'block';
+    phonkSection.classList.remove('section-hidden');
+    phonkSection.classList.add('section-visible');
     renderCards(phonkSongs, 'phonkRow');
     
     // Re-attach scroll functionality for Phonk section
@@ -785,52 +766,56 @@ async function loadSongs() {
     renderCards(songs, 'hindiRow');
     
     // Render AMV section - filter songs where amv: true
-    const amvSongs = songs.filter(song => song.amv === true);
-    const amvSection = document.getElementById('amvSection');
-    const amvRow = document.getElementById('amvRow');
+  const amvSongs = songs.filter(song => song.amv === true);
+  const amvSection = document.getElementById('amvSection');
+  const amvRow = document.getElementById('amvRow');
+  
+  if (amvSongs.length > 0) {
+    amvSection.classList.remove('section-hidden');
+    amvSection.classList.add('section-visible');
+    renderCards(amvSongs, 'amvRow');
     
-    if (amvSongs.length > 0) {
-      amvSection.style.display = 'block';
-      renderCards(amvSongs, 'amvRow');
-      
-      // Add scroll functionality for AMV section
-      const amvScrollLeft = document.getElementById('amvScrollLeft');
-      const amvScrollRight = document.getElementById('amvScrollRight');
-      if (amvScrollLeft && amvScrollRight) {
-        amvScrollLeft.addEventListener('click', () => {
-          amvRow.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        amvScrollRight.addEventListener('click', () => {
-          amvRow.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-      }
-    } else {
-      amvSection.style.display = 'none';
+    // Add scroll functionality for AMV section
+    const amvScrollLeft = document.getElementById('amvScrollLeft');
+    const amvScrollRight = document.getElementById('amvScrollRight');
+    if (amvScrollLeft && amvScrollRight) {
+      amvScrollLeft.addEventListener('click', () => {
+        amvRow.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      amvScrollRight.addEventListener('click', () => {
+        amvRow.scrollBy({ left: 300, behavior: 'smooth' });
+      });
     }
+  } else {
+    amvSection.classList.remove('section-visible');
+    amvSection.classList.add('section-hidden');
+  }
+  
+  // Render Phonk section - filter songs where phonk: true
+  const phonkSongs = songs.filter(song => song.phonk === true);
+  const phonkSection = document.getElementById('phonkSection');
+  const phonkRow = document.getElementById('phonkRow');
+  
+  if (phonkSongs.length > 0) {
+    phonkSection.classList.remove('section-hidden');
+    phonkSection.classList.add('section-visible');
+    renderCards(phonkSongs, 'phonkRow');
     
-    // Render Phonk section - filter songs where phonk: true
-    const phonkSongs = songs.filter(song => song.phonk === true);
-    const phonkSection = document.getElementById('phonkSection');
-    const phonkRow = document.getElementById('phonkRow');
-    
-    if (phonkSongs.length > 0) {
-      phonkSection.style.display = 'block';
-      renderCards(phonkSongs, 'phonkRow');
-      
-      // Add scroll functionality for Phonk section
-      const phonkScrollLeft = document.getElementById('phonkScrollLeft');
-      const phonkScrollRight = document.getElementById('phonkScrollRight');
-      if (phonkScrollLeft && phonkScrollRight) {
-        phonkScrollLeft.addEventListener('click', () => {
-          phonkRow.scrollBy({ left: -300, behavior: 'smooth' });
-        });
-        phonkScrollRight.addEventListener('click', () => {
-          phonkRow.scrollBy({ left: 300, behavior: 'smooth' });
-        });
-      }
-    } else {
-      phonkSection.style.display = 'none';
+    // Add scroll functionality for Phonk section
+    const phonkScrollLeft = document.getElementById('phonkScrollLeft');
+    const phonkScrollRight = document.getElementById('phonkScrollRight');
+    if (phonkScrollLeft && phonkScrollRight) {
+      phonkScrollLeft.addEventListener('click', () => {
+        phonkRow.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      phonkScrollRight.addEventListener('click', () => {
+        phonkRow.scrollBy({ left: 300, behavior: 'smooth' });
+      });
     }
+  } else {
+    phonkSection.classList.remove('section-visible');
+    phonkSection.classList.add('section-hidden');
+  }
 
     // Snapshot home view HTML so we can restore it from playlist view
     snapshotHomeView();
