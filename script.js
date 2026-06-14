@@ -78,6 +78,9 @@ const searchInput = document.getElementById('searchInput');
 // Set default audio volume to 100%
 audio.volume = 1;
 
+// debounce timer for search
+let searchTimer;
+
 // ========== KEYBOARD SHORTCUTS ==========
 document.addEventListener('keydown', (e) => {
   // Prevent spacebar from scrolling page
@@ -108,6 +111,29 @@ document.addEventListener('keydown', (e) => {
     if (prevIndex !== -1) {
       playSong(prevIndex);
     }
+  }
+  // Ctrl+Shift+L => toggle like for current song (accessibility shortcut)
+  if (e.ctrlKey && e.shiftKey && e.code === 'KeyL') {
+    const currentSong = songs[currentIndex];
+    if (!currentSong) return;
+    if (likedSongIds.has(currentSong.id)) {
+      likedSongIds.delete(currentSong.id);
+      heartBtn.classList.remove('liked');
+      if (rightHeartBtn) {
+        rightHeartBtn.classList.remove('liked');
+        const rightIcon = rightHeartBtn.querySelector('i');
+        if (rightIcon) rightIcon.className = 'far fa-heart';
+      }
+    } else {
+      likedSongIds.add(currentSong.id);
+      heartBtn.classList.add('liked');
+      if (rightHeartBtn) {
+        rightHeartBtn.classList.add('liked');
+        const rightIcon = rightHeartBtn.querySelector('i');
+        if (rightIcon) rightIcon.className = 'fas fa-heart';
+      }
+    }
+    saveStateToLocalStorage();
   }
 });
 
@@ -498,6 +524,7 @@ function _renderPlaylistView(playlistId) {
   /* ── Back button — fixed top bar ── */
   const backBtn = document.createElement('button');
   backBtn.className = 'pl-back-btn';
+  backBtn.setAttribute('aria-label', 'Back to home');
   backBtn.innerHTML = '<i class="fas fa-arrow-left"></i> Back';
   backBtn.addEventListener('click', restoreHomeView);
   mainContent.insertBefore(backBtn, mainContent.firstChild);
@@ -570,7 +597,14 @@ function renderSkeletons(containerId, count = 6) {
     container.appendChild(skeleton);
   }
 }
-
+// ========== SCROLL HELPER ==========
+function attachScrollArrows(leftId, rightId, rowEl, amount = 300) {
+  const l = document.getElementById(leftId);
+  const r = document.getElementById(rightId);
+  if (!l || !r || !rowEl) return;
+  l.onclick = () => rowEl.scrollBy({ left: -amount, behavior: 'smooth' });
+  r.onclick = () => rowEl.scrollBy({ left: amount, behavior: 'smooth' });
+}
 // ========== RENDER CARDS ==========
 function renderCards(songList, containerId) {
   const container = document.getElementById(containerId);
@@ -593,10 +627,10 @@ function renderCards(songList, containerId) {
       <div class="card-title">${song.title}</div>
       <div class="card-artist">${song.artist}</div>
       <div class="play-overlay"><i class="fas fa-play"></i></div>
-      <button class="add-to-queue-btn" title="Add to Queue">
+      <button class="add-to-queue-btn" title="Add to Queue" aria-label="Add to queue">
         <i class="fas fa-plus"></i>
       </button>
-      <button class="add-to-playlist-btn" title="Add to Playlist">
+      <button class="add-to-playlist-btn" title="Add to Playlist" aria-label="Add to playlist">
         <i class="fas fa-list"></i>
       </button>
     `;
@@ -666,17 +700,7 @@ function restoreHomeView() {
     amvSection.classList.add('section-visible');
     renderCards(amvSongs, 'amvRow');
     
-    // Re-attach scroll functionality for AMV section
-    const amvScrollLeft = document.getElementById('amvScrollLeft');
-    const amvScrollRight = document.getElementById('amvScrollRight');
-    if (amvScrollLeft && amvScrollRight) {
-      amvScrollLeft.addEventListener('click', () => {
-        amvRow.scrollBy({ left: -300, behavior: 'smooth' });
-      });
-      amvScrollRight.addEventListener('click', () => {
-        amvRow.scrollBy({ left: 300, behavior: 'smooth' });
-      });
-    }
+    attachScrollArrows('amvScrollLeft', 'amvScrollRight', amvRow);
   }
   
   // Re-render Phonk section when restoring from snapshot
@@ -688,18 +712,7 @@ function restoreHomeView() {
     phonkSection.classList.remove('section-hidden');
     phonkSection.classList.add('section-visible');
     renderCards(phonkSongs, 'phonkRow');
-    
-    // Re-attach scroll functionality for Phonk section
-    const phonkScrollLeft = document.getElementById('phonkScrollLeft');
-    const phonkScrollRight = document.getElementById('phonkScrollRight');
-    if (phonkScrollLeft && phonkScrollRight) {
-      phonkScrollLeft.addEventListener('click', () => {
-        phonkRow.scrollBy({ left: -300, behavior: 'smooth' });
-      });
-      phonkScrollRight.addEventListener('click', () => {
-        phonkRow.scrollBy({ left: 300, behavior: 'smooth' });
-      });
-    }
+    attachScrollArrows('phonkScrollLeft', 'phonkScrollRight', phonkRow);
   }
 
   // Re-mark active card
@@ -716,20 +729,8 @@ function restoreHomeView() {
   });
 
   // Re-attach scroll arrows
-  const scrollLeftBtn  = document.getElementById('scrollLeft');
-  const scrollRightBtn = document.getElementById('scrollRight');
-  const hindiRow       = document.getElementById('hindiRow');
-  if (scrollLeftBtn && scrollRightBtn && hindiRow) {
-    scrollLeftBtn.addEventListener('click',  () => hindiRow.scrollBy({ left: -300, behavior: 'smooth' }));
-    scrollRightBtn.addEventListener('click', () => hindiRow.scrollBy({ left:  300, behavior: 'smooth' }));
-  }
-  const recL = document.getElementById('recScrollLeft');
-  const recR = document.getElementById('recScrollRight');
-  const recRow = document.getElementById('recommendedRow');
-  if (recL && recR && recRow) {
-    recL.addEventListener('click', () => recRow.scrollBy({ left: -300, behavior: 'smooth' }));
-    recR.addEventListener('click', () => recRow.scrollBy({ left:  300, behavior: 'smooth' }));
-  }
+  attachScrollArrows('scrollLeft', 'scrollRight', document.getElementById('hindiRow'));
+  attachScrollArrows('recScrollLeft', 'recScrollRight', document.getElementById('recommendedRow'));
 
   // Re-attach recent card listeners
   attachRecentCardListeners();
@@ -747,6 +748,7 @@ function addBackToTopButton() {
   button.type = 'button';
   button.className = 'back-to-top-btn';
   button.textContent = 'Back to Top';
+  button.setAttribute('aria-label', 'Back to Top');
   button.addEventListener('click', () => {
     mc.scrollTo({ top: 0, behavior: 'smooth' });
   });
@@ -775,9 +777,121 @@ function observeBackToTopButton(button) {
 }
 
 // ========== LOAD SONGS FROM JSON ==========
+async function fetchSongs() {
+  const res = await fetch('songs.json');
+  // Add 'phonk': false to any song missing it
+  songs = (await res.json()).map(song => ({ ...song, phonk: song.phonk ?? false }));
+}
+
+function renderAllSections() {
+  // Recommended
+  const nonAmvSongs = songs.filter(song => !song.amv);
+  const recommendedSongs = getRandomSongs(nonAmvSongs, 20);
+  renderCards(recommendedSongs, 'recommendedRow');
+
+  // Hindi / All songs
+  renderCards(songs, 'hindiRow');
+
+  // AMV
+  const amvSongs = songs.filter(song => song.amv === true);
+  const amvSection = document.getElementById('amvSection');
+  const amvRow = document.getElementById('amvRow');
+  if (amvSongs.length > 0) {
+    amvSection.classList.remove('section-hidden');
+    amvSection.classList.add('section-visible');
+    renderCards(amvSongs, 'amvRow');
+    attachScrollArrows('amvScrollLeft', 'amvScrollRight', amvRow);
+  } else {
+    amvSection.classList.remove('section-visible');
+    amvSection.classList.add('section-hidden');
+  }
+
+  // Phonk
+  const phonkSongs = songs.filter(song => song.phonk === true);
+  const phonkSection = document.getElementById('phonkSection');
+  const phonkRow = document.getElementById('phonkRow');
+  if (phonkSongs.length > 0) {
+    phonkSection.classList.remove('section-hidden');
+    phonkSection.classList.add('section-visible');
+    renderCards(phonkSongs, 'phonkRow');
+    attachScrollArrows('phonkScrollLeft', 'phonkScrollRight', phonkRow);
+  } else {
+    phonkSection.classList.remove('section-visible');
+    phonkSection.classList.add('section-hidden');
+  }
+
+  // Snapshot home view and attach UI pieces
+  snapshotHomeView();
+  attachRecentCardListeners();
+  renderLibraryList();
+  renderRecentPlaylists();
+  addBackToTopButton();
+
+  // Re-attach scroll arrows
+  attachScrollArrows('scrollLeft', 'scrollRight', document.getElementById('hindiRow'));
+  attachScrollArrows('recScrollLeft', 'recScrollRight', document.getElementById('recommendedRow'));
+}
+
+function initSavedState() {
+  loadStateFromLocalStorage();
+
+  if (songs.length === 0) return;
+  if (currentIndex < 0 || currentIndex >= songs.length) return;
+
+  const song = songs[currentIndex];
+  if (!song) return;
+
+  // Update UI
+  currentCover.src = song.cover;
+  currentCover.onerror = () => { currentCover.src = `https://picsum.photos/seed/${song.id}/300/300`; };
+  currentTitle.textContent = song.title;
+  currentArtist.textContent = song.artist;
+
+  // Update right sidebar
+  const rightSidebar = document.querySelector('.right-sidebar');
+  const rightCover = document.getElementById('rightCover');
+  const rightTitle = document.getElementById('rightTitle');
+  const rightArtist = document.getElementById('rightArtist');
+  if (rightSidebar) {
+    rightSidebar.style.display = 'block';
+    setTimeout(() => {
+      rightSidebar.style.opacity = '1';
+      rightSidebar.style.transform = 'translateX(0)';
+      if (window._applyRightSidebarState) window._applyRightSidebarState();
+    }, 10);
+  }
+  if (rightCover) rightCover.src = song.cover;
+  if (rightTitle) rightTitle.textContent = song.title;
+  if (rightArtist) rightArtist.textContent = song.artist;
+
+  // Update liked state
+  if (likedSongIds.has(song.id)) {
+    heartBtn.classList.add('liked');
+    if (rightHeartBtn) {
+      rightHeartBtn.classList.add('liked');
+      const rightIcon = rightHeartBtn.querySelector('i');
+      if (rightIcon) rightIcon.className = 'fas fa-heart';
+    }
+  }
+
+  // Update queue display
+  updateQueueDisplay();
+
+  // Set up audio to seek when it's ready
+  audio.src = song.src;
+  audio.addEventListener('loadedmetadata', function onMetadataLoaded() {
+    audio.currentTime = savedPlaybackTime || 0;
+    audio.removeEventListener('loadedmetadata', onMetadataLoaded);
+  }, { once: true });
+
+  // Update active card
+  document.querySelectorAll('.song-card').forEach(c => c.classList.remove('active'));
+  const activeCard = document.querySelector(`.song-card[data-song-id="${song.id}"]`);
+  if (activeCard) activeCard.classList.add('active');
+}
+
 async function loadSongs() {
   const container = document.getElementById('recommendedRow');
-
   // Show skeletons while loading
   renderSkeletons('recommendedRow', 6);
   renderSkeletons('hindiRow', 6);
@@ -785,154 +899,13 @@ async function loadSongs() {
   renderSkeletons('phonkRow', 6);
 
   try {
-    const res = await fetch('songs.json');
-    // Add 'phonk': false to any song missing it
-    songs = (await res.json()).map(song => ({
-      ...song,
-      phonk: song.phonk ?? false
-    }));
-    
-    // Render Recommended section with random 20 songs (exclude AMVs to keep it clean)
-    const nonAmvSongs = songs.filter(song => !song.amv);
-    const recommendedSongs = getRandomSongs(nonAmvSongs, 20);
-    renderCards(recommendedSongs, 'recommendedRow');
-    
-    renderCards(songs, 'hindiRow');
-    
-    // Render AMV section - filter songs where amv: true
-  const amvSongs = songs.filter(song => song.amv === true);
-  const amvSection = document.getElementById('amvSection');
-  const amvRow = document.getElementById('amvRow');
-  
-  if (amvSongs.length > 0) {
-    amvSection.classList.remove('section-hidden');
-    amvSection.classList.add('section-visible');
-    renderCards(amvSongs, 'amvRow');
-    
-    // Add scroll functionality for AMV section
-    const amvScrollLeft = document.getElementById('amvScrollLeft');
-    const amvScrollRight = document.getElementById('amvScrollRight');
-    if (amvScrollLeft && amvScrollRight) {
-      amvScrollLeft.addEventListener('click', () => {
-        amvRow.scrollBy({ left: -300, behavior: 'smooth' });
-      });
-      amvScrollRight.addEventListener('click', () => {
-        amvRow.scrollBy({ left: 300, behavior: 'smooth' });
-      });
-    }
-  } else {
-    amvSection.classList.remove('section-visible');
-    amvSection.classList.add('section-hidden');
-  }
-  
-  // Render Phonk section - filter songs where phonk: true
-  const phonkSongs = songs.filter(song => song.phonk === true);
-  const phonkSection = document.getElementById('phonkSection');
-  const phonkRow = document.getElementById('phonkRow');
-  
-  if (phonkSongs.length > 0) {
-    phonkSection.classList.remove('section-hidden');
-    phonkSection.classList.add('section-visible');
-    renderCards(phonkSongs, 'phonkRow');
-    
-    // Add scroll functionality for Phonk section
-    const phonkScrollLeft = document.getElementById('phonkScrollLeft');
-    const phonkScrollRight = document.getElementById('phonkScrollRight');
-    if (phonkScrollLeft && phonkScrollRight) {
-      phonkScrollLeft.addEventListener('click', () => {
-        phonkRow.scrollBy({ left: -300, behavior: 'smooth' });
-      });
-      phonkScrollRight.addEventListener('click', () => {
-        phonkRow.scrollBy({ left: 300, behavior: 'smooth' });
-      });
-    }
-  } else {
-    phonkSection.classList.remove('section-visible');
-    phonkSection.classList.add('section-hidden');
-  }
-
-    // Snapshot home view HTML so we can restore it from playlist view
-    snapshotHomeView();
-
-    // Attach recent card listeners
-    attachRecentCardListeners();
-    
-    // Load saved state after songs are loaded
-    loadStateFromLocalStorage();
-    
-    // Render library list and recent playlists row
-    renderLibraryList();
-    renderRecentPlaylists();
-    addBackToTopButton();
-    
-    // If we have a saved state, initialize the song
-    if (songs.length > 0) {
-      const savedState = localStorage.getItem('spotifyCloneState');
-      if (savedState) {
-        const state = JSON.parse(savedState);
-        
-        // Load the song
-        const song = songs[state.currentIndex];
-        if (song) {
-          // Update UI
-          currentCover.src = song.cover;
-          currentCover.onerror = () => {
-            currentCover.src = `https://picsum.photos/seed/${song.id}/300/300`;
-          };
-          currentTitle.textContent = song.title;
-          currentArtist.textContent = song.artist;
-          
-          // Update right sidebar
-          const rightSidebar = document.querySelector('.right-sidebar');
-          const rightCover = document.getElementById('rightCover');
-          const rightTitle = document.getElementById('rightTitle');
-          const rightArtist = document.getElementById('rightArtist');
-          
-          if (rightSidebar) {
-            rightSidebar.style.display = 'block';
-            setTimeout(() => {
-              rightSidebar.style.opacity = '1';
-              rightSidebar.style.transform = 'translateX(0)';
-            }, 10);
-          }
-          if (rightCover) rightCover.src = song.cover;
-          if (rightTitle) rightTitle.textContent = song.title;
-          if (rightArtist) rightArtist.textContent = song.artist;
-          
-          // Update liked state
-          if (state.isLiked) {
-            heartBtn.classList.add('liked');
-            if (rightHeartBtn) {
-              rightHeartBtn.classList.add('liked');
-              const rightIcon = rightHeartBtn.querySelector('i');
-              if (rightIcon) rightIcon.className = 'fas fa-heart';
-            }
-          }
-          
-          // Update queue display
-          updateQueueDisplay();
-          
-          // Set up audio to seek when it's ready
-          audio.src = song.src;
-          audio.addEventListener('loadedmetadata', function onMetadataLoaded() {
-            audio.currentTime = state.playbackTime || 0;
-            audio.removeEventListener('loadedmetadata', onMetadataLoaded);
-          }, { once: true });
-          
-          // Update active card
-          document.querySelectorAll('.song-card').forEach(c => c.classList.remove('active'));
-          const activeCard = document.querySelector(`.song-card[data-index="${state.currentIndex}"]`);
-          if (activeCard) {
-            activeCard.classList.add('active');
-          }
-        }
-      }
-    }
+    await fetchSongs();
+    renderAllSections();
+    initSavedState();
   } catch (err) {
-    console.error('Songs load nahi hue:', err);
-    if (container) {
-      container.innerHTML = '<p class="loading-text">Songs load nahi hue. Live Server use karo.</p>';
-    }
+    // Show user-friendly error and toast instead of console.error
+    if (container) container.innerHTML = '<p class="loading-text">Songs load nahi hue. Live Server use karo.</p>';
+    showToast('Failed to load songs');
   }
 }
 
@@ -964,6 +937,22 @@ function playSong(input) {
   };
   currentTitle.textContent = song.title;
   currentArtist.textContent = song.artist;
+
+  // Update page title
+  try { document.title = `${song.title} • Spotify Clone`; } catch (e) {}
+
+  // Media Session metadata (if available)
+  if ('mediaSession' in navigator) {
+    try {
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: song.title,
+        artist: song.artist,
+        artwork: [ { src: song.cover } ]
+      });
+    } catch (e) {
+      // ignore on older browsers
+    }
+  }
 
   // Update Right Sidebar with transition
   const rightSidebar = document.querySelector('.right-sidebar');
@@ -1332,70 +1321,65 @@ audio.addEventListener('ended', () => {
 });
 
 // ========== SEARCH ==========
-searchInput?.addEventListener("input", () => {
-  const query = searchInput.value.trim().toLowerCase();
+function performSearch(query) {
+  const container = document.getElementById('recommendedRow');
+  if (!container) return;
+  container.innerHTML = '';
 
-  const container = document.getElementById("recommendedRow");
-  container.innerHTML = "";
+  const q = query.trim().toLowerCase();
+  if (!q) {
+    // restore recommended view
+    const nonAmvSongs = songs.filter(song => !song.amv);
+    const recommendedSongs = getRandomSongs(nonAmvSongs, 20);
+    renderCards(recommendedSongs, 'recommendedRow');
+    return;
+  }
 
   const filteredSongs = songs.filter(song =>
-    song.title.toLowerCase().includes(query) ||
-    song.artist.toLowerCase().includes(query)
+    song.title.toLowerCase().includes(q) || song.artist.toLowerCase().includes(q)
   );
 
   if (filteredSongs.length === 0) {
-    container.innerHTML =
-      '<p class="loading-text">No songs found.</p>';
+    container.innerHTML = '<p class="loading-text">No songs found.</p>';
     return;
   }
 
   filteredSongs.forEach(song => {
-
-    const card = document.createElement("div");
-    card.className = "song-card";
+    const card = document.createElement('div');
+    card.className = 'song-card';
     card.dataset.songId = song.id;
-
     card.innerHTML = `
       <img src="${song.cover}" alt="${song.title}">
       <div class="card-title">${song.title}</div>
       <div class="card-artist">${song.artist}</div>
-      <div class="play-overlay">
-        <i class="fas fa-play"></i>
-      </div>
-      <button class="add-to-queue-btn" title="Add to Queue">
-        <i class="fas fa-plus"></i>
-      </button>
-      <button class="add-to-playlist-btn" title="Add to Playlist">
-        <i class="fas fa-list"></i>
-      </button>
+      <div class="play-overlay"><i class="fas fa-play"></i></div>
+      <button class="add-to-queue-btn" title="Add to Queue" aria-label="Add to queue"><i class="fas fa-plus"></i></button>
+      <button class="add-to-playlist-btn" title="Add to Playlist" aria-label="Add to playlist"><i class="fas fa-list"></i></button>
     `;
 
-    // Play on card click
     card.addEventListener('click', (e) => {
       if (!e.target.closest('.add-to-queue-btn') && !e.target.closest('.add-to-playlist-btn')) {
-        // Reset playlist state since we're playing from home
         currentPlaylistType = null;
         currentPlaylistSongs = [];
         playSong(song.id);
       }
     });
 
-    // Add to Queue button
     const addBtn = card.querySelector('.add-to-queue-btn');
-    addBtn.addEventListener('click', (e) => {
-      e.stopImmediatePropagation();
-      addToQueue(song);
-    });
-
-    // Add to Playlist button
+    addBtn.addEventListener('click', (e) => { e.stopImmediatePropagation(); addToQueue(song); });
     const addPlaylistBtn = card.querySelector('.add-to-playlist-btn');
-    addPlaylistBtn.addEventListener('click', (e) => {
-      e.stopImmediatePropagation();
-      openAddToPlaylistModal(song);
-    });
+    addPlaylistBtn.addEventListener('click', (e) => { e.stopImmediatePropagation(); openAddToPlaylistModal(song); });
 
     container.appendChild(card);
   });
+  observeNewCards();
+}
+
+searchInput?.addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => {
+    performSearch(searchInput.value || '');
+  }, 300);
 });
 
 // ========== FILTER TABS ==========
@@ -1497,50 +1481,8 @@ function showToast(message) {
 }
 
 // ========== HORIZONTAL SCROLL ARROWS ==========
-const scrollLeftBtn = document.getElementById('scrollLeft');
-const scrollRightBtn = document.getElementById('scrollRight');
-const hindiRow = document.getElementById('hindiRow');
-
-if (scrollLeftBtn && scrollRightBtn && hindiRow) {
-  const scrollAmount = 300; // pixels to scroll each click
-
-  scrollLeftBtn.addEventListener('click', () => {
-    hindiRow.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth'
-    });
-  });
-
-  scrollRightBtn.addEventListener('click', () => {
-    hindiRow.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  });
-}
-
-// Recommended section arrows
-const recScrollLeftBtn = document.getElementById('recScrollLeft');
-const recScrollRightBtn = document.getElementById('recScrollRight');
-const recommendedRow = document.getElementById('recommendedRow');
-
-if (recScrollLeftBtn && recScrollRightBtn && recommendedRow) {
-  const recScrollAmount = 300;
-
-  recScrollLeftBtn.addEventListener('click', () => {
-    recommendedRow.scrollBy({
-      left: -recScrollAmount,
-      behavior: 'smooth'
-    });
-  });
-
-  recScrollRightBtn.addEventListener('click', () => {
-    recommendedRow.scrollBy({
-      left: recScrollAmount,
-      behavior: 'smooth'
-    });
-  });
-}
+attachScrollArrows('scrollLeft', 'scrollRight', document.getElementById('hindiRow'));
+attachScrollArrows('recScrollLeft', 'recScrollRight', document.getElementById('recommendedRow'));
 
 // ========== SAVE STATE LISTENERS ==========
 // Save state periodically
@@ -1660,34 +1602,25 @@ if (rightHeartBtn) {
   window._applyRightSidebarState = applyState;
 })();
 /// ========== SCROLL ANIMATIONS ==========
-function initScrollAnimations() {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
+function createScrollObserver() {
+  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+  return new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        // Jab element dikhne lage
         entry.target.classList.add('fade-in');
-        // observer.unobserve(entry.target); ← YEH LINE HATA DO!
       } else {
-        // Jab element gaayab ho jaye
         entry.target.classList.remove('fade-in');
       }
     });
   }, observerOptions);
+}
 
+function initScrollAnimations() {
+  const observer = createScrollObserver();
   const sections = document.querySelectorAll('.section');
-  sections.forEach((section) => {
-    observer.observe(section);
-  });
-
+  sections.forEach((section) => observer.observe(section));
   const cards = document.querySelectorAll('.song-card');
-  cards.forEach((card) => {
-    observer.observe(card);
-  });
+  cards.forEach((card) => observer.observe(card));
 }
 
 if (document.readyState === 'loading') {
@@ -1697,25 +1630,9 @@ if (document.readyState === 'loading') {
 }
 
 function observeNewCards() {
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('fade-in');
-      } else {
-        entry.target.classList.remove('fade-in');
-      }
-    });
-  }, observerOptions);
-
+  const observer = createScrollObserver();
   const newCards = document.querySelectorAll('.song-card:not(.fade-in)');
-  newCards.forEach((card) => {
-    observer.observe(card);
-  });
+  newCards.forEach((card) => observer.observe(card));
 }
 // ========== INIT ==========
 loadSongs();
