@@ -632,6 +632,7 @@ function renderCards(songList, containerId) {
 
     container.appendChild(card);
   });
+  observeNewCards();
 }
 
 // ========== HOME VIEW SNAPSHOT & RESTORE ==========
@@ -1633,6 +1634,63 @@ if (rightHeartBtn) {
 
   window._applyRightSidebarState = applyState;
 })();
+/// ========== SCROLL ANIMATIONS ==========
+function initScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Jab element dikhne lage
+        entry.target.classList.add('fade-in');
+        // observer.unobserve(entry.target); ← YEH LINE HATA DO!
+      } else {
+        // Jab element gaayab ho jaye
+        entry.target.classList.remove('fade-in');
+      }
+    });
+  }, observerOptions);
+
+  const sections = document.querySelectorAll('.section');
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  const cards = document.querySelectorAll('.song-card');
+  cards.forEach((card) => {
+    observer.observe(card);
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+  initScrollAnimations();
+}
+
+function observeNewCards() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      } else {
+        entry.target.classList.remove('fade-in');
+      }
+    });
+  }, observerOptions);
+
+  const newCards = document.querySelectorAll('.song-card:not(.fade-in)');
+  newCards.forEach((card) => {
+    observer.observe(card);
+  });
+}
 // ========== INIT ==========
 loadSongs();

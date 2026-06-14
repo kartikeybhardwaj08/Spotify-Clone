@@ -3,6 +3,7 @@
   color: #fff;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   scroll-behavior: smooth;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="8" fill="none" stroke="%231DB954" stroke-width="3"/><circle cx="16" cy="16" r="2"/></svg>') 16 16, auto;
 }
 
 html {
@@ -917,7 +918,84 @@ aside {
     color: #b3b3b3;
     font-size: 14px;
 }
+/* Scroll Animation - Fade In */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scroll Animation Classes */
+.scroll-animate {
+    opacity: 0;
+}
+
+.scroll-animate.in-view {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.section.fade-in {
+    animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.cards-row .song-card {
+    opacity: 0;
+    animation: none;
+}
+
+.cards-row .song-card.fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Staggered animation for cards */
+.cards-row .song-card:nth-child(1).fade-in { animation-delay: 0.05s; }
+.cards-row .song-card:nth-child(2).fade-in { animation-delay: 0.1s; }
+.cards-row .song-card:nth-child(3).fade-in { animation-delay: 0.15s; }
+.cards-row .song-card:nth-child(4).fade-in { animation-delay: 0.2s; }
+.cards-row .song-card:nth-child(5).fade-in { animation-delay: 0.25s; }
+.cards-row .song-card:nth-child(6).fade-in { animation-delay: 0.3s; }
+.cards-row .song-card:nth-child(7).fade-in { animation-delay: 0.35s; }
+.cards-row .song-card:nth-child(8).fade-in { animation-delay: 0.4s; }
+.cards-row .song-card:nth-child(9).fade-in { animation-delay: 0.45s; }
+.cards-row .song-card:nth-child(10).fade-in { animation-delay: 0.5s; }
 /* Song Card */
 .song-card {
     background: var(--card-bg);
