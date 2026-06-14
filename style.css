@@ -1,5 +1,5 @@
 * {
-    user-select: none;
+    user-select:contain;
     color: #fff;
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -1183,12 +1183,12 @@ aside {
 
     /* Show only center controls on mobile, hide progress row */
     .player-center {
-        flex: 0 0 auto;
+        flex: 1;
         gap: 0;
     }
 
     .progress-row {
-        display: none;
+        display: flex;
     }
 
     .player-controls {
