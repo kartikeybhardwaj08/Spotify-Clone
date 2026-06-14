@@ -83,9 +83,10 @@
 
             <!-- Filter Tabs -->
             <div class="content-filters">
-                <button class="content-filter active">All</button>
-                <button class="content-filter">Music</button>
-                <button class="content-filter">Podcasts</button>
+                <button class="content-filter active" href="#mainContent">All</button>
+                <a class="content-filter" href="#amvSection">AMV</a>
+                <a class="content-filter" href="#phonkSection">Phonk</a>
+                <a class="content-filter" href="#trendingSection">Trending</a>
             </div>
 
             <!-- Recent Row — playlists dynamically injected by JS -->
@@ -140,7 +141,7 @@
     </div>
 
     <!-- Trending Section -->
-            <div class="section">
+            <div class="section" id="trendingSection">
                 <div class="section-header">
                     <h2>Trending Songs</h2>
                     <div class="scroll-controls">

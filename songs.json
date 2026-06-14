@@ -844,5 +844,14 @@
     "src": "https://archive.org/download/spooky_202606/MY%20ENEMY%20ULTRAFUNK.m4a",
     "amv": false,
     "phonk": true
+  },
+  {
+    "id": "95",
+    "title": "Infinity Castle Part 1 | Beginning of the End",
+    "artist": "Tanjiro Frames",
+    "cover": "https://i.ytimg.com/vi/kKutTZ8VNc8/maxresdefault.jpg",
+    "src": "https://archive.org/download/infinity-castle-part-1-beginning-of-the-end/Infinity%20Castle%20Part%201%20Beginning%20of%20the%20End.m4a",
+    "amv": true,
+    "phonk": false
   }
 ]
