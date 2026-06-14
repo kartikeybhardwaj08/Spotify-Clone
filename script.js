@@ -504,6 +504,7 @@ function _renderPlaylistView(playlistId) {
 
   /* scroll to top */
   mainContent.scrollTop = 0;
+  addBackToTopButton();
 }
 
 
@@ -572,9 +573,6 @@ function renderSkeletons(containerId, count = 6) {
 
 // ========== RENDER CARDS ==========
 function renderCards(songList, containerId) {
-  console.log('✅ renderCards CALLED FOR:', containerId);
-  console.log('✅ songList length:', songList.length);
-  console.log('✅ songList:', songList);
   const container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = '';
@@ -585,7 +583,6 @@ function renderCards(songList, containerId) {
   }
 
   songList.forEach((song, i) => {
-    console.log(`  🎵 song[${i}]: title="${song.title}", id=${song.id}`);
     const card = document.createElement('div');
     card.className = 'song-card';
     card.dataset.songId = song.id;
@@ -607,8 +604,6 @@ function renderCards(songList, containerId) {
     // Play on card click
     card.addEventListener('click', (e) => {
       if (!e.target.closest('.add-to-queue-btn') && !e.target.closest('.add-to-playlist-btn')) {
-        console.log('👆 CLICKED CARD! song:', song);
-        console.log('👆 Calling playSong with song.id:', song.id);
         // Reset playlist state since we're playing from home
         currentPlaylistType = null;
         currentPlaylistSongs = [];
@@ -739,6 +734,44 @@ function restoreHomeView() {
   // Re-attach recent card listeners
   attachRecentCardListeners();
   renderRecentPlaylists();
+  addBackToTopButton();
+}
+
+function addBackToTopButton() {
+  const mc = document.getElementById('mainContent');
+  if (!mc) return;
+  if (document.getElementById('backToTopBtn')) return;
+
+  const button = document.createElement('button');
+  button.id = 'backToTopBtn';
+  button.type = 'button';
+  button.className = 'back-to-top-btn';
+  button.textContent = 'Back to Top';
+  button.addEventListener('click', () => {
+    mc.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  mc.appendChild(button);
+  observeBackToTopButton(button);
+}
+
+function observeBackToTopButton(button) {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      } else {
+        entry.target.classList.remove('fade-in');
+      }
+    });
+  }, observerOptions);
+
+  observer.observe(button);
 }
 
 // ========== LOAD SONGS FROM JSON ==========
@@ -830,6 +863,7 @@ async function loadSongs() {
     // Render library list and recent playlists row
     renderLibraryList();
     renderRecentPlaylists();
+    addBackToTopButton();
     
     // If we have a saved state, initialize the song
     if (songs.length > 0) {
@@ -904,26 +938,19 @@ async function loadSongs() {
 
 // ========== PLAY SONG ==========
 function playSong(input) {
-  console.log('🎵 playSong CALLED with input:', input, 'TYPE:', typeof input);
   let index;
   // Check if input is a number (index) or song id
   if (typeof input === 'number') {
     index = input;
-    console.log('🎵 Input was index:', index);
   } else {
     // Input is song id
-    console.log('🎵 Input was songId, finding index in songs array...');
     index = songs.findIndex(s => s.id === input);
-    console.log('🎵 Found index:', index);
   }
   if (index < 0 || index >= songs.length) {
-    console.error('❌ Index invalid:', index);
     return;
   }
   currentIndex = index;
   const song = songs[currentIndex];
-  console.log('🎵 NOW PLAYING:', song.title);
-  console.log('🎵 song.src:', song.src);
 
   audio.src = song.src;
   audio.volume = volumeBar.value / 100;

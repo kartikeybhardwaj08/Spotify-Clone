@@ -997,6 +997,27 @@ aside {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
+.back-to-top-btn {
+    display: block;
+    margin: 24px auto 40px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 999px;
+    background: #1DB954;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: none;
+}
+
+.back-to-top-btn.fade-in {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
 /* Staggered animation for cards */
 .cards-row .song-card:nth-child(1).fade-in {
     animation-delay: 0.05s;
