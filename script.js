@@ -1394,14 +1394,10 @@ if (queueBtn) {
     if (songs.length === 0 || currentIndex < 0) return;
 
     const currentSong = songs[currentIndex];
-    
-    // Avoid duplicates at the end
-    if (queue.length === 0 || queue[queue.length - 1].id !== currentSong.id) {
-      queue.push(currentSong);
-      showToast(`"${currentSong.title}" added to queue`);
-      updateQueueDisplay();
-      saveStateToLocalStorage();
-    }
+    if (!currentSong) return;
+
+    // Do not add the currently playing song to the next-in-queue position
+    showToast(`"${currentSong.title}" is already playing and cannot be added to queue`);
   });
 }
 
@@ -1441,12 +1437,19 @@ function updateQueueDisplay() {
 }
 
 function addToQueue(song) {
+  const currentSong = songs[currentIndex];
+  if (currentSong && song.id === currentSong.id) {
+    showToast(`Already playing can't be add`);
+    return;
+  }
+
   // Check if song already exists in queue
   const songExists = queue.some(s => s.id === song.id);
   if (songExists) {
     showToast(`"${song.title}" is already in queue`);
     return;
   }
+
   queue.push(song);
   showToast(`"${song.title}" added to queue`);
   updateQueueDisplay();
@@ -1455,12 +1458,7 @@ function addToQueue(song) {
 
 function showToast(message) {
   const toast = document.createElement('div');
-  toast.style.cssText = `
-    position: fixed; bottom: 120px; left: 50%; transform: translateX(-50%);
-    background: #1DB954; color: #000; padding: 12px 24px; border-radius: 25px;
-    font-size: 14px; font-weight: 600; z-index: 9999;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  `;
+  toast.classList.add('showToast');
   toast.textContent = message;
   document.body.appendChild(toast);
 
