@@ -5,7 +5,8 @@
     "artist": "Seedhe Maut",
     "cover": "https://c.saavncdn.com/320/KAMALI-Unknown-2026-20260205053827-500x500.jpg",
     "src": "https://archive.org/download/magic_202606/_KAMALI.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": true
   },
   {
     "id": "2",
@@ -21,7 +22,8 @@
     "artist": "Rebzyyx",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUxER12a0Gyg_r53F87dbKAt-GPc6RQ0rHtA&s",
     "src": "https://archive.org/download/magic_202606/All%20i%20Want%20is%20You.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": true
   },
   {
     "id": "4",
@@ -37,7 +39,8 @@
     "artist": "-Prey, ZMAJOR, zxnc, Emrld",
     "cover": "https://i1.sndcdn.com/artworks-YkOAaAAcuP0NjBsj-IkSUTg-t500x500.png",
     "src": "https://archive.org/download/magic_202606/CONFESS%20YOUR%20LOVE%20FUNK%20-%20-Prey%2C%20ZMAJOR%2C%20zxnc%2C%20Emrld!.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": true
   },
   {
     "id": "6",
@@ -53,7 +56,8 @@
     "artist": "BLVKZ",
     "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FfLLRNfBD03olUM9i2ORN%2Fresized%2FlU2pLY65ofxw9w1cvTAV-1715464964150-1-output-0_500x500.webp?alt=media&token=9bc499e9-044a-442e-8220-9691e45d9f00",
     "src": "https://archive.org/download/magic_202606/LYA%20FUNK%20-%20BLVKZ.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": true
   },
   {
     "id": "8",
@@ -69,7 +73,8 @@
     "artist": "DJ ORBITAL",
     "cover": "https://i1.sndcdn.com/artworks-hhSZlOUL4i6l-0-t500x500.jpg",
     "src": "https://archive.org/download/magic_202606/Maldito%20Movimiento.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": true
   },
   {
     "id": "10",
@@ -101,7 +106,8 @@
     "artist": "CHMCL SØUP",
     "cover": "https://i1.sndcdn.com/artworks-pUX371NyTjqfuO8R-QTy3RA-t500x500.jpg",
     "src": "https://archive.org/download/darkside_202606/Darkside.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": true
   },
   {
     "id": "14",
