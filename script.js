@@ -134,6 +134,12 @@ const closeAddToPlaylistModal = document.getElementById('closeAddToPlaylistModal
 const playlistOptions = document.getElementById('playlistOptions');
 const libraryList = document.getElementById('libraryList');
 
+// Helper function to shuffle array and get random items
+function getRandomSongs(arr, count) {
+  const shuffled = [...arr].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
 // ========== RECENT PLAYLISTS ROW ==========
 function renderRecentPlaylists() {
   const row = document.getElementById('recentPlaylistsRow');
@@ -668,8 +674,11 @@ function restoreHomeView() {
 
   mc.innerHTML = _homeHTML;
 
-  // Re-attach card click listeners
-  renderCards(songs, 'recommendedRow');
+  // Re-render Recommended with random 20 songs
+  const nonAmvSongs = songs.filter(song => !song.amv);
+  const recommendedSongs = getRandomSongs(nonAmvSongs, 20);
+  renderCards(recommendedSongs, 'recommendedRow');
+  
   renderCards(songs, 'hindiRow');
   
   // Re-render AMV section when restoring from snapshot
@@ -690,6 +699,28 @@ function restoreHomeView() {
       });
       amvScrollRight.addEventListener('click', () => {
         amvRow.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+    }
+  }
+  
+  // Re-render Phonk section when restoring from snapshot
+  const phonkSongs = songs.filter(song => song.phonk === true);
+  const phonkSection = document.getElementById('phonkSection');
+  const phonkRow = document.getElementById('phonkRow');
+  
+  if (phonkSongs.length > 0) {
+    phonkSection.style.display = 'block';
+    renderCards(phonkSongs, 'phonkRow');
+    
+    // Re-attach scroll functionality for Phonk section
+    const phonkScrollLeft = document.getElementById('phonkScrollLeft');
+    const phonkScrollRight = document.getElementById('phonkScrollRight');
+    if (phonkScrollLeft && phonkScrollRight) {
+      phonkScrollLeft.addEventListener('click', () => {
+        phonkRow.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+      phonkScrollRight.addEventListener('click', () => {
+        phonkRow.scrollBy({ left: 300, behavior: 'smooth' });
       });
     }
   }
@@ -731,16 +762,26 @@ function restoreHomeView() {
 // ========== LOAD SONGS FROM JSON ==========
 async function loadSongs() {
   const container = document.getElementById('recommendedRow');
-  
+
   // Show skeletons while loading
   renderSkeletons('recommendedRow', 6);
   renderSkeletons('hindiRow', 6);
   renderSkeletons('amvRow', 6);
-  
+  renderSkeletons('phonkRow', 6);
+
   try {
     const res = await fetch('songs.json');
-    songs = await res.json();
-    renderCards(songs, 'recommendedRow');
+    // Add 'phonk': false to any song missing it
+    songs = (await res.json()).map(song => ({
+      ...song,
+      phonk: song.phonk ?? false
+    }));
+    
+    // Render Recommended section with random 20 songs (exclude AMVs to keep it clean)
+    const nonAmvSongs = songs.filter(song => !song.amv);
+    const recommendedSongs = getRandomSongs(nonAmvSongs, 20);
+    renderCards(recommendedSongs, 'recommendedRow');
+    
     renderCards(songs, 'hindiRow');
     
     // Render AMV section - filter songs where amv: true
@@ -765,6 +806,30 @@ async function loadSongs() {
       }
     } else {
       amvSection.style.display = 'none';
+    }
+    
+    // Render Phonk section - filter songs where phonk: true
+    const phonkSongs = songs.filter(song => song.phonk === true);
+    const phonkSection = document.getElementById('phonkSection');
+    const phonkRow = document.getElementById('phonkRow');
+    
+    if (phonkSongs.length > 0) {
+      phonkSection.style.display = 'block';
+      renderCards(phonkSongs, 'phonkRow');
+      
+      // Add scroll functionality for Phonk section
+      const phonkScrollLeft = document.getElementById('phonkScrollLeft');
+      const phonkScrollRight = document.getElementById('phonkScrollRight');
+      if (phonkScrollLeft && phonkScrollRight) {
+        phonkScrollLeft.addEventListener('click', () => {
+          phonkRow.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+        phonkScrollRight.addEventListener('click', () => {
+          phonkRow.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+      }
+    } else {
+      phonkSection.style.display = 'none';
     }
 
     // Snapshot home view HTML so we can restore it from playlist view

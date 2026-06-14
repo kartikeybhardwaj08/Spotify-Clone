@@ -14,7 +14,8 @@
     "artist": "Karan Aujla",
     "cover": "https://cdn-images.dzcdn.net/images/cover/22f4e4606f6b9a7bad96f74fa42c3778/1900x1900-000000-80-0-0.jpg",
     "src": "https://archive.org/download/magic_202606/Admirin%27%20You.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "3",
@@ -31,7 +32,8 @@
     "artist": "Karan Aujla",
     "cover": "https://f4.bcbits.com/img/a1653167560_16.jpg",
     "src": "https://archive.org/download/magic_202606/boyfriend%20karan%20aujla.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "5",
@@ -48,7 +50,8 @@
     "artist": "Karan Aujla",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3GaqMFVPC5OI_e1G_BJ1tjvsAuf6cYK5uZQ&s",
     "src": "https://archive.org/download/magic_202606/For%20A%20Reason.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "7",
@@ -65,7 +68,8 @@
     "artist": "Unknown",
     "cover": "https://assets.promptbase.com/DALLE_IMAGES%2FdycAvtqLKeX4igfYb8pX9ryJO8O2%2Fresized%2F1707411134145e_800x800.webp?alt=media&token=30484985-907c-454b-a6e5-15af34d69e65",
     "src": "https://archive.org/download/magic_202606/Magic.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "9",
@@ -82,7 +86,8 @@
     "artist": "Dhanda Nyoliwala",
     "cover": "https://c.saavncdn.com/414/Russian-Bandana-Lo-Fi-Hindi-2024-20241016121647-500x500.jpg",
     "src": "https://archive.org/download/magic_202606/Russian%20Bandana.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "11",
@@ -90,7 +95,8 @@
     "artist": "AP Dhillon",
     "cover": "https://i.ytimg.com/vi/NHLiJAcW1J0/maxresdefault.jpg",
     "src": "https://archive.org/download/magic_202606/STFU.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "12",
@@ -98,7 +104,8 @@
     "artist": "Mark Ambo",
     "cover": "https://cdnb.artstation.com/p/assets/images/images/066/152/281/large/phonk-artwork-cover2.jpg?1692179830",
     "src": "https://archive.org/download/magic_202606/You%20and%20Me.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "13",
@@ -115,7 +122,8 @@
     "artist": "Surjit Bindrakhiya",
     "cover": "https://c.saavncdn.com/625/Lakk-Tunoo-Tunoo-Punjabi-2000-20221201201142-500x500.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Lak%20Tunu%20Tunu%20Surjit%20Bindrakhiya%20%28meledy%29%20%20Lakk%20Tunoo%20Tunoo%20-%20T-Series%20Apna%20Punjab.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "15",
@@ -123,7 +131,8 @@
     "artist": "Gurnam Bhullar",
     "cover": "https://c.saavncdn.com/593/Diamond-Punjabi-2018-20180109-500x500.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diamond%20di%20jhanjar%20pa%20da%20gay%20Offical%20Video%20%28Full%20HD%29%20%20Gurnam%20Bhullar%20%20New%20Punjabi%20Songs%202018%20-%20Z-Production.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "16",
@@ -131,7 +140,8 @@
     "artist": "Diljit Dosanjh",
     "cover": "https://ih1.redbubble.net/image.3766960069.8924/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u3.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diljit%20Dosanjh%20-%20G.O.A.T.%20%28Official%20Music%20Video%29.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "17",
@@ -139,7 +149,8 @@
     "artist": "Diljit Dosanjh",
     "cover": "https://i.ytimg.com/vi/RpN9gTFll5o/hqdefault.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Diljit%20Dosanjh_%20Kinni%20Kinni%20%28Official%20Audio%29%20GHOST%20_%20Thiarajxtt%2C%20Raj%20Ranjodh.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "18",
@@ -147,7 +158,8 @@
     "artist": "Sabaat Batin ft. Rackstar",
     "cover": "https://i.ytimg.com/vi/LZymeRtax3Q/hqdefault.jpg?v=68b48615",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Gal%20Sun%20-%20Sabaat%20Batin%20ft.%20Rackstar%20_%20Official%20Music%20Video%20_%20SkillMill%20Records.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "19",
@@ -155,7 +167,8 @@
     "artist": "Jind Universe",
     "cover": "https://c.saavncdn.com/541/High-On-You-Punjabi-2024-20241211183544-500x500.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/HIGH%20ON%20YOU%20-%20Jind%20Universe%20_%20Latest%20Punjabi%20Love%20Song%202024.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "20",
@@ -163,7 +176,8 @@
     "artist": "Don Mixicano",
     "cover": "https://i.ytimg.com/vi/EyxI628uZaI/maxresdefault.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Hai%20Hai%20Jawaani%20feat.%20Don%20Mixicano%20-%20Official%20Video%20%20Jawani%20On%20The%20Rocks%20%20Stereo%20Nation%20Taz%20-%20Tips%20Official.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "21",
@@ -171,7 +185,8 @@
     "artist": "Arctic Monkeys",
     "cover": "https://f4.bcbits.com/img/a2426428626_16.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/I%20Wanna%20Be%20Yours.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "22",
@@ -179,7 +194,8 @@
     "artist": "Fahad Mustafa & Mehwish Hayat",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZKLm5yPxdPFuWfmWU8tfk63410CWjZROcw&s",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Kooch%20Na%20Karin-Full%20Video%20Song%20%20Load%20Wedding%20%20Fahad%20Mustafa%20%26%20Mehwish%20Hayat%20%20Azhar%20Abbas%20-%20ML%20Series.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "23",
@@ -187,7 +203,8 @@
     "artist": "Sharn, 40K, and The Paul",
     "cover": "https://c.saavncdn.com/385/Mi-Amor-Punjabi-2020-20230708024929-500x500.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Mi%20Amor.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "24",
@@ -195,7 +212,8 @@
     "artist": "Riar Saab ft. Abhijay Sharma",
     "cover": "https://c.saavncdn.com/850/Obsessed-Punjabi-2022-20240926115443-500x500.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Obsessed%20-%20Riar%20Saab%2C%20%40AbhijaySharma%20%20_%20Official%20Audio.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "25",
@@ -203,7 +221,8 @@
     "artist": "Amrit Maan & Jasmine Sandlas",
     "cover": "https://c.saavncdn.com/228/Bamb-Jatt-Punjabi-2017-500x500.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Punjabi%20Songs%20%20Bamb%20Jatt%20%20Amrit%20Maan%20%20Jasmine%20Sandlas%20Ft.%20DJ%20Flow%20%20Ishtar%20Punjabi%20-%20Ishtar%20Punjabi.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "26",
@@ -211,7 +230,8 @@
     "artist": "Shubh",
     "cover": "https://a10.gaanacdn.com/gn_img/albums/lJvKa63DV9/vKa5ay7RKD/size_m.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Shubh%20-%20One%20Love%20%28Official%20Audio%29.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "27",
@@ -219,7 +239,8 @@
     "artist": "Diljit Dosanjh",
     "cover": "https://f4.bcbits.com/img/a3319506576_16.jpg",
     "src": "https://archive.org/download/lak-tunu-tunu-surjit-bindrakhiya-meledy-lakk-tunoo-tunoo-t-series-apna-punjab/Water%20I%20Diljit%20Dosanjh%20I%20Happy%20Valentine%20Day.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "28",
@@ -227,7 +248,8 @@
     "artist": "Atif Aslam",
     "cover": "https://a10.gaanacdn.com/gn_img/song/2lV3d1WRgB/V3d56QQoWR/size_m_1516003439.webp",
     "src": "https://archive.org/download/ishq-sufiyana/Dil%20Diyan%20Gallan.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "29",
@@ -235,7 +257,8 @@
     "artist": "Kamal Khan / Sunidhi Chauhan",
     "cover": "https://m.media-amazon.com/images/I/61E7OfS4lPL._UF1000,1000_QL80_.jpg",
     "src": "https://archive.org/download/ishq-sufiyana/Ishq%20Sufiyana.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "30",
@@ -243,7 +266,8 @@
     "artist": "Mohit Chauhan",
     "cover": "https://c.saavncdn.com/871/Mascara-Hindi-2021-20210209180733-500x500.jpg",
     "src": "https://archive.org/download/ishq-sufiyana/Maskara.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "31",
@@ -251,7 +275,8 @@
     "artist": "Boney M.",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ--qJN49skYyD5vcxpPDZIJLq8Mkf7d8GoWQ&s",
     "src": "https://archive.org/download/ishq-sufiyana/Rasputin.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "32",
@@ -259,7 +284,8 @@
     "artist": "Kanika Kapoor & Meet Bros",
     "cover": "https://i.ytimg.com/vi/-J2rSm8K9_Y/sddefault.jpg",
     "src": "https://archive.org/download/ishq-sufiyana/Baby%20Doll.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "33",
@@ -267,7 +293,8 @@
     "artist": "Luis Fonsi & Daddy Yankee",
     "cover": "https://f4.bcbits.com/img/a2635494032_10.jpg",
     "src": "https://archive.org/download/ishq-sufiyana/Despacito.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "34",
@@ -275,7 +302,8 @@
     "artist": "Master Saleem & Neeraj Shridhar",
     "cover": "https://c.saavncdn.com/822/Aahun-Aahun-Trippy-Club-Remix-Hindi-2022-20250702161917-500x500.jpg",
     "src": "https://archive.org/download/ishq-sufiyana/Aahun%20Aahun.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "35",
@@ -283,7 +311,8 @@
     "artist": "Harrdy Sandhu",
     "cover": "https://upload.wikimedia.org/wikipedia/en/8/8a/Naah_Cover_Art.jpeg",
     "src": "https://archive.org/download/ishq-sufiyana/Naah.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "36",
@@ -291,7 +320,8 @@
     "artist": "Satinder Sartaaj",
     "cover": "https://cdn-images.dzcdn.net/images/cover/7406fd113d8c76c13cc3f8019723a694/1900x1900-000000-80-0-0.jpg",
     "src": "https://archive.org/download/ishq-sufiyana/Sajjan%20Raazi.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "37",
@@ -299,7 +329,8 @@
     "artist": "Satinder Sartaaj",
     "cover": "https://c.saavncdn.com/902/Ikko-Mikke-Punjabi-2021-20211123105034-500x500.jpg",
     "src": "https://archive.org/download/ishq-sufiyana/Ikko%20Mikke.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "38",
@@ -307,7 +338,8 @@
     "artist": "Alfaaz (feat. Yo Yo Honey Singh)",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhsltbVHFCGO7yVQXifZ6qwEz1yTzlHh2h0w&s",
     "src": "https://archive.org/download/ishq-sufiyana/Yaar%20Bathere.mp3",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "39",
@@ -315,7 +347,8 @@
     "artist": "Tochi Raina",
     "cover": "https://c.saavncdn.com/274/Gal-Mitthi-Mitthi-Bol-The-DJ-Suketu-Remix-From-Aisha-2013-500x500.jpg",
     "src": "https://archive.org/download/gani_20260611/Gal%20Mitthi%20Mitthi%20Bol.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "40",
@@ -323,7 +356,8 @@
     "artist": "Sharry Mann",
     "cover": "https://c.saavncdn.com/348/Cute-Munda-Punjabi-2022-20220817164912-500x500.jpg",
     "src": "https://archive.org/download/gani_20260611/CUTE%20MUNDA.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "41",
@@ -331,7 +365,8 @@
     "artist": "Dr. Zeus",
     "cover": "https://i.ytimg.com/vi/te9GQ5_LkwY/sddefault.jpg",
     "src": "https://archive.org/download/gani_20260611/Black%20Suit.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "42",
@@ -339,7 +374,8 @@
     "artist": "Aneela Mirza, Robert Uhlmann & Arash",
     "cover": "https://s.saregama.tech/image/c/fw_485/8/5e/b3/say-na-say-na-pro-bros-remix-1440_1725620094.jpg",
     "src": "https://archive.org/download/gani_20260611/SayNa%20SayNa.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "43",
@@ -347,7 +383,8 @@
     "artist": "Shreya Ghoshal & Udit Narayan",
     "cover": "https://c.saavncdn.com/705/Bairi-Rajasthani-2026-20260204121225-500x500.jpg",
     "src": "https://archive.org/download/gani_20260611/Bairi.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "44",
@@ -355,7 +392,8 @@
     "artist": "Panjabi MC / Sukhwinder Singh",
     "cover": "https://c.saavncdn.com/542/Jogi-Punjabi-2023-20230622140259-500x500.jpg",
     "src": "https://archive.org/download/gani_20260611/Jogi.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "45",
@@ -363,7 +401,8 @@
     "artist": "AP Dhillon",
     "cover": "https://i.ytimg.com/vi/fe9udc210tM/maxresdefault.jpg",
     "src": "https://archive.org/download/gani_20260611/With%20You.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "46",
@@ -371,7 +410,8 @@
     "artist": "Mickey Singh",
     "cover": "https://a10.gaanacdn.com/gn_img/albums/81l3Me3rMx/l3MZOn1yWr/size_m.jpg",
     "src": "https://archive.org/download/gani_20260611/Gani.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "47",
@@ -379,7 +419,8 @@
     "artist": "Talwiinder",
     "cover": "https://i.ytimg.com/vi/IltsOcCj1Ak/sddefault.jpg?v=67bb05cd",
     "src": "https://archive.org/download/gani_20260611/HASEEN.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "48",
@@ -387,7 +428,8 @@
     "artist": "Dani Fura (Blue) / Yung Kai (Blue)",
     "cover": "https://i.scdn.co/image/ab67616d0000b273d2133dab7528044b530616f0",
     "src": "https://archive.org/download/gani_20260611/Bolve.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "49",
@@ -395,7 +437,8 @@
     "artist": "Aakshy Kuamr",
     "cover": "https://artwork.anghcdn.co/webp/?id=220944164&size=320",
     "src": "https://archive.org/download/gani_20260611/Long%20Drive.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "50",
@@ -403,7 +446,8 @@
     "artist": "Jassie Gill",
     "cover": "https://i1.sndcdn.com/artworks-000112322178-5wp5r8-t500x500.jpg",
     "src": "https://archive.org/download/gani_20260611/Bapu%20Zimidar.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "51",
@@ -411,7 +455,8 @@
     "artist": "Jassie Gill",
     "cover": "https://c.saavncdn.com/224/Laden-Remix-Punjabi-2019-20190907001516-500x500.jpg",
     "src": "https://archive.org/download/gani_20260611/Laden.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "52",
@@ -419,7 +464,8 @@
     "artist": "Dhanush",
     "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Why_This_Kolaveri_Di.jpg/250px-Why_This_Kolaveri_Di.jpg",
     "src": "https://archive.org/download/london_202606/Why%20This%20Kolaveri%20Di.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "53",
@@ -427,7 +473,8 @@
     "artist": "Sukhbir",
     "cover": "https://i.ytimg.com/vi/P4UnrmPFPA4/maxresdefault.jpg",
     "src": "https://archive.org/download/london_202606/Naal%20Nachna.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "54",
@@ -435,7 +482,8 @@
     "artist": "Elly Mangat",
     "cover": "https://aydym.com/_next/image?url=https%3A%2F%2Fstorage.aydym.com%2Fimages%2Fthumbnail%2F2022%2F02%2F14%2F067f653f-9853-4848-946c-975c4b7a0c9c.webp&w=1080&q=75",
     "src": "https://archive.org/download/london_202606/Dil%20Tutteya.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "55",
@@ -443,7 +491,8 @@
     "artist": "Yo Yo Honey Singh & Leo",
     "cover": "https://c.saavncdn.com/622/Breakup-Party-Punjabi-2017-20221224014513-500x500.jpg",
     "src": "https://archive.org/download/london_202606/BREAK%20UP%20PARTY.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "56",
@@ -451,7 +500,8 @@
     "artist": "Deep Money & Yo Yo Honey Singh",
     "cover": "https://c.saavncdn.com/964/Dope-Shope-LoFI-Remix-Punjabi-2023-20231031161429-500x500.jpg",
     "src": "https://archive.org/download/london_202606/Dope%20Shope.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "57",
@@ -459,7 +509,8 @@
     "artist": "Yo Yo Honey Singh & Diljit Dosanjh",
     "cover": "https://c.saavncdn.com/300/Lak-28-Kudi-Da-Punjabi-2015-500x500.jpg",
     "src": "https://archive.org/download/london_202606/Lakk%2028.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "58",
@@ -467,7 +518,8 @@
     "artist": "Lehmber Hussainpuri",
     "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY1nuwuNL9A_p1BloVT-4cYMsK1iCCifdaPw&s",
     "src": "https://archive.org/download/london_202606/SADI%20SUN.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "59",
@@ -475,7 +527,8 @@
     "artist": "Labh Janjua, Sonu Kakkar & Neha Kakkar",
     "cover": "https://c.saavncdn.com/894/London-Punjabi-2022-20220804061905-500x500.jpg",
     "src": "https://archive.org/download/london_202606/London.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "60",
@@ -483,7 +536,8 @@
     "artist": "K.S. Makhan",
     "cover": "https://i.scdn.co/image/ab67616d0000b27336b0cee402db81788eeba6e8",
     "src": "https://archive.org/download/london_202606/Good%20Luck%20Charm.m4a",
-    "amv": false
+    "amv": false,
+    "phonk": false
   },
   {
     "id": "61",
@@ -491,7 +545,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/V0EAVoIclPE/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAJs0QHI_PHgFY1FkQYECb4sN-nEg",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/AKAZA%20VS%20TANJIRO%20%20GIYU%20%20Final%20War%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false  
   },
   {
     "id": "62",
@@ -499,7 +554,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/3pZVdopQdd4/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLByfgi34A7wTD9GZLa5hqk-bVHHmQ",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Demon%20Slayer%20Infinity%20Castle%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false  
   },
   {
     "id": "63",
@@ -507,7 +563,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/FEjRntWLsno/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDR_R2PN7WEEldjrZn_BGOopwc9rw",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Demon%20Slayer%20Season%204%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "64",
@@ -515,7 +572,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/x27OHNinWbQ/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCM5A3Gh74VE8eJoX5JITGw57NABg",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gojo%20vs%20Toji%20AMVEdit%204K%20%20%20Hidden%20Inventory%20Arc%20Part%20-1.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "65",
@@ -523,7 +581,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/agjF8rtu7Qs/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCpZPp0APlrEBGo4scrnn4HcEDI9Q",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gyomei%20Himejima%20AMV%20%20MONSTER%20Stone%20Hashira.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "66",
@@ -531,7 +590,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/h3mZpIZ8ozk/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAKFL-hFX1Wa-KndDDETNaGBkdLOw",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/INOSUKE%20VS%20DOMA%20%20Infinity%20Castle%20AMV%20%20Final%20Battle.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "67",
@@ -539,7 +599,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/Eg5iMvCFAEM/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDbQmeenwWMQXZ8QXyVCZZ9wX9dxQ",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Infinity%20Castle%20Part%202%20Final%20War%20Kokushibo%20vs%20Hash.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "68",
@@ -547,7 +608,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/0oq08jc4DGQ/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD4KZRZF33h3pw0ZwcDfZGdJFlcDQ",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Inosuke%20Hashibira%20The%20Jungle%20King%20%20%20Demon%20Slayer%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "69",
@@ -555,7 +617,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/fhA05-axdRM/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCanChpEE7aDjj2ddr20z3J32MNGA",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/JINWOO%20VS%20BERU%20%20SHADOW%20MONARCH%20%20Solo%20Leveling%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "70",
@@ -563,7 +626,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/yAjDdpzD3v0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBKHt4vSfVktn-CBnPSBRqeUSgWKA",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Mugen%20Train%20AMV%20%20Rengoku%20vs%20Akaza.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "71",
@@ -571,7 +635,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/jjMqgpx_Eqw/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLByfBzyWfhCoHI5woBX2io8HxbXJA",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Naruto%20AMV%20%20The%20Journey%20of%20Naruto%20Sasuke%20%20Sakura.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "72",
@@ -579,7 +644,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/mVWHDjISd4E/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAcGgIDjcZ5hiy8Og_AaFLchRCeHA",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/SECRET%20LIFE%20%20Spy%20x%20Family%20AMV%20%20Forger%20Family.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "73",
@@ -587,7 +653,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/_8id2vkTqmc/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCI20vU0UBPplQBy3uIM9eBPzGEwQ",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Satoru%20Gojo%20AMV%20%20The%20Strongest%20Sorcerer%20%20Jujutsu%20Kaisen.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "74",
@@ -595,7 +662,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/EANKW8sadCc/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBliYcgadnUtj4DE5OiRBslrSCNgg",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Tengen%20Uzui%20AMV%20%20Flashy%20King%20%20%20Demon%20Slayer.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "75",
@@ -603,7 +671,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/A_pPNiGp5-A/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA9NEQDXZgCuDFahhpXRzayTqMk9g",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/UNSTOPPABLE%20%20Rimuru%20Tempest%20Demon%20Lord.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "76",
@@ -611,7 +680,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/W5aatBHFDy8/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDEmxYZw67EhbA3oNMnr2R2ypScdA",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Yoriichi%20vs%20Muzan%20AMVEdit%20Demon%20Slayer%20Final%20War.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "77",
@@ -619,7 +689,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/FQNg284WllQ/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDxcCVK-2LEIRkhNh3fxiBywGwkdA",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/ZENITSU%20VS%20KAIGAKU%20%20GODSPEED%20%20%20Demon%20Slayer%20Infiniy%20Castle%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "78",
@@ -627,7 +698,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/NMkAXnqm1wM/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Live%20or%20Die%20%20Demon%20Slayer%20AMV%20%20Entertainment%20Distr.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "79",
@@ -635,7 +707,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/yAjDdpzD3v0/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Demon%20Slayer%20Trio%20AMV%20%20Rengoku%20Muichiro%20Mitsuri.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "80",
@@ -643,7 +716,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/YX5S5rR71kc/maxresdefault.jpg",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Demon%20Slayer%20Infinity%20Castle%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "81",
@@ -651,7 +725,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/NWXlGcVioGA/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Demon%20Slayer%20AMV%20%20Zenitsu%20Tanjiro%20Inosuke%20Tengen.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "82",
@@ -659,7 +734,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/0gfue_KSnaM/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Yoriichi%20Tsugikuni%20%20Dark%20Side%20%20Demon%20Slayer%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "83",
@@ -667,7 +743,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/sMM_EnoSTfo/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Tanjiro%20Zenitsu%20Inosuke%20Demon%20Hunters.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "84",
@@ -675,7 +752,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/lav5pEcqU3U/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Demon%20Slayer%20Hashira%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "85",
@@ -683,7 +761,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/0q1DEqMN3LU/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Muichiro%20Tokito(Silent%20Voice).m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "86",
@@ -691,7 +770,8 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/KpDD3mO3Elg/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/RENGOKU%20VS%20AKAZA%20Mugen%20Train%20Arc%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
   },
   {
     "id": "87",
@@ -699,6 +779,70 @@
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/aeTImBqlj28/maxresdefault.jpg",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Butterfly%20Sisters%20%20Love%20Hashira%20AMV.m4a",
-    "amv": true
+    "amv": true,
+    "phonk": false
+  },
+  {
+    "id": "88",
+    "title": "NO BATIDAO",
+    "artist": "ZXKAI ",
+    "cover": "https://i.ytimg.com/vi/ovj8Gb_cVgY/maxresdefault.jpg",
+    "src": "https://archive.org/download/no-batidao/NO%20BATIDAO.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "89",
+    "title": "Matadora",
+    "artist": "Dj - Asul",
+    "cover": "https://i.ytimg.com/vi/YIYBhDeQfT0/maxresdefault.jpg",
+    "src": "https://archive.org/download/MATADORA/MATADORA.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "90",
+    "title": "Spooky",
+    "artist": "DJ ALEX",
+    "cover": "https://i.ytimg.com/vi/c12MvHsIB2o/maxresdefault.jpg",
+    "src": "https://archive.org/download/spooky_202606/SPOOKY.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "91",
+    "title": "MURDER IN MY MIND",
+    "artist": "Kordhell",
+    "cover": "https://i.ytimg.com/vi/mzD50zVl20E/maxresdefault.jpg",
+    "src": "https://archive.org/download/spooky_202606/MURDER%20IN%20MY%20MIND.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "92",
+    "title": "Matushka Ultrafunk",
+    "artist": "FUNK DEMON",
+    "cover": "https://i.ytimg.com/vi/kMiBV-nEAHI/maxresdefault.jpg",
+    "src": "https://archive.org/download/spooky_202606/MATUSHKA%20ULTRAFUNK.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "93",
+    "title": "MONTAGEM COMA",
+    "artist": "ANDROMEDA",
+    "cover": "https://i.ytimg.com/vi/T7B_pObC2kE/maxresdefault.jpg",
+    "src": "https://archive.org/download/spooky_202606/MONTAGEM%20COMA.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "94",
+    "title": "MY ENEMY ULTRAFUNK",
+    "artist": "KVSHX",
+    "cover": "https://i.ytimg.com/vi/U2uasL_X7fQ/maxresdefault.jpg",
+    "src": "https://archive.org/download/spooky_202606/MY%20ENEMY%20ULTRAFUNK.m4a",
+    "amv": false,
+    "phonk": true
   }
 ]
