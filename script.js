@@ -902,6 +902,7 @@ async function loadSongs() {
     await fetchSongs();
     renderAllSections();
     initSavedState();
+    updateQueueDisplay(); // Ensure queue display is updated on load
   } catch (err) {
     // Show user-friendly error and toast instead of console.error
     if (container) container.innerHTML = '<p class="loading-text">Songs load nahi hue. Live Server use karo.</p>';
