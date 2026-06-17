@@ -859,8 +859,17 @@
     "title": "DEMON SLAYER PARODY SONG 😂",
     "artist": "Tanjiro Frames",
     "cover":"https://i.ytimg.com/vi/fuXesc7GjT8/maxresdefault.jpg",
-    "src": "https://archive.org/download/demon%20slayer%20parody",
+    "src": "https://archive.org/download/demon-slayer-parody/DEMON%20SLAYER%20PARODY.m4a",
     "amv": true,
     "phonk": false
+  },
+  {
+    "id": "97",
+    "title": "LUZ ROJA(All versions)",
+    "artist": "bxkq",
+    "cover": "https://i.ytimg.com/vi/5nmIg1XWYY8/maxresdefault.jpg",
+    "src": "https://archive.org/download/luz-roja/LUZ%20ROJA.m4a",
+    "amv": false,
+    "phonk": true
   }
 ]
