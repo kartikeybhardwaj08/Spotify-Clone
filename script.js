@@ -1635,5 +1635,11 @@ function observeNewCards() {
   const newCards = document.querySelectorAll('.song-card:not(.fade-in)');
   newCards.forEach((card) => observer.observe(card));
 }
+const crsr = document.getElementById("cursor");
+
+document.addEventListener("pointermove", (e) => {
+  crsr.style.transform = `translate(${e.clientX - 12.5}px, ${e.clientY - 12.5}px)`;
+});
+
 // ========== INIT ==========
 loadSongs();

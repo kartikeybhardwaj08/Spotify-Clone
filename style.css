@@ -416,6 +416,7 @@ aside {
 .content {
     flex: 1;
     border-radius: 10px;
+    z-index: 100;
     background: linear-gradient(180deg, #3a0a0a 0%, #1a0a0a 20%, #181818 50%);
     overflow-y: auto;
     padding: 20px 24px 24px;
@@ -2547,4 +2548,16 @@ body.right-collapsed .right-sidebar-expand-tab {
     font-weight: 600;
     z-index: 9999;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+#cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #1DB954;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    pointer-events: none;
+    transition: transform 0.03s ease;
 }
