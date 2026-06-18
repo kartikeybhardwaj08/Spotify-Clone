@@ -20,6 +20,7 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+
 *::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -298,10 +299,25 @@ nav {
 .playlist-song-row:hover .remove-song-btn {
     opacity: 1;
 }
+#cursor{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #1DB954;
+    position: fixed;
+    top: -25px;
+    left: -25px;
+    z-index: 99;
+    pointer-events: none;
+    transition: transform 0.03s ease;
+}
 
 @media (max-width: 768px) {
     .remove-song-btn {
         opacity: 1;
+    }
+    #cursor{
+        display: none;
     }
 }
 
@@ -1325,6 +1341,9 @@ aside {
 
 /* ── Small Tablet (max 768px) ── */
 @media (max-width: 768px) {
+    #cursor{
+        display: none;
+    }
 
     /* ── Navbar ── */
     nav {
@@ -1537,6 +1556,9 @@ aside {
 
 /* ── Mobile (max 480px) ── */
 @media (max-width: 480px) {
+    #cursor{
+        display: none;
+    }
     nav {
         padding: 6px 10px;
     }
@@ -1631,6 +1653,9 @@ aside {
 
 /* ── Very small (max 360px) ── */
 @media (max-width: 360px) {
+    #cursor{
+        display: none;
+    }
     .search {
         width: 110px;
     }
@@ -2548,16 +2573,4 @@ body.right-collapsed .right-sidebar-expand-tab {
     font-weight: 600;
     z-index: 9999;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-}
-#cursor{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #1DB954;
-    position: fixed;
-    top: -25px;
-    left: -25px;
-    z-index: 99;
-    pointer-events: none;
-    transition: transform 0.03s ease;
 }
