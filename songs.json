@@ -871,5 +871,14 @@
     "src": "https://archive.org/download/luz-roja/LUZ%20ROJA.m4a",
     "amv": false,
     "phonk": true
+  },
+  {
+    "id": "98",
+    "title": "The End of Humanity | Attack on Titan Rumbling Arc",
+    "artist": "Tanjiro Frames",
+    "cover": "https://i.ytimg.com/vi/h_H3odvX_bw/maxresdefault.jpg",
+    "src": "https://archive.org/download/the-end-of-humanity-attack-on-titan-rumbling-arc/The%20End%20of%20Humanity%20Attack%20on%20Titan%20Rumbling%20Arc.m4a",
+    "amv": true,
+    "phonk": false
   }
 ]
