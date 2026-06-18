@@ -880,5 +880,104 @@
     "src": "https://archive.org/download/the-end-of-humanity-attack-on-titan-rumbling-arc/The%20End%20of%20Humanity%20Attack%20on%20Titan%20Rumbling%20Arc.m4a",
     "amv": true,
     "phonk": false
+  },
+  {
+    "id": "99",
+    "title": "EMPIRE",
+    "artist": "Ogryzek",
+    "cover": "https://i.ytimg.com/vi/L8H7J8VANQo/maxresdefault.jpg",
+    "src": "https://archive.org/download/ogryzek-empire/Ogryzek%20EMPIRE.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "100",
+    "title": "FUNK UNIVERSO",
+    "artist": "Irokz",
+    "cover": "https://i.ytimg.com/vi/yHKXRcZxpG8/maxresdefault.jpg",
+    "src": "https://archive.org/download/funk-universo/FUNK%20UNIVERSO.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "101",
+    "title": "AVANGARD ",
+    "artist": "LONOWN",
+    "cover": "https://i.ytimg.com/vi/HbuJXPbtrQw/maxresdefault.jpg",
+    "src": "https://archive.org/download/AVANGARD/AVANGARD.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "102",
+    "title": "NUNCA MUDA",
+    "artist": "BangersOnly",
+    "cover": "https://i.ytimg.com/vi/Ju-VnQuWoQU/maxresdefault.jpg",
+    "src": "https://archive.org/download/nunca-muda/NUNCA%20MUDA.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "103",
+    "title": "MONTAGEM ALQUIMIA",
+    "artist": "MAFIA",
+    "cover": "https://i.ytimg.com/vi/CQZ-XIgyEUg/maxresdefault.jpg",
+    "src": "https://archive.org/download/montagem-alquimia/MONTAGEM%20ALQUIMIA.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "104",
+    "title": "TE CONOCÍ",
+    "artist": "bxkq, PXLWYSE",
+    "cover": "https://i.ytimg.com/vi/MeamyO9UxPk/maxresdefault.jpg",
+    "src": "https://archive.org/download/te-conoc/TE%20CONOC.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "105",
+    "title": "VILLAGE FUNK!",
+    "artist": "MVSTERIOUS, bear bear & friends",
+    "cover": "https://i.ytimg.com/vi/uY9-lpXsYTs/maxresdefault.jpg",
+    "src": "https://archive.org/download/village-fun/VILLAGE%20FUN.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "106",
+    "title": "FAIRYTALE",
+    "artist": "$lothbaby6",
+    "cover": "https://i.ytimg.com/vi/SxM2hLnj59I/maxresdefault.jpg",
+    "src": "https://archive.org/download/fairytale-funk_202606/FAIRYTALE%20FUNK.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "107",
+    "title": "HOMAGE FUNK",
+    "artist": "The Vibe Guide",
+    "cover": "https://i.ytimg.com/vi/Qz7emaqE8UQ/maxresdefault.jpg",
+    "src": "https://archive.org/download/homage-funk/HOMAGE%20FUNK.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "108",
+    "title": "LUA NA PRAÇA",
+    "artist": "Dj Samir",
+    "cover": "https://i.ytimg.com/vi/C5jbM5kTNjA/maxresdefault.jpg",
+    "src": "https://archive.org/download/lua-na-praca_202606/LUA%20NA%20PRACA.m4a",
+    "amv": false,
+    "phonk": true
+  },
+  {
+    "id": "109",
+    "title": "GOZALO FUNK",
+    "artist": "Ariis",
+    "cover": "https://i.ytimg.com/vi/QUH0_vbeggQ/maxresdefault.jpg",
+    "src": "https://archive.org/download/gozalo-funk/GOZALO%20FUNK.m4a",
+    "amv": false,
+    "phonk": true
   }
 ]
