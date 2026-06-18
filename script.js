@@ -1638,7 +1638,7 @@ function observeNewCards() {
 const crsr = document.getElementById("cursor");
 
 document.addEventListener("pointermove", (e) => {
-  crsr.style.transform = `translate(${e.clientX - 12.5}px, ${e.clientY - 12.5}px)`;
+  crsr.style.transform = `translate(${e.clientX+12.4}px, ${e.clientY+12.4}px)`;
 });
 function outOfServicesBtn(){
     showToast("Out Of Service");
