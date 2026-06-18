@@ -2555,8 +2555,8 @@ body.right-collapsed .right-sidebar-expand-tab {
     border-radius: 50%;
     background-color: #1DB954;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: -25;
+    left: -25;
     z-index: 99;
     pointer-events: none;
     transition: transform 0.03s ease;
