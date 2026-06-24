@@ -979,5 +979,14 @@
     "src": "https://archive.org/download/gozalo-funk/GOZALO%20FUNK.m4a",
     "amv": false,
     "phonk": true
+  },
+  {
+    "id": "110",
+    "title": "The Strongest Upper Moons Kokushibo Doma  Akaza",
+    "artist": "Tanjiro Frames",
+    "cover": "https://i.ytimg.com/vi/DJycugXRUQE/maxresdefault.jpg",
+    "src": "https://archive.org/download/the-strongest-upper-moons-kokushibo-doma-akaza/The%20Strongest%20Upper%20Moons%20Kokushibo%20Doma%20%20Akaza.m4a",
+    "amv": true,
+    "phonk": false
   }
 ]
