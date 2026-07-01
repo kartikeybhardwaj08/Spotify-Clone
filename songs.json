@@ -768,7 +768,7 @@
     "id": "86",
     "title": "RENGOKU VS AKAZA Mugen Train Arc AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/KpDD3mO3Elg/maxresdefault.jpg",
+    "cover": "./asstes/amv banners/RENGOKU VS AKAZA Mugen Train Arc.png",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/RENGOKU%20VS%20AKAZA%20Mugen%20Train%20Arc%20AMV.m4a",
     "amv": true,
     "phonk": false
@@ -777,7 +777,7 @@
     "id": "87",
     "title": "Butterfly Sisters & Love Hashira AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/aeTImBqlj28/maxresdefault.jpg",
+    "cover": "./asstes/amv banners/Butterfly Sisters & Love Hashira.png",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Butterfly%20Sisters%20%20Love%20Hashira%20AMV.m4a",
     "amv": true,
     "phonk": false
@@ -849,7 +849,7 @@
     "id": "95",
     "title": "Infinity Castle Part 1 | Beginning of the End",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/kKutTZ8VNc8/maxresdefault.jpg",
+    "cover": "./asstes/amv banners/Infinity Castle Part 1 Beginning of the End.png",
     "src": "https://archive.org/download/infinity-castle-part-1-beginning-of-the-end/Infinity%20Castle%20Part%201%20Beginning%20of%20the%20End.m4a",
     "amv": true,
     "phonk": false
@@ -858,7 +858,7 @@
     "id" : "96",
     "title": "DEMON SLAYER PARODY SONG 😂",
     "artist": "Tanjiro Frames",
-    "cover":"https://i.ytimg.com/vi/fuXesc7GjT8/maxresdefault.jpg",
+    "cover":"./asstes/amv banners/DEMON SLAYER PARODY SONG.png",
     "src": "https://archive.org/download/demon-slayer-parody/DEMON%20SLAYER%20PARODY.m4a",
     "amv": true,
     "phonk": false
@@ -876,7 +876,7 @@
     "id": "98",
     "title": "The End of Humanity | Attack on Titan Rumbling Arc",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/h_H3odvX_bw/maxresdefault.jpg",
+    "cover": "./asstes/amv banners/The End of Humanity Attack on Titan Rumbling Arc.png",
     "src": "https://archive.org/download/the-end-of-humanity-attack-on-titan-rumbling-arc/The%20End%20of%20Humanity%20Attack%20on%20Titan%20Rumbling%20Arc.m4a",
     "amv": true,
     "phonk": false
@@ -982,9 +982,9 @@
   },
   {
     "id": "110",
-    "title": "The Strongest Upper Moons Kokushibo Doma  Akaza",
+    "title": "The Strongest Upper Moons Kokushibo Doma Akaza",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/DJycugXRUQE/maxresdefault.jpg",
+    "cover": "./asstes/amv banners/The Strongest Upper Moons Kokushibo Doma Akaza.png",
     "src": "https://archive.org/download/the-strongest-upper-moons-kokushibo-doma-akaza/The%20Strongest%20Upper%20Moons%20Kokushibo%20Doma%20%20Akaza.m4a",
     "amv": true,
     "phonk": false
