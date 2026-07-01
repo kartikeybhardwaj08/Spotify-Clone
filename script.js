@@ -610,6 +610,7 @@ function attachScrollArrows(leftId, rightId, rowEl, amount = 300) {
   l.onclick = () => rowEl.scrollBy({ left: -amount, behavior: 'smooth' });
   r.onclick = () => rowEl.scrollBy({ left: amount, behavior: 'smooth' });
 }
+
 // ========== RENDER CARDS ==========
 function renderCards(songList, containerId) {
   const container = document.getElementById(containerId);
