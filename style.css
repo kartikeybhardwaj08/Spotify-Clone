@@ -19,37 +19,54 @@
     z-index: 10000;
     display: flex;
     justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out;
     align-items: center;
-    pointer-events: none;
-    animation: load-div 10s linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; 
+    /* pointer-events: none; */
 }
 
-.loader {
+.loader-logo {
+    width: 175px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #1DB954;
+    border-radius: 50%;
     position: relative;
-    background-color: transparent;
+}
+.loader-logo img {
     width: 200px;
     height: 200px;
-    border: 8px solid grey;
-    border-top: 8px solid #1ed760;
-    border-radius: 50%;
-    animation: load 2s linear infinite;
+    object-fit: contain;
 }
 
-@keyframes load {
-    100% {
-        rotate: 360deg;
-    }
+.loader-div span {
+    position: absolute;
+    font-size: 50px;
+    font-weight: bolder;
+    color: red;
+    top: -15px;
+    right: -30px;
+    rotate: 20deg;
 }
 
-@keyframes load-div {
-    0%, 95% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+#go-to-web {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    border: none;
+    background-color: #fff;
+    color: black;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#go-to-web:hover {
+    background-color: #1DB954;
+    color: black;
+    scale: 1.1;
 }
 
 /* for content filtters btns */

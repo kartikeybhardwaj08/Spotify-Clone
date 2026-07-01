@@ -12,6 +12,11 @@ let currentAddingSong = null;
 let likedSongIds = new Set(); // Track liked song IDs
 let currentPlaylistType = null; // 'liked', playlist id, or null
 let currentPlaylistSongs = []; // Songs of current playing playlist
+let gotToWebbtn = document.getElementById('go-to-web');
+
+gotToWebbtn.addEventListener('click', () => {
+  document.querySelector('.loader-div').style.transform = 'translateY(-100%)';
+});
 
 // ========== LOCAL STORAGE ==========
 function saveStateToLocalStorage() {
