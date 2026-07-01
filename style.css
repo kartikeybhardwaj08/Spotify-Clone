@@ -35,11 +35,22 @@
     border: 2px solid #1DB954;
     border-radius: 50%;
     position: relative;
+    animation: loader-levitate 2s ease-in-out infinite;
 }
 .loader-logo img {
     width: 200px;
     height: 200px;
     object-fit: contain;
+}@keyframes loader-levitate {
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translate(0);
+    }
 }
 
 .loader-div span {
@@ -67,6 +78,7 @@
     background-color: #1DB954;
     color: black;
     scale: 1.1;
+    box-shadow: 0 0 30px #1DB954;
 }
 
 /* for content filtters btns */
