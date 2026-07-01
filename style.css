@@ -5,10 +5,51 @@
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="8" fill="none" stroke="%231DB954" stroke-width="3"/><circle cx="16" cy="16" r="2"/></svg>') 16 16, auto;
 }
 
-*::selection{
+*::selection {
     background-color: #1DB954;
     color: black;
     font-weight: bolder;
+}
+
+.loader-div {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    animation: load-div 10s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+
+.loader {
+    position: relative;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
+    border: 8px solid grey;
+    border-top: 8px solid #1ed760;
+    border-radius: 50%;
+    animation: load 2s linear infinite;
+}
+
+@keyframes load {
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes load-div {
+    0%, 95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 /* for content filtters btns */
@@ -305,7 +346,8 @@ nav {
 .playlist-song-row:hover .remove-song-btn {
     opacity: 1;
 }
-#cursor{
+
+#cursor {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -322,7 +364,8 @@ nav {
     .remove-song-btn {
         opacity: 1;
     }
-    #cursor{
+
+    #cursor {
         display: none;
     }
 }
@@ -1028,7 +1071,7 @@ aside {
     color: #fff;
     font-weight: 700;
     cursor: pointer;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     transition: transform 0.2s ease, opacity 0.2s ease;
     opacity: 0;
     transform: translateY(20px);
@@ -1347,7 +1390,7 @@ aside {
 
 /* ── Small Tablet (max 768px) ── */
 @media (max-width: 768px) {
-    #cursor{
+    #cursor {
         display: none;
     }
 
@@ -1562,9 +1605,10 @@ aside {
 
 /* ── Mobile (max 480px) ── */
 @media (max-width: 480px) {
-    #cursor{
+    #cursor {
         display: none;
     }
+
     nav {
         padding: 6px 10px;
     }
@@ -1659,9 +1703,10 @@ aside {
 
 /* ── Very small (max 360px) ── */
 @media (max-width: 360px) {
-    #cursor{
+    #cursor {
         display: none;
     }
+
     .search {
         width: 110px;
     }
@@ -2551,6 +2596,7 @@ body.right-collapsed .right-sidebar-expand-tab {
         gap: 10px !important;
     }
 }
+
 .showToast {
     position: fixed;
     bottom: 120px;
@@ -2563,7 +2609,7 @@ body.right-collapsed .right-sidebar-expand-tab {
     font-size: 14px;
     font-weight: 600;
     z-index: 9999;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .showToast {
@@ -2578,5 +2624,5 @@ body.right-collapsed .right-sidebar-expand-tab {
     font-size: 14px;
     font-weight: 600;
     z-index: 9999;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }

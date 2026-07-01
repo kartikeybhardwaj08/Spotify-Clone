@@ -543,7 +543,7 @@
     "id": "61",
     "title": "AKAZA VS TANJIRO GIYU Final War AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/V0EAVoIclPE/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAJs0QHI_PHgFY1FkQYECb4sN-nEg",
+    "cover": "./asstes/amv banners/AKAZA VS TANJIRO GIYU Final War AMV.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/AKAZA%20VS%20TANJIRO%20%20GIYU%20%20Final%20War%20AMV.m4a",
     "amv": true,
     "phonk": false  
@@ -552,7 +552,7 @@
     "id": "62",
     "title": "Demon Slayer Infinity Castle AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/3pZVdopQdd4/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLByfgi34A7wTD9GZLa5hqk-bVHHmQ",
+    "cover": "./asstes/amv banners/Demon Slayer Infinity Castle AMV.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Demon%20Slayer%20Infinity%20Castle%20AMV.m4a",
     "amv": true,
     "phonk": false  
@@ -561,16 +561,16 @@
     "id": "63",
     "title": "Demon Slayer Season 4 AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/FEjRntWLsno/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDR_R2PN7WEEldjrZn_BGOopwc9rw",
+    "cover": "./asstes/amv banners/Demon Slayer Season 4 AMV.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Demon%20Slayer%20Season%204%20AMV.m4a",
     "amv": true,
     "phonk": false
   },
   {
     "id": "64",
-    "title": "Gojo vs Toji AMVEdit 4K Hidden Inventory Arc Part -1",
+    "title": "Gojo vs Toji AMV Hidden Inventory Arc Part -1",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/x27OHNinWbQ/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCM5A3Gh74VE8eJoX5JITGw57NABg",
+    "cover": "./asstes/amv banners/Gojo vs Toji.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gojo%20vs%20Toji%20AMVEdit%204K%20%20%20Hidden%20Inventory%20Arc%20Part%20-1.m4a",
     "amv": true,
     "phonk": false
@@ -579,7 +579,7 @@
     "id": "65",
     "title": "Gyomei Himejima AMV MONSTER Stone Hashira",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/agjF8rtu7Qs/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCpZPp0APlrEBGo4scrnn4HcEDI9Q",
+    "cover": "./asstes/amv banners/Gyomei Himejima MONSTER Stone Hashira.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Gyomei%20Himejima%20AMV%20%20MONSTER%20Stone%20Hashira.m4a",
     "amv": true,
     "phonk": false
@@ -588,16 +588,16 @@
     "id": "66",
     "title": "INOSUKE VS DOMA Infinity Castle AMV Final Battle",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/h3mZpIZ8ozk/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAKFL-hFX1Wa-KndDDETNaGBkdLOw",
+    "cover": "./asstes/amv banners/INOSUKE VS DOMA.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/INOSUKE%20VS%20DOMA%20%20Infinity%20Castle%20AMV%20%20Final%20Battle.m4a",
     "amv": true,
     "phonk": false
   },
   {
     "id": "67",
-    "title": "Infinity Castle Part 2 Final War Kokushibo vs Hash",
+    "title": "Infinity Castle Part 2 Final War Kokushibo vs Hashira",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/Eg5iMvCFAEM/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDbQmeenwWMQXZ8QXyVCZZ9wX9dxQ",
+    "cover": "./asstes/amv banners/Infinity Castle Part 2 Final War Kokushibo vs Hashira.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Infinity%20Castle%20Part%202%20Final%20War%20Kokushibo%20vs%20Hash.m4a",
     "amv": true,
     "phonk": false
@@ -606,7 +606,7 @@
     "id": "68",
     "title": "Inosuke Hashibira The Jungle King Demon Slayer AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/0oq08jc4DGQ/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD4KZRZF33h3pw0ZwcDfZGdJFlcDQ",
+    "cover": "./asstes/amv banners/Inosuke hashibira.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Inosuke%20Hashibira%20The%20Jungle%20King%20%20%20Demon%20Slayer%20AMV.m4a",
     "amv": true,
     "phonk": false
@@ -615,7 +615,7 @@
     "id": "69",
     "title": "JINWOO VS BERU SHADOW MONARCH Solo Leveling AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/fhA05-axdRM/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCanChpEE7aDjj2ddr20z3J32MNGA",
+    "cover": "./asstes/amv banners/jin woo vs beru.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/JINWOO%20VS%20BERU%20%20SHADOW%20MONARCH%20%20Solo%20Leveling%20AMV.m4a",
     "amv": true,
     "phonk": false
@@ -624,7 +624,7 @@
     "id": "70",
     "title": "Mugen Train AMV Rengoku vs Akaza",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/yAjDdpzD3v0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBKHt4vSfVktn-CBnPSBRqeUSgWKA",
+    "cover": "./asstes/amv banners/Mugen Train Rengoku vs Akaza.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Mugen%20Train%20AMV%20%20Rengoku%20vs%20Akaza.m4a",
     "amv": true,
     "phonk": false
@@ -633,7 +633,7 @@
     "id": "71",
     "title": "Naruto AMV The Journey of Naruto Sasuke Sakura",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/jjMqgpx_Eqw/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLByfBzyWfhCoHI5woBX2io8HxbXJA",
+    "cover": "./asstes/amv banners/Naruto AMV The Journey of Naruto Sasuke Sakura.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Naruto%20AMV%20%20The%20Journey%20of%20Naruto%20Sasuke%20%20Sakura.m4a",
     "amv": true,
     "phonk": false
@@ -642,7 +642,7 @@
     "id": "72",
     "title": "SECRET LIFE Spy x Family AMV Forger Family",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/mVWHDjISd4E/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAcGgIDjcZ5hiy8Og_AaFLchRCeHA",
+    "cover": "./asstes/amv banners/SECRET LIFE Spy x Family AMV Forger Family.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/SECRET%20LIFE%20%20Spy%20x%20Family%20AMV%20%20Forger%20Family.m4a",
     "amv": true,
     "phonk": false
@@ -651,7 +651,7 @@
     "id": "73",
     "title": "Satoru Gojo AMV The Strongest Sorcerer Jujutsu Kaisen",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/_8id2vkTqmc/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCI20vU0UBPplQBy3uIM9eBPzGEwQ",
+    "cover": "./asstes/amv banners/Satoru Gojo AMV The Strongest Sorcerer Jujutsu Kaisen.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Satoru%20Gojo%20AMV%20%20The%20Strongest%20Sorcerer%20%20Jujutsu%20Kaisen.m4a",
     "amv": true,
     "phonk": false
@@ -660,7 +660,7 @@
     "id": "74",
     "title": "Tengen Uzui AMV Flashy King Demon Slayer",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/EANKW8sadCc/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBliYcgadnUtj4DE5OiRBslrSCNgg",
+    "cover": "./asstes/amv banners/Tengen Uzui AMV Flashy King Demon Slayer.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Tengen%20Uzui%20AMV%20%20Flashy%20King%20%20%20Demon%20Slayer.m4a",
     "amv": true,
     "phonk": false
@@ -669,7 +669,7 @@
     "id": "75",
     "title": "UNSTOPPABLE Rimuru Tempest Demon Lord",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/A_pPNiGp5-A/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA9NEQDXZgCuDFahhpXRzayTqMk9g",
+    "cover": "./asstes/amv banners/Rimuru Tempest Demon Lord.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/UNSTOPPABLE%20%20Rimuru%20Tempest%20Demon%20Lord.m4a",
     "amv": true,
     "phonk": false
@@ -678,7 +678,7 @@
     "id": "76",
     "title": "Yoriichi vs Muzan AMVEdit Demon Slayer Final War",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/W5aatBHFDy8/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDEmxYZw67EhbA3oNMnr2R2ypScdA",
+    "cover": "./asstes/amv banners/Yoriichi vs Muzan Demon Slayer Final War.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Yoriichi%20vs%20Muzan%20AMVEdit%20Demon%20Slayer%20Final%20War.m4a",
     "amv": true,
     "phonk": false
@@ -687,7 +687,7 @@
     "id": "77",
     "title": "ZENITSU VS KAIGAKU GODSPEED Demon Slayer Infiniy Castle AMV",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/FQNg284WllQ/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDxcCVK-2LEIRkhNh3fxiBywGwkdA",
+    "cover": "./asstes/amv banners/ZENITSU VS KAIGAKU GODSPEED Demon Slayer Infiniy Castle.png",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/ZENITSU%20VS%20KAIGAKU%20%20GODSPEED%20%20%20Demon%20Slayer%20Infiniy%20Castle%20AMV.m4a",
     "amv": true,
     "phonk": false
@@ -696,7 +696,7 @@
     "id": "78",
     "title": "Live or Die Demon Slayer AMV | Entertainment District Arc",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/NMkAXnqm1wM/maxresdefault.jpg",
+    "cover": "./asstes/amv banners/Live or Die Demon Slayer Entertainment District Arc.png",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Live%20or%20Die%20%20Demon%20Slayer%20AMV%20%20Entertainment%20Distr.m4a",
     "amv": true,
     "phonk": false
@@ -705,14 +705,14 @@
     "id": "79",
     "title": "Demon Slayer Trio AMV Rengoku Muichiro Mitsuri",
     "artist": "Tanjiro Frames",
-    "cover": "https://i.ytimg.com/vi/yAjDdpzD3v0/maxresdefault.jpg",
+    "cover": "./asstes/amv banners/Demon Slayer Trio Rengoku Muichiro Mitsuri.png",
     "src": "https://archive.org/download/rengoku-vs-akaza-mugen-train-arc-amv/Demon%20Slayer%20Trio%20AMV%20%20Rengoku%20Muichiro%20Mitsuri.m4a",
     "amv": true,
     "phonk": false
   },
   {
     "id": "80",
-    "title": "Demon Slayer Infinity Castle AMV",
+    "title": "Demon Slayer Infinity Castle AMV Part - 2",
     "artist": "Tanjiro Frames",
     "cover": "https://i.ytimg.com/vi/YX5S5rR71kc/maxresdefault.jpg",
     "src": "https://archive.org/download/akaza-vs-tanjiro-giyu-final-war-amv/Demon%20Slayer%20Infinity%20Castle%20AMV.m4a",
