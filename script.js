@@ -17,6 +17,9 @@ let currentPlaylistSongs = [];
 const gotToWebbtn = document.getElementById("go-to-web");
 gotToWebbtn.addEventListener("click", () => {
   document.querySelector(".loader-div").style.transform = "translateY(-100%)";
+  setTimeout(() => {
+    document.querySelector(".loader-div").style.display = "none";
+  }, 2000);
 });
 
 // LOCAL STORAGE FUNCTIONS

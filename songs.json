@@ -988,5 +988,14 @@
     "src": "https://archive.org/download/the-strongest-upper-moons-kokushibo-doma-akaza/The%20Strongest%20Upper%20Moons%20Kokushibo%20Doma%20%20Akaza.m4a",
     "amv": true,
     "phonk": false
+  },
+  {
+    "id" : "111",
+    "title": "GOJO 4K AMV",
+    "artist" : "Tanjiro Frames",
+    "cover" : "./asstes/amv banners/GOJO 4K AMV.png",
+    "src": "./asstes/GOJO 4K AMV EDIT.m4a",
+    "amv" : true,
+    "phonk" : false
   }
 ]
