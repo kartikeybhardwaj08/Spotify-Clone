@@ -997,5 +997,14 @@
     "src": "./asstes/GOJO 4K AMV EDIT.m4a",
     "amv" : true,
     "phonk" : false
+  },
+  {
+    "id" : "112",
+    "title": "KAKASHI HATAKE",
+    "artist" : "Tanjiro Frames",
+    "cover" : "./asstes/amv banners/KAKASHI HATAKE.png",
+    "src": "./asstes/KAKASHI HATAKE.m4a",
+    "amv" : true,
+    "phonk" : false
   }
 ]
