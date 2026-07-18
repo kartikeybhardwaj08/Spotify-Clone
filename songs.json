@@ -1006,5 +1006,14 @@
     "src": "./asstes/KAKASHI HATAKE.m4a",
     "amv" : true,
     "phonk" : false
+  },
+  {
+    "id" : "113",
+    "title": "Demon Slayer Hashira The Anthem",
+    "artist" : "Tanjiro Frames",
+    "cover" : "./asstes/amv banners/Demon Slayer Hashira The Anthem.png",
+    "src": "./asstes/Demon Slayer Hashira The Anthem.m4a",
+    "amv" : true,
+    "phonk" : false
   }
 ]
