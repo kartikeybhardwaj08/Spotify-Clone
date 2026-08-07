@@ -1022,7 +1022,7 @@
     "artist" : "QMIIR  ",
     "cover" : "./asstes/phonk/tiki png.jpg",
     "src": "./asstes/phonk/TIKI TIKI slowed.m4a",
-    "amv" : true,
-    "phonk" : false
+    "amv" : false,
+    "phonk" : true
   }
 ]
