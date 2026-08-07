@@ -1015,5 +1015,14 @@
     "src": "./asstes/Demon Slayer Hashira The Anthem.m4a",
     "amv" : true,
     "phonk" : false
+  },
+  {
+    "id" : "114",
+    "title": "Tiki Tiki",
+    "artist" : "QMIIR  ",
+    "cover" : "./asstes/phonk/tiki png.jpg",
+    "src": "./asstes/phonk/TIKI TIKI slowed.m4a",
+    "amv" : true,
+    "phonk" : false
   }
 ]
