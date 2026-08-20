@@ -1024,5 +1024,14 @@
     "src": "https://archive.org/download/london_202606/Good%20Luck%20Charm.m4a",
     "amv": false,
     "phonk": false
+  },
+  {
+    "id" : "115",
+    "title" : "Suzume",
+    "artist" : "Toaka",
+    "cover" : "asstes/other banner's/suzume.png",
+    "src" : "./asstes/RADWIMPS - Suzume (Lyrics) ft. Toaka.mp3",
+    "amv" : false,
+    "phonk" : false
   }
 ]
